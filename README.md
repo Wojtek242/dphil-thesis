@@ -1,15 +1,10 @@
 CUED PhD thesis template
 ========================
 
-[![Join the chat at https://gitter.im/kks32/phd-thesis-template](https://badges.gitter.im/kks32/phd-thesis-template.svg)](https://gitter.im/kks32/phd-thesis-template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-> A LaTeX / XeLaTeX / LuaLaTeX PhD thesis template for Cambridge University Engineering Department.
-
-[![Build Status](https://api.travis-ci.org/kks32/phd-thesis-template.svg)](https://travis-ci.org/kks32/phd-thesis-template)
-[![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
-[![Version](http://img.shields.io/badge/version-2.0-brightgreen.svg)](https://github.com/kks32/phd-thesis-template/releases/latest)
+> My thesis based on LaTeX / XeLaTeX / LuaLaTeX PhD thesis template for Cambridge University Engineering Department by Krishna Kumar.
 
 ## Author(s)
-*   Krishna Kumar
+*   Wojciech Kozlowski
 
 --------------------------------------------------------------------------------
 ## Features
@@ -57,7 +52,7 @@ This template supports `XeLaTeX` compilation chain. To generate  PDF run
     latexmk -xelatex -g thesis.tex
 
 ## Building your thesis - LuaLaTeX
-
+v
 ### Using latexmk (Unix/Linux/Windows)
 
 This template supports `XeLaTeX` compilation chain. To generate  PDF run
@@ -531,4 +526,3 @@ The history of releases can be viewed at [ChangeLog](ChangeLog.md)
 *   Tina Schwamb - testing and bug reports
 
 *   John Plaice - Bug fixes
-# thesis
