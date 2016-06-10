@@ -11,7 +11,7 @@
 *.blg*
 *~*
 *.nlo*
-*make*
+
 *.d*
 *.bcf*
 *.blg*
