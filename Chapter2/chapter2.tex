@@ -99,7 +99,7 @@ geometrical representation.
 A general many-body Hamiltonian coupled to a quantized light field in
 second quantized can be separated into three parts,
 \begin{equation}
-\label{eq:TwoH}
+\label{eq:FullH}
   \H = \H_f + \H_a + \H_{fa}.
 \end{equation}
 The term $\H_f$ represents the optical part of the Hamiltonian,
@@ -211,9 +211,11 @@ $\H^\mathrm{eff}_1 = \H_f + \H^\mathrm{eff}_{1,a} +
 \H^\mathrm{eff}_{1,fa}$. The effective atomic and interaction
 Hamiltonians  are
 \begin{equation}
+\label{eq:aeff}
   \H^\mathrm{eff}_{1,a} = \frac{\b{p}^2}{2 m_a} + V_\mathrm{cl}(\b{r}),
 \end{equation}
 \begin{equation}
+\label{eq:faeff}
   \H^\mathrm{eff}_{1,fa} = \frac{\hbar}{\Delta_a} \sum_{l,m}
   u_l^*(\b{r}) u_m(\b{r}) g_l g_m \ad_l \a_m,
 \end{equation}
@@ -222,6 +224,50 @@ $V_\mathrm{cl}(\b{r}) = \hbar g_\mathrm{cl}^2 |a_\mathrm{cl}
 u_\mathrm{cl}(\b{r})|^2 / \Delta_{\mathrm{cl},a}$, the classical
 trapping potential, from the interaction terms. However, we consider
 the trapping beam to be sufficiently detuned from the other light
-modes that we can neglect any scattering between them. However, a
-later inclusion of this scattered light would not be difficult due to
-the linearity of the dipoles we assumed.
+modes that we can neglect any scattering between them. A later
+inclusion of this scattered light would not be difficult due to the
+linearity of the dipoles we assumed.
+
+Normally we will consider scattering of modes $a_l$ much weaker than
+the field forming the lattice potential $V_\mathrm{cl}(\b{r})$. We now
+proceed in the same way as when deriving the conventional Bose-Hubbard
+Hamiltonian in the zero temperature limit. The field operators
+$\Psi(\b{r})$ can be expanded using localised Wannier functions of
+$V_\mathrm{cl}(\b{r})$ and by keeping only the lowest vibrational
+state we get
+\begin{equation}
+  \Psi(\b{r}) = \sum_i^M b_i w(\b{r} - \b{r}_i),
+\end{equation} 
+where $b_i$ ($\bd_i$) is the annihilation (creation) operator of an
+atom at site $i$ with coordinate $\b{r}_i$ and $M$ is the number of
+lattice sites. Substituting this expression in Eq. \eqref{eq:FullH}
+with $\H_{1,a} = \H_{1,a}^\mathrm{eff}$ and
+$\H_{1,fa} = \H_{1,fa}^\mathrm{eff}$ given by Eq. \eqref{eq:aeff} and
+\eqref{eq:faeff} respectively yields the following generalised
+Bose-Hubbard Hamiltonian, $\H = \H_f + \H_a + \H_{fa}$, 
+\begin{equation}
+  \H = \H_f + \sum_{i,j}^M J^\mathrm{cl}_{i,j} \bd_i b_j + 
+  \sum_{i,j,k,l}^M \frac{U_{ijkl}}{2} \bd_i \bd_j b_k b_l + 
+  \frac{\hbar}{\Delta_a} \sum_{l,m} g_l g_m \ad_l \a_m 
+  \left( \sum_{i,j}^K J^{l,m}_{i,j} \bd_i b_j \right).
+\end{equation}
+The optical field part of the Hamiltonian, $\H_f$, has remained
+unaffected by all our approximations and is given by
+Eq. \eqref{eq:Hf}. The matter-field Hamiltonian is now given by the
+well known Bose-Hubbard Hamiltonian
+\begin{equation}
+  \H_a = \sum_{i,j}^M J^\mathrm{cl}_{i,j} \bd_i b_j + 
+  \sum_{i,j,k,l}^M \frac{U_{ijkl}}{2} \bd_i \bd_j b_k b_l,
+\end{equation}
+where the first term represents atoms tunnelling between sites with a
+hopping rate given by
+\begin{equation}
+  J^\mathrm{cl}_{i,j} = \int \mathrm{d}^3 \b{r} w (\b{r} - \b{r}_i ) 
+  \left( -\frac{\b{p}^2}{2 m_a} + V_\mathrm{cl}(\b{r}) \right) w(\b{r}
+  - \b{r}_i),
+\end{equation}
+and $U_{ijkl}$ is the interaction strength given by
+\begin{equation}
+  U_{ijkl} = \frac{4 \pi a_s \hbar^2}{m_a} \int \mathrm{d}^3 \b{r} 
+  w(\b{r} - \b{r}_i) w(\b{r} - \b{r}_j) w(\b{r} - \b{r}_k) w(\b{r} - \b{r}_l).
+\end{equation}
