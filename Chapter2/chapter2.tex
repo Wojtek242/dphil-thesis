@@ -239,12 +239,13 @@ state we get
   \Psi(\b{r}) = \sum_i^M b_i w(\b{r} - \b{r}_i),
 \end{equation} 
 where $b_i$ ($\bd_i$) is the annihilation (creation) operator of an
-atom at site $i$ with coordinate $\b{r}_i$ and $M$ is the number of
-lattice sites. Substituting this expression in Eq. \eqref{eq:FullH}
-with $\H_{1,a} = \H_{1,a}^\mathrm{eff}$ and
+atom at site $i$ with coordinate $\b{r}_i$, $w(\b{r})$ is the lowest
+band Wannier function, and $M$ is the number of lattice
+sites. Substituting this expression in Eq. \eqref{eq:FullH} with
+$\H_{1,a} = \H_{1,a}^\mathrm{eff}$ and
 $\H_{1,fa} = \H_{1,fa}^\mathrm{eff}$ given by Eq. \eqref{eq:aeff} and
 \eqref{eq:faeff} respectively yields the following generalised
-Bose-Hubbard Hamiltonian, $\H = \H_f + \H_a + \H_{fa}$, 
+Bose-Hubbard Hamiltonian, $\H = \H_f + \H_a + \H_{fa}$,
 \begin{equation}
   \H = \H_f + \sum_{i,j}^M J^\mathrm{cl}_{i,j} \bd_i b_j + 
   \sum_{i,j,k,l}^M \frac{U_{ijkl}}{2} \bd_i \bd_j b_k b_l + 
@@ -266,8 +267,135 @@ hopping rate given by
   \left( -\frac{\b{p}^2}{2 m_a} + V_\mathrm{cl}(\b{r}) \right) w(\b{r}
   - \b{r}_i),
 \end{equation}
-and $U_{ijkl}$ is the interaction strength given by
+and $U_{ijkl}$ is the atomic interaction term given by
 \begin{equation}
   U_{ijkl} = \frac{4 \pi a_s \hbar^2}{m_a} \int \mathrm{d}^3 \b{r} 
   w(\b{r} - \b{r}_i) w(\b{r} - \b{r}_j) w(\b{r} - \b{r}_k) w(\b{r} - \b{r}_l).
 \end{equation}
+Both integrals above depend on the overlap between Wannier functions
+corresponding to different lattice sites. This overlap decreases
+rapidly as the distance between sites increases. Therefore, in both
+cases we can simply neglect all terms but the one that corresponds to
+the most significant overlap. Thus, for $J_{i,j}^\mathrm{cl}$ we will
+only consider $i$ and $j$ that correspond to nearest neighbours.
+Furthermore, since we will only be looking at lattices that have the
+same separtion between all its nearest neighbours (e.g. cubic or
+square lattice) we can define $J_{i,j}^\mathrm{cl} = - J^\mathrm{cl}$
+(negative sign, because this way $J^\mathrm{cl} > 0$). For the
+inter-atomic interactions this simplifies to simply considering
+on-site collisions where $i=j=k=l$ and we define $U_{iiii} =
+U$. Finally, we end up with the canonical form for the Bose-Hubbard
+Hamiltonian
+\begin{equation}
+  \H_a = -J^\mathrm{cl} \sum_{\langle i,j \rangle}^M \bd_i b_j + 
+  \frac{U}{2} \sum_{i}^M \hat{n}_i (\hat{n}_i - 1),
+\end{equation}
+where $\langle i,j \rangle$ denotes a summation over nearest
+neighbours and $\hat{n}_i = \bd_i b_i$ is the atom number operator at
+site $i$.
+
+Finally, we have the light-matter interaction part of the Hamiltonian
+given by
+\begin{equation}
+  \H_{fa} = \frac{\hbar}{\Delta_a} \sum_{l,m} g_l g_m \ad_l \a_m
+  \left( \sum_{i,j}^K J^{l,m}_{i,j} \bd_i b_j \right),
+\end{equation}
+where the coupling between the matter and optical fields is determined
+by the coefficients
+\begin{equation}
+  J^{l,m}_{i,j} = \int \mathrm{d}^3 \b{r} w(\b{r} - \b{r}_i)
+  u_l^*(\b{r}) u_m(\b{r}) w(\b{r} - \b{r}_j).
+\end{equation}
+This contribution can be separated into two parts, one which couples
+directly to the on-site atomic density and one that couples to the
+tunnelling operators. We will define the operator
+\begin{equation}
+  \hat{F}_{l,m} = \hat{D}_{l,m} + \hat{B}_{l,m},
+\end{equation}
+where $\hat{D}_{l,m}$ is the direct coupling to atomic density
+\begin{equation}
+  \hat{D}_{l,m} = \sum_{i}^K J^{l,m}_{i,i} \hat{n}_i,
+\end{equation}
+and $\hat{B}_{l,m}$ couples to the matter-field via the
+nearest-neighbour tunnelling operators
+\begin{equation}
+  \hat{B}_{l,m} = \sum_{\langle i, j \rangle}^K J^{l,m}_{i,j} \bd_i b_j,
+\end{equation}
+and we neglect couplings beyond nearest neighbours for the same reason
+as before when deriving the matter Hamiltonian.
+
+It is important to note that we are considering a situation where the
+contribution of quantized light is much weaker than that of the
+classical trapping potential. If that was not the case, it would be
+necessary to determine thw Wannier functions in a self-consistent way
+which takes into account the depth of the quantum poterntial generated
+by the quantized light modes. This significantly complicates the
+treatment, but can lead to interesting physics. Amongst other things,
+the atomic tunnelling and interaction coefficients will now depend on
+the quantum state of light.
+\mynote{cite Santiago's papers and Maschler/Igor EPJD}
+
+Therefore, combining these final simplifications we finally arrive at
+our quantum light-matter Hamiltonian
+\begin{equation}
+  \H = \H_f -J^\mathrm{cl} \sum_{\langle i,j \rangle}^M \bd_i b_j + 
+  \frac{U}{2} \sum_{i}^M \hat{n}_i (\hat{n}_i - 1) + 
+  \frac{\hbar}{\Delta_a} \sum_{l,m} g_l g_m \ad_l \a_m \hat{F}_{l,m} -
+  i \sum_l \kappa_l \ad_l \a_l,
+\end{equation}
+where we have phenomologically included the cavity decay rates
+$\kappa_l$ of the modes $a_l$. A crucial observation about the
+structure of this Hamiltonian is that in the last term, the light
+modes $a_l$ couple to the matter in a global way. Instead of
+considering individual coupling to each site, the optical field
+couples to the global state of the atoms within the illuminated region
+via the operator $\hat{F}_{l,m}$. This will have important
+implications for the system and is one of the leading factors
+responsible for many-body behaviour beyong the Bose-Hubbard
+Hamiltonian paradigm.
+
+\subsection{Scattered light behaviour}
+
+Having derived the full quantum light-matter Hamiltonian we will no
+look at the behaviour of the scattered light. We begin by looking at
+the equations of motion in the Heisenberg picture
+\begin{equation}
+  \dot{\a_l} = \frac{i}{\hbar} [\hat{H}, \a_l] = 
+  -i \left(\omega_l + U_{l,l}\hat{F}_{1,1} \right) \a_l
+   - i \sum_{m \ne l} U_{l,m} \hat{F}_{l,m} \a_m
+    - \kappa_l \a_l + \eta_l,
+\end{equation}
+where we have defined $U_{l,m} = g_l g_m / \Delta_a$. By considering
+the steady state solution in the frame rotating with the probe
+frequency $\omega_p$ we can show that the stationary solution is given
+by
+\begin{equation}
+  \a_l = \frac{\sum_{m \ne l} U_{l,m} \a_m \hat{F}_{l,m} + i \eta_l} 
+  {(\Delta_{lp} - U_{l,l} \hat{F}_{l,l}) + i \kappa_l},
+\end{equation}
+where $\Delta_{lp} = \omega_p - \omega_l$ is the detuning between the
+probe beam and the light mode $a_l$. This equation gives us a direct
+relationship between the light operators and the atomic operators. In
+the stationary limit, the quantum state of the light field
+adiabatically follows the quantum state of matter.
+
+The above equation is quite general as it includes an arbitrary number
+of light modes which can be pumped directly into the cavity or
+produced via scattering from other modes. To simplify the equation
+slightly we will neglect the cavity resonancy shift,
+$U_{l,l} \hat{F}_{l,l}$ which is possible provided the cavity decay
+rate and/or probe detuning are large enough. We will also only
+consider probing with an external coherent beam and thus we neglect
+any cavity pumping $\eta_l$. This leads to a linear relationship
+between the light mode and the atomic operator $\hat{F}_{l,m}$
+\begin{equation}
+  \a_l = \frac{\sum_{m \ne l} U_{l,m} \a_m} 
+  {\Delta_{lp} + i \kappa_l} \hat{F}_{l,m} = C \hat{F}_{l,m},
+\end{equation}
+where we have defined
+$C = \sum_{m \ne l} U_{l,m} \a_m / (\Delta_{lp} + i \kappa_l)$ which
+is essentially the Rayleigh scattering coefficient into the
+cavity. Whilst the light amplitude itself is only linear in atomic
+operators, we can easily have access to higher moments by simply
+simply considering higher moments of the $\a_l$ such as the photon
+number $\ad_l \a_l$.
