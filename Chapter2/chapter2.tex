@@ -193,6 +193,7 @@ detuning. Within this rotating frame we will take
 $\dot{\tilde{\sigma}}^- \approx 0$ and thus obtain the following
 equation for the lowering operator
 \begin{equation}
+  \label{eq:sigmam}
   \sigma^- = - \frac{i}{\Delta_a} \sum_l g_l \a_l u_l(\b{r}).
 \end{equation}
 Therefore, by inserting this expression into the Heisenberg equation
@@ -399,3 +400,170 @@ cavity. Whilst the light amplitude itself is only linear in atomic
 operators, we can easily have access to higher moments by simply
 simply considering higher moments of the $\a_l$ such as the photon
 number $\ad_l \a_l$.
+
+\subsection{Electric Field Stength}
+
+The Electric field operator at position $\b{r}$ and at time $t$ is
+usually written in terms of its positive and negative components:
+\begin{equation}
+  \b{\hat{E}}(\b{r},t) = \b{\hat{E}}^{(+)}(\b{r},t) + \b{\hat{E}}^{(-)}(\b{r},t),
+\end{equation}
+where
+\begin{subequations}
+  \begin{equation}
+    \b{\hat{E}}^{(+)}(\b{r},t) = \sum_{\b{k}} \hat{\epsilon}_{\b{k}} 
+    \mathcal{E}_{\b{k}} \a_{\b{k}} e^{-i \omega_{\b{k}} t + i \b{k} \cdot \b{r}},
+  \end{equation}
+  \begin{equation}
+    \b{\hat{E}}^{(-)}(\b{r},t) = \sum_{\b{k}} \hat{\epsilon}_{\b{k}} 
+    \mathcal{E}_{\b{k}} \a^\dagger_{\b{k}} e^{i \omega_{\b{k}} t - i \b{k} \cdot \b{r}},
+  \end{equation}
+\end{subequations}
+$\hat{\epsilon}_{\b{k}}$ is a unit polarization vector, $\b{k}$ is the
+wave vector,
+$\mathcal{E}_{\b{k}} = \sqrt{\hbar \omega_{\b{k}} / 2 \epsilon_0 V}$,
+$\epsilon_0$ is the free space permittivity, $V$ is the quantization
+volume and $\a_\b{k}$ and $\a_\b{k}^\dagger$ are the annihilation and
+creation operators respectively of a photon in mode $\b{k}$, and
+$\omega_\b{k}$ is the angular frequency of mode $\b{k}$.
+
+In Ref. \cite{Scully} it was shown that the operator
+$\b{\hat{E}}^{(+)}(\b{r},t)$ due to light scattering from a single
+atom located at $\b{r}^\prime$ at the observation point $\b{r}$ is
+given by
+\begin{equation}
+  \label{eq:Ep}
+  \b{\hat{E}}^{(+)}(\b{r},\b{r}^\prime,t) = \frac{\omega_a^2 d \sin \eta}{4 \pi
+    \epsilon_0 c^2 |\b{r} - \b{r}^\prime|} \hat{\epsilon} \sigma^-
+  \left( \b{r}^\prime, t - \frac{|\b{r} - \b{r}^\prime|}{c} \right),
+\end{equation}
+with a similar expression for
+$\b{E}^{(-)}(\b{r},\b{r}^\prime,t)$. Eq. \eqref{eq:Ep} is valid only
+in the far field, $\eta$ is the angle the dipole makes with
+$\b{r} - \b{r}^\prime$, $\hat{\epsilon}$ is the polarization vector
+which is perpendicular to $\b{r} - \b{r}^\prime$ and lies in the plane
+defined by $\b{r} - \b{r}^\prime$ and the dipole, $\omega_a$ is the
+atomic transition frequency, and $d$ is the dipole matrix element
+between the two levels, and $c$ is the speed of light in vacuum.
+
+
+We have already derived an expression for the atomic lowering
+operator, $\sigma^-$, in Eq. \eqref{eq:sigmam} and it is given by
+\begin{equation}
+  \sigma^- = - \frac{i} {\Delta_a} \sum_\b{k} g_\b{k} a_\b{k} u_\b{k}(\b{r}).
+\end{equation}
+We will want to substitute this expression into Eq. \eqref{eq:Ep}, but
+first we note that in the setup we consider the coherent probe will be
+much stronger than the scattered modes. This in turn implies that the
+expression for $\sigma^-$ will be dominated by this external
+probe. Therefore, we drop the sum and consider only a single wave
+vector, $\b{k}_0$, of the dominant contribution from the external
+beam.
+
+We now use the definititon of the atom-light coupling constant
+\cite{Scully} to make the substitution
+$g_0 a_0 = -i \Omega_0 e^{-i \omega_0 t} / 2$, where
+$\Omega_0$ is the Rabi frequency for the probe-atom system. We now
+evaluate the polarisation operator at the retarded time
+\begin{equation}
+  \sigma^- \left(\b{r}^\prime, t - \frac{|\b{r} - \b{r}^\prime|}{c} \right) =
+  -\frac{\Omega_0}{2 \Delta_a} u_0 (\b{r}^\prime) \exp \left[-i \omega_0
+    \left( t - \frac{|\b{r} - \b{r}^\prime|}{c} \right)\right].
+\end{equation}
+We are considering observation in the far field regime so
+$|\b{r} - \b{r}^\prime| \approx r - \hat{\b{r}} \cdot
+\b{r}^\prime$. We also consider the incoming, $\b{k}_0$, and the
+outgoing, $\mathbf{k}_1$, waves to be of the same wavelength,
+$|\b{k}_0| = |\b{k}_1| = k = \omega_0 / c$, hence
+$(\omega_0 / c) |\b{r} - \b{r}^\prime| \approx k (r - \hat{\b{r}}
+\cdot \b{r}^\prime) = \b{k}_1 \cdot (\b{r} - \b{r}^\prime )$ and
+\begin{equation}
+  \sigma^- \left(\b{r}^\prime, t - \frac{|\b{r} - \b{r}^\prime|}{c} \right) \approx
+  -\frac{\Omega_0}{2 \Delta_a} u_0 (\b{r}^\prime) \exp \left[i
+    \b{k}_1 \cdot (\b{r} - \b{r}^\prime ) - i \omega_0 t \right].
+\end{equation}
+
+The many-body version of the electric field operator is given by
+\begin{equation}
+  \b{\hat{E}}^{(+)}_N(\b{r},t) = \int \mathrm{d}^3 \b{r}^\prime
+  \Psi^\dagger (\b{r}^\prime) \b{\hat{E}}^{(+)}(\b{r},\b{r}^\prime,t) \Psi(\b{r}^\prime),
+\end{equation}
+where $\Psi(\b{r})$ is the atomic matter-field operator. As before, we
+expand this field operator using localized Wannier functions
+corresponding to the lattice potential and keeping only the lowest
+vibrational state at each site:
+$\Psi(\b{r}) = \sum_i b_i w(\b{r} - \b{r}_i)$, where $b_i$ is the
+annihilation operator of an atom at site $i$ with the coordinate
+$\b{r}_i$. Thus, the relevant many-body operator is
+\begin{subequations}
+  \begin{equation}
+    \b{\hat{E}}^{(+)}_N(\b{r},t) = \hat{\epsilon} C_E
+    \sum_{i,j}^K \bd_i b_j \int \mathrm{d}^3 \b{r}^\prime
+    w^* (\b{r}^\prime - \b{r}_i)  \frac{u_0
+      (\b{r}^\prime)}{|\b{r} - \b{r}^\prime|} e^ {i \b{k}_1
+      \cdot (\b{r} - \b{r}^\prime ) - i \omega_0 t }
+    w(\b{r}^\prime - \b{r}_j),
+  \end{equation}
+  \begin{equation}
+    C_E = -\frac{\omega_a^2 \Omega_0 d \sin \eta}{8 \pi \epsilon_0 c^2
+      \Delta_a}
+  \end{equation}
+\end{subequations}
+where $K$ is the number of illuminated sites. We now assume that the
+lattice is deep and that the light scattering occurs on time scales
+much shorter than atom tunneling. Therefore, we ignore all terms for
+which $i \ne j$ and the remaining integrals become $\int \mathrm{d}^3
+\b{r}_0 w^*(\b{r}_0 - \b{r}_i) f (\b{r})
+w(\b{r}_0 - \b{r}_i) = f(\b{r}_i)$. The final form of
+the many body operator is then
+\begin{equation}
+  \b{E}^{(+)}_N(\b{r},t) = \hat{\epsilon} C_E
+  \sum_{j = 1}^K \hat{n}_j \frac{u_0 (\b{r}_j)}{|\b{r} -
+    \b{r}_j|} e^ {i \b{k}_1 \cdot (\b{r} - \b{r}_j
+    ) - i \omega_0 t },
+\end{equation}
+where $\hat{n}_i = b^\dagger_ib_i$ is the atom number operator at site
+$i$. We will now consider the incoming probe to be a plane wave,
+$u_0(\b{r}) = e^{i \b{k}_0 \cdot \b{r}}$, and we
+approximate $|\b{r} - \b{r}_j| \approx r$ in the
+denominator. Thus,
+\begin{equation}
+  \b{E}^{(+)}_N(\b{r},t) = \hat{\epsilon} C_E \frac{e^ {ikr - i\omega_0t}}{r}
+  \sum_{j = 1}^K \hat{n}_j e^ {i (\b{k}_0 - \b{k}_1) \cdot \b{r}_j}.
+\end{equation}
+We note that this is exactly the same form of the optical field as
+derived from a generalised Bose-Hubbard model which considers a fully
+quantum light-matter interaction Hamiltonian \cite{mekhov2007prl,
+  mekhov2007pra, mekhov2012}. We can even express the result in terms of
+the $\hat{D} = \sum_j^K u_1^*(\b{r}_j) u_0(\b{r}_j)
+\hat{n}_j$ formalism used in those works
+\begin{equation}
+  \b{E}^{(+)}_N(\b{r},t) = \hat{\epsilon} C_E \frac{e^
+    {ikr - i\omega_0t}}{r} \hat{D}.
+\end{equation}
+
+The average light intensity at point $\b{r}$ at time $t$ is given
+by the formula $I = c \epsilon_0 |E|^2/2$ and yields
+\begin{equation}
+  \langle I (\b{r}, t) \rangle = c \epsilon_0 \langle
+  E^{(-)} (\b{r}, t) E^{(+)} (\b{r}, t) \rangle =
+  \frac{c \epsilon_0}{r^2} C_E^2 \langle \hat{D}^* \hat{D} \rangle.
+\end{equation}
+The scattering is dominated by a uniform background for which $\langle
+\hat{D}^* \hat{D} \rangle \approx N_K$ for a superfluid
+\cite{mekhov2012}, where $N_K$ is the mean number of atoms in the
+illuminated volume. Thus, the approximate number of photons scattered
+per second can be obtained by integrating over a sphere
+\begin{equation}
+  n_{\Phi} = \frac{4 \pi c \epsilon_0}{3 \hbar \omega_a} \left(\frac{\omega_a^2
+      \Omega_0 d}{8 \pi \epsilon_0 c^2 \Delta_a}\right)^2 N_K.
+\end{equation}
+In the Weisskopf-Wigner approximation it can be shown \cite{Scully}
+that for a two level system the decay constant, $\Gamma$, is
+\begin{equation}
+  \Gamma = \frac{\omega_a^3 d^2}{3 \pi \epsilon_0 \hbar c^3}.
+\end{equation}
+Therefore, we can now express the quantity $n_{\Phi}$ as
+\begin{equation}
+  n_{\Phi} = \frac{1}{8} \left(\frac{\Omega_0}{\Delta_a}\right)^2 \frac{\Gamma}{2} N_K.
+\end{equation}
