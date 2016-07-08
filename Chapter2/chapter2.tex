@@ -450,7 +450,8 @@ between the two levels, and $c$ is the speed of light in vacuum.
 We have already derived an expression for the atomic lowering
 operator, $\sigma^-$, in Eq. \eqref{eq:sigmam} and it is given by
 \begin{equation}
-  \sigma^- = - \frac{i} {\Delta_a} \sum_\b{k} g_\b{k} a_\b{k} u_\b{k}(\b{r}).
+  \sigma^-(\b{r}, t) = - \frac{i} {\Delta_a} \sum_\b{k} g_\b{k}
+  a_\b{k}(t) u_\b{k}(\b{r}).
 \end{equation}
 We will want to substitute this expression into Eq. \eqref{eq:Ep}, but
 first we note that in the setup we consider the coherent probe will be
@@ -458,7 +459,7 @@ much stronger than the scattered modes. This in turn implies that the
 expression for $\sigma^-$ will be dominated by this external
 probe. Therefore, we drop the sum and consider only a single wave
 vector, $\b{k}_0$, of the dominant contribution from the external
-beam.
+beam corresponding to the mode $\a_0$.
 
 We now use the definititon of the atom-light coupling constant
 \cite{Scully} to make the substitution
@@ -567,3 +568,51 @@ Therefore, we can now express the quantity $n_{\Phi}$ as
 \begin{equation}
   n_{\Phi} = \frac{1}{8} \left(\frac{\Omega_0}{\Delta_a}\right)^2 \frac{\Gamma}{2} N_K.
 \end{equation}
+Estimates of the scattering rate using real experimental parameters
+are given in Table \ref{tab:photons}.
+
+\begin{table}[!htbp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      Value & Miyake \emph{et al.} & Weitenberg \emph{et al.} \\ \hline
+      $\omega_a$ & \multicolumn{2}{|c|}{$2 \pi \cdot 384$ THz}\\ \hline
+      $\Gamma$ & \multicolumn{2}{|c|}{$2 \pi \cdot 6.07$ MHz} \\ \hline
+      $\Delta_a$ & $2\pi \cdot 30$ MHz & $2 \pi \cdot 85$ MHz \\ \hline
+      $I$ & $4250$ Wm$^{-2}$ & N/A \\ \hline
+      $\Omega_0$ & 293$\times 10^6$ s$^{-1}$ & 42.5$\times 10^6$ s$^{-1}$ \\ \hline
+      $N_K$ & 10$^5$ & 147 \\ \hline \hline
+      $n_{\Phi}$ & $6 \times 10^{11}$ s$^{-1}$ & $2 \times 10^6$ s$^{-1}$ \\ \hline
+    \end{tabular}
+  \end{center}
+  \caption{ Rubidium data taken from Ref. \cite{steck}; Miyake
+    \emph{et al.}: based on Ref. \cite{miyake2011}. The $5^2S_{1/2}$,
+    $F=2 \rightarrow 5^2P_{3/2}$, $F^\prime = 3$ transition of
+    $^{87}$Rb is considered. For this transition the Rabi frequency is
+    actually larger than the detuning and and effects of saturation
+    should be taken into account in a more complete analysis. However,
+    it is included for discussion. The detuning is said to be a few
+    natural linewidths. Note that it is much smaller than
+    $\Omega_0$. The Rabi fequency is $\Omega_0 =
+    (d_\mathrm{eff}/\hbar)\sqrt{2 I / c \epsilon_0}$ which is obtained
+    from definition of Rabi frequency, $\Omega = \mathbf{d} \cdot
+    \mathbf{E} / \hbar$, assuming the electric field is parallel to
+    the dipole, and the relation $I = c \epsilon_0 |E|^2 /2$. We used
+    $d_\mathrm{eff} = 1.73 \times 10^{-29}$ Cm \cite{steck};
+    Weitenberg \emph{et al.}: based on Ref. \cite{weitenberg2011,
+      weitenbergThesis}. The $5^2S_{1/2} \rightarrow 5^2P_{3/2}$
+    transition of $^{87}$Rb is used. Ref. \cite{weitenberg2011} gives
+    the free space detuning to be $\Delta_\mathrm{free} = - 2 \pi
+    \cdot 45$ MHz. Ref. \cite{weitenbergThesis} clarifies that the
+    relevant detuning is $\Delta = \Delta_\mathrm{free} +
+    \Delta_\mathrm{lat}$, where $\Delta_\mathrm{lat} = - 2 \pi \cdot
+    40$ MHz. Ref. \cite{weitenbergThesis} uses a saturation parameter
+    $s_\mathrm{tot}$ to quantify the intensity of the beams which is
+    related to the Rabi frequency, $s_\mathrm{tot} = 2 \Omega^2 /
+    \Gamma^2$ \cite{steck,foot}. We can extract $s_\mathrm{tot}$ for
+    the experiment from the total scattering rate by
+    $\Gamma_\mathrm{sc} = (\Gamma/2) (s_\mathrm{tot}) /
+    (1+s_\mathrm{tot}+(2 \Delta / \Gamma)^2)$. A scattering rate of 60
+    kHz per atom \cite{weitenberg2011} gives $s_\mathrm{tot} =
+    2.5$.\label{tab:photons}}
+\end{table}
