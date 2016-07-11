@@ -70,12 +70,12 @@ quantum potential in contrast to the classical lattice trap.
 \begin{figure}[htbp!]
   \centering
   \includegraphics[width=1.0\textwidth]{LatticeDiagram}
-  \caption[LatticeDiagram]{Atoms (green) trapped in an optical lattice
-    are illuminated by a coherent probe beam (red). The light scatters
-    (blue) in free space or into a cavity and is measured by a
-    detector. If the experiment is in free space light can scatter in
-    any direction. A cavity on the other hand enhances scattering in
-    one particular direction.}
+  \caption[Experimental Setup]{Atoms (green) trapped in an optical
+    lattice are illuminated by a coherent probe beam (red). The light
+    scatters (blue) in free space or into a cavity and is measured by
+    a detector. If the experiment is in free space light can scatter
+    in any direction. A cavity on the other hand enhances scattering
+    in one particular direction.}
   \label{fig:LatticeDiagram}
 \end{figure}
 
@@ -401,6 +401,38 @@ operators, we can easily have access to higher moments by simply
 simply considering higher moments of the $\a_l$ such as the photon
 number $\ad_l \a_l$.
 
+\subsection{Simplifications for Two Modes and Linear Coupling}
+
+So far we have derived a general Hamiltonian for an arbitrary number
+of light modes. However, most of the time we will be considering a
+much simpler setup, namely the case with a coherent probe beam and a
+single scattered mode as shown in Fig. \ref{fig:LatticeDiagram}. We
+can use this fact to simplify our equations. Even though we consider
+only one scattered mode, this treatment is also applicable to free
+space scattering where the atoms can emit light in any direction. We
+will simply neglect multiple scattering events, thus we can simply
+vary the scattered mode's angle to obtain results for all possible
+directions.
+
+We consider the two modes indexed with $l = 0$ and $1$, $\a_0$ and $\a_1$. We
+will take $\a_0$ to be the external probe beam which is incident on the
+quantum gas (it is not pumped into the cavity via $\eta_0$).
+Furthermore, we will consider it to be in a coherent state. Therefore,
+we can treat $a_0$ in our equations like a complex number instead of a
+full operator. This leaves $\a_1$ as our scattered light mode. We can
+now simplify the Hamiltonian to
+\begin{align}
+  \H = & \hbar \left( \omega_1 + U_{1,1} \hat{F}_{1,1} \right) \ad_1
+  \a_1 -J^\mathrm{cl} \sum_{\langle i,j \rangle}^M \bd_i b_j +
+  \frac{U}{2} \sum_{i}^M \hat{n}_i (\hat{n}_i - 1) \nonumber \\ &
+  + \hbar U_{0,0} |a_0|^2 \hat{F}_{0,0} + \hbar U_{0,1} \left[ a_0^*
+    \a_1 \hat{F}_{0,1} + \ad_1 a_0 \hat{F}_{1,0} \right] - i \kappa
+  \ad_1 \a_1,
+\end{align}
+
+\subsection{Density and Phase Observables}
+
+
 \subsection{Electric Field Stength}
 
 The Electric field operator at position $\b{r}$ and at time $t$ is
@@ -572,47 +604,47 @@ Estimates of the scattering rate using real experimental parameters
 are given in Table \ref{tab:photons}.
 
 \begin{table}[!htbp]
-  \begin{center}
-    \begin{tabular}{|c|c|c|}
-      \hline
-      Value & Miyake \emph{et al.} & Weitenberg \emph{et al.} \\ \hline
-      $\omega_a$ & \multicolumn{2}{|c|}{$2 \pi \cdot 384$ THz}\\ \hline
-      $\Gamma$ & \multicolumn{2}{|c|}{$2 \pi \cdot 6.07$ MHz} \\ \hline
-      $\Delta_a$ & $2\pi \cdot 30$ MHz & $2 \pi \cdot 85$ MHz \\ \hline
-      $I$ & $4250$ Wm$^{-2}$ & N/A \\ \hline
-      $\Omega_0$ & 293$\times 10^6$ s$^{-1}$ & 42.5$\times 10^6$ s$^{-1}$ \\ \hline
-      $N_K$ & 10$^5$ & 147 \\ \hline \hline
-      $n_{\Phi}$ & $6 \times 10^{11}$ s$^{-1}$ & $2 \times 10^6$ s$^{-1}$ \\ \hline
-    \end{tabular}
-  \end{center}
-  \caption{ Rubidium data taken from Ref. \cite{steck}; Miyake
-    \emph{et al.}: based on Ref. \cite{miyake2011}. The $5^2S_{1/2}$,
-    $F=2 \rightarrow 5^2P_{3/2}$, $F^\prime = 3$ transition of
-    $^{87}$Rb is considered. For this transition the Rabi frequency is
-    actually larger than the detuning and and effects of saturation
-    should be taken into account in a more complete analysis. However,
-    it is included for discussion. The detuning is said to be a few
-    natural linewidths. Note that it is much smaller than
-    $\Omega_0$. The Rabi fequency is $\Omega_0 =
-    (d_\mathrm{eff}/\hbar)\sqrt{2 I / c \epsilon_0}$ which is obtained
-    from definition of Rabi frequency, $\Omega = \mathbf{d} \cdot
-    \mathbf{E} / \hbar$, assuming the electric field is parallel to
-    the dipole, and the relation $I = c \epsilon_0 |E|^2 /2$. We used
-    $d_\mathrm{eff} = 1.73 \times 10^{-29}$ Cm \cite{steck};
-    Weitenberg \emph{et al.}: based on Ref. \cite{weitenberg2011,
-      weitenbergThesis}. The $5^2S_{1/2} \rightarrow 5^2P_{3/2}$
-    transition of $^{87}$Rb is used. Ref. \cite{weitenberg2011} gives
-    the free space detuning to be $\Delta_\mathrm{free} = - 2 \pi
-    \cdot 45$ MHz. Ref. \cite{weitenbergThesis} clarifies that the
-    relevant detuning is $\Delta = \Delta_\mathrm{free} +
-    \Delta_\mathrm{lat}$, where $\Delta_\mathrm{lat} = - 2 \pi \cdot
-    40$ MHz. Ref. \cite{weitenbergThesis} uses a saturation parameter
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Value & Miyake \emph{et al.} & Weitenberg \emph{et al.} \\ \hline
+    $\omega_a$ & \multicolumn{2}{|c|}{$2 \pi \cdot 384$ THz}\\ \hline
+    $\Gamma$ & \multicolumn{2}{|c|}{$2 \pi \cdot 6.07$ MHz} \\ \hline
+    $\Delta_a$ & $2\pi \cdot 30$ MHz & $2 \pi \cdot 85$ MHz \\ \hline
+    $I$ & $4250$ Wm$^{-2}$ & N/A \\ \hline
+    $\Omega_0$ & 293$\times 10^6$ s$^{-1}$ & 42.5$\times 10^6$ s$^{-1}$ \\ \hline
+    $N_K$ & 10$^5$ & 147 \\ \hline \hline
+    $n_{\Phi}$ & $6 \times 10^{11}$ s$^{-1}$ & $2 \times 10^6$ s$^{-1}$ \\ \hline
+  \end{tabular}
+  \caption[Photon Scattering Rates]{ Rubidium data taken from
+    Ref. \cite{steck}; Miyake \emph{et al.}: based on
+    Ref. \cite{miyake2011}. The $5^2S_{1/2}$, $F=2 \rightarrow
+    5^2P_{3/2}$, $F^\prime = 3$ transition of $^{87}$Rb is
+    considered. For this transition the Rabi frequency is actually
+    larger than the detuning and and effects of saturation should be
+    taken into account in a more complete analysis. However, it is
+    included for discussion. The detuning is said to be a few natural
+    linewidths. Note that it is much smaller than $\Omega_0$. The Rabi
+    fequency is $\Omega_0 = (d_\mathrm{eff}/\hbar)\sqrt{2 I / c
+      \epsilon_0}$ which is obtained from definition of Rabi
+    frequency, $\Omega = \mathbf{d} \cdot \mathbf{E} / \hbar$,
+    assuming the electric field is parallel to the dipole, and the
+    relation $I = c \epsilon_0 |E|^2 /2$. We used $d_\mathrm{eff} =
+    1.73 \times 10^{-29}$ Cm \cite{steck}; Weitenberg \emph{et al.}:
+    based on Ref. \cite{weitenberg2011, weitenbergThesis}. The
+    $5^2S_{1/2} \rightarrow 5^2P_{3/2}$ transition of $^{87}$Rb is
+    used. Ref. \cite{weitenberg2011} gives the free space detuning to
+    be $\Delta_\mathrm{free} = - 2 \pi \cdot 45$
+    MHz. Ref. \cite{weitenbergThesis} clarifies that the relevant
+    detuning is $\Delta = \Delta_\mathrm{free} + \Delta_\mathrm{lat}$,
+    where $\Delta_\mathrm{lat} = - 2 \pi \cdot 40$
+    MHz. Ref. \cite{weitenbergThesis} uses a saturation parameter
     $s_\mathrm{tot}$ to quantify the intensity of the beams which is
     related to the Rabi frequency, $s_\mathrm{tot} = 2 \Omega^2 /
     \Gamma^2$ \cite{steck,foot}. We can extract $s_\mathrm{tot}$ for
     the experiment from the total scattering rate by
     $\Gamma_\mathrm{sc} = (\Gamma/2) (s_\mathrm{tot}) /
     (1+s_\mathrm{tot}+(2 \Delta / \Gamma)^2)$. A scattering rate of 60
-    kHz per atom \cite{weitenberg2011} gives $s_\mathrm{tot} =
-    2.5$.\label{tab:photons}}
+    kHz per atom \cite{weitenberg2011} gives $s_\mathrm{tot} = 2.5$.}
+  \label{tab:photons}
 \end{table}
