@@ -19,53 +19,69 @@ Nondestructive Addressing} %Title of the Third Chapter
 Having developed the basic theoretical framework within which we can
 treat the fully quantum regime of light-matter interactions we now
 consider possible applications. There are three prominent directions
-in which we can apply our model: nondestructive probing, quantum
-measurement backaction and quantum optical lattices. Here, we deal
-with the first of the three options.
+in which we can proceed: nondestructive probing of the quantum state
+of matter, quantum measurement backaction induced dynamics and quantum
+optical lattices. Here, we deal with the first of the three options.
 
-\mynote{adjust for the fact that the derivation of B operator has been moved}
-\mynote{update some outdated mentions to previous experiments}
 In this chapter we develop a method to measure properties of ultracold
-gases in optical lattices by light scattering. We show that such
-measurements can reveal not only density correlations, but also
-matter-field interference.  Recent quantum non-demolition (QND)
-schemes \cite{rogers2014, mekhov2007prl, eckert2008} probe density
-fluctuations and thus inevitably destroy information about phase,
-i.e.~the conjugate variable, and as a consequence destroy matter-field
-coherence. In contrast, we focus on probing the atom interference
-between lattice sites. Our scheme is nondestructive in contrast to
-totally destructive methods such as time-of-flight measurements. It
+gases in optical lattices by light scattering. In the previous chapter
+we have shown that quantum light field couples to the bosons via the
+operator $\hat{F}$. This is the key element of the scheme we propose
+as this makes it sensitive to the quantum state of the matter and all
+of its possible superpositions which will be reflected in the quantum
+state of the light itself. We have also shown in section
+\ref{sec:derivation} that this coupling consists of two parts, a
+density component $\hat{D}$ given by Eq. \eqref{eq:D}, and a phase
+component $\hat{B}$ given by Eq. \eqref{eq:B}. Therefore, when probing
+the quantum state of the ultracold gas we can have access to not only
+density correlations, but also matter-field interference at its
+shortest possible distance in an optical lattice, i.e.~the lattice
+period. Previous work on quantum non-demolition (QND) schemes
+\cite{rogers2014, mekhov2007prl, eckert2008} probe only the density
+component as it is generally challenging to couple to the matter-field
+observables directly. Here, we will consider nondestructive probing of
+both density and interference operators.
+
+Firstly, we will consider the simpler and more typical case of
+coupling to the atom number operators via $\hat{F} =
+\hat{D}$. However, we show that light diffraction in this regime has
+several nontrivial characteristics due to the fully quantum nature of
+the interaction. Firstly, we show that the angular distribution has
+multiple interesting features even when classical diffraction is
+forbidden facilitating their experimental observation. We derive new
+generalised Bragg diffraction conditions which are different to their
+classical counterpart. Furthermore, due to the fully quantum nature of
+the interaction our proposal is capable of probing the quantum state
+beyond mean-field prediction. We demonstrate this by showing that this
+scheme is capable of distinguishing all three phases in the Mott
+insulator - superfluid - Bose glass phase transition in a 1D
+disordered optical lattice which is not very well described by a
+mean-field treatment. We underline that transitions in 1D are much
+more visible when changing an atomic density rather than for
+fixed-density scattering. It was only recently that an experiment
+distinguished a Mott insulator from a Bose glass \cite{derrico2014}
+via a series of destructive measurements. Our proposal, on the other
+hand, is nondestructive and is capable of extracting all the relevant
+information in a single experiment.
+
+Having shown the possibilities created by this nondestructive
+measurement scheme we move on to considering light scattering from the
+phase related observables via the operator $\hat{F} = \hat{B}$. This
 enables in-situ probing of the matter-field coherence at its shortest
 possible distance in an optical lattice, i.e. the lattice period,
 which defines key processes such as tunnelling, currents, phase
-gradients, etc. This is achieved by concentrating light between the
-sites. By contrast, standard destructive time-of-flight measurements
-deal with far-field interference and a relatively near-field one was
-used in Ref. \cite{miyake2011}. Such a counter-intuitive configuration
-may affect works on quantum gases trapped in quantum potentials
-\cite{mekhov2012, mekhov2008, larson2008, chen2009, habibian2013,
-  ivanov2014, caballero2015} and quantum measurement-induced
-preparation of many-body atomic states \cite{mazzucchi2016,
-  mekhov2009prl, pedersen2014, elliott2015}. Within the mean-field
-treatment, this enables measurements of the order parameter,
-matter-field quadratures and squeezing. This can have an impact on
-atom-wave metrology and information processing in areas where quantum
-optics already made progress, e.g., quantum imaging with pixellized
-sources of non-classical light \cite{golubev2010, kolobov1999}, as an
-optical lattice is a natural source of multimode nonclassical matter
-waves.
+gradients, etc. This is in contrast to standard destructive
+time-of-flight measurements which deal with far-field interference
+although a relatively near-field scheme was use in
+Ref. \cite{miyake2011}. We show how within the mean-field treatment,
+this enables measurements of the order parameter, matter-field
+quadratures and squeezing. This can have an impact on atom-wave
+metrology and information processing in areas where quantum optics
+already made progress, e.g., quantum imaging with pixellized sources
+of non-classical light \cite{golubev2010, kolobov1999}, as an optical
+lattice is a natural source of multimode nonclassical matter waves.
 
-Furthermore, the scattering angular distribution is nontrivial, even
-when classical diffraction is forbidden and we derive generalized
-Bragg conditions for this situation. The method works beyond
-mean-field, which we demonstrate by distinguishing all three phases in
-the Mott insulator - superfluid - Bose glass phase transition in a 1D
-disordered optical lattice. We underline that transitions in 1D are
-much more visible when changing an atomic density rather than for
-fixed-density scattering. It was only recently that an experiment
-distinguished a Mott insulator from a Bose glass \cite{derrico2014}.
-
-\section{Global Nondestructive Measurement}
+\section{Coupling to the Quantum State of Matter}
 
 As we have seen in section \ref{sec:a} under certain approximations
 the scattered light mode, $\a_1$, is linked to the quantum state of
@@ -77,9 +93,10 @@ matter via
 where the atomic operators $\hat{D}$ and $\hat{B}$, given by
 Eq. \eqref{eq:D} and Eq. \eqref{eq:B}, are responsible for the
 coupling to on-site density and inter-site interference
-respectively. It crucial to note that light couples to the bosons via
-an operator as this makes it sensitive to the quantum state of the
-matter.
+respectively. It is crucial to note that light couples to the bosons
+via an operator as this makes it sensitive to the quantum state of the
+matter as this will imprint the fluctuations in the quantum state of
+the scattered light.
 
 Here, we will use this fact that the light is sensitive to the atomic
 quantum state due to the coupling of the optical and matter fields via
@@ -87,97 +104,149 @@ operators in order to develop a method to probe the properties of an
 ultracold gas. Therefore, we neglect the measurement back-action and
 we will only consider expectation values of light observables. Since
 the scheme is nondestructive (in some cases, it even satisfies the
-stricter requirements for a QND measurement \cite{mekhov2007pra,
-  mekhov2012}) and the measurement only weakly perturbs the system,
+stricter requirements for a QND measurement \cite{mekhov2012,
+  mekhov2007pra}) and the measurement only weakly perturbs the system,
 many consecutive measurements can be carried out with the same atoms
-without preparing a new sample. Again, we will show how the extreme
+without preparing a new sample. We will show how the extreme
 flexibility of the the measurement operator $\hat{F}$ allows us to
 probe a variety of different atomic properties in-situ ranging from
 density correlations to matter-field interference.
 
-\subsection{On-site density measurements}
+\subsection{On-site Density Measurements}
 
-Typically, the dominant term in $\hat{F}$ is the density term
-$\hat{D}$, rather than inter-site matter-field interference $\hat{B}$
-\cite{mekhov2007pra, rist2010, lakomy2009, ruostekoski2009,
-  LP2009}. However, before we move onto probing the interference
-terms, $\hat{B}$, we will first discuss typical light scattering. We
-start with a simpler case when scattering is faster than tunneling and
-$\hat{F} = \hat{D}$. This corresponds to a QND scheme
-\cite{mekhov2007prl, mekhov2007pra, eckert2008, rogers2014}. The
-density-related measurement destroys some matter-phase coherence in
-the conjugate variable \cite{mekhov2009pra, LP2010, LP2011}
-$\bd_i b_{i+1}$, but this term is neglected. For this purpose we will
-define an auxiliary quantity,
+We have seen in section \ref{sec:B} that typically the dominant term
+in $\hat{F}$ is the density term $\hat{D}$ \cite{LP2009,
+  mekhov2007pra, rist2010, lakomy2009, ruostekoski2009}. This is
+simply due to the fact that atoms are localised with lattice sites
+leading to an effective coupling with atom number operators instead of
+inter-site interference terms. Therefore, we will first consider
+nondestructive probing of the density related observables of the
+quantum gas. However, we will focus on the novel nontrivial aspects
+that go beyond the work in Ref. \cite{mekhov2012, mekhov2007prl,
+  mekhov2007pra} which only considered a few extremal cases.
+
+As we are only interested in the quantum information imprinted in the
+state of the optical field we will simplify our analysis by
+considering the light scattering to be much faster than the atomic
+tunnelling. Therefore, our scheme is actually a QND scheme
+\cite{rogers2014, mekhov2007prl, mekhov2007pra, eckert2008} as
+normally density-related measurements destroy the matter-phase
+coherence since it is its conjugate variable, but here we neglect the
+$\bd_i b_j$ terms. Furthermore, we will consider a deep
+lattice. Therefore, the Wannier functions will be well localised
+within their corresponding lattice sites and thus the coefficients
+$J_{i,i}$ reduce to $u_1^*(\b{r}_i) u_0(\b{r}_i)$ leading to
+\begin{equation}
+  \label{eq:D-3}
+  \hat{D}=\sum_i^K u_1^*(\b{r}_i) u_0(\b{r}_i) \hat{n}_i,
+\end{equation} 
+which for travelling
+[$u_l(\b{r})=\exp(i \b{k}_l \cdot \b{r}+i\varphi_l)$] or standing
+[$u_l(\b{r})=\cos(\b{k}_l \cdot \b{r}+\varphi_l)$] waves is just a
+density Fourier transform at one or several wave vectors
+$\pm(\b{k}_1 \pm \b{k}_0)$. 
+
+We will now define a new auxiliary quantity to aid our analysis,
 \begin{equation}
   \label{eq:R}
   R = \langle \ad_1 \a_1 \rangle - | \langle \a_1 \rangle |^2,
 \end{equation}
-which we will call the ``quantum addition'' to light scattering. $R$
-is simply the full light intensity minus the classical field intensity
-and thus it faithfully represents the new contribution from the
-quantum light-matter interaction to the diffraction pattern.
+which we will call the ``quantum addition'' to light scattering. By
+construction $R$ is simply the full light intensity minus the
+classical field diffraction. In order to justify its name we will show
+that this quantity depends purely quantum mechanical properties of the
+ultracold gase. We will substitute $\a_1 = C \hat{D}$ using
+Eq. \eqref{eq:D-3} into our expression for $R$ in Eq. \eqref{eq:R} and
+we will make use of the shorthand notation
+$A_i = u_1^*(\b{r}_i) u_0(\b{r}_i)$. The result is
+\begin{equation}
+  R = |C|^2 \sum_{i,j}^K A^*_i A_j \langle \delta \hat{n}_i \delta
+  \hat{n}_j \rangle,
+\end{equation}
+where $\delta \hat{n}_i = \hat{n}_i - \langle \hat{n}_i
+\rangle$. Thus, we can clearly see that $R$ is a result of light
+scattering from fluctuations in the atom number which is a purely
+quantum mechanical property of a system. Therefore, $R$, the ``quantum
+addition'' faithfully represents the new contribution from the quantum
+light-matter interaction to the diffraction pattern.
+
+If instead we are interested in quantities linear in $\hat{D}$, we can
+measure the quadrature of the light fields which in section
+\ref{sec:a} we saw that $\hat{X}_\phi = |C| \hat{X}^F_\beta$. For the
+case when both the scattered mode and probe are travelling waves the
+quadrature
+\begin{equation} 
+  \hat{X}^F_\beta = \frac{1}{2} \left( \hat{F} e^{-i \beta} +
+    \hat{F}^\dagger e^{i \beta} \right) = \sum_i^K \hat{n}_i\cos[(\b{k}_1 - \b{k}_2) \cdot
+  \b{r}_i - \beta].
+\end{equation} 
+Note that different light quadratures are differently coupled to the
+atom distribution, hence by varying the local oscillator phase, and
+thus effectively $\beta$, and/or the detection angle one can scan the
+whole range of couplings. A similar expression exists for $\hat{D}$
+for a standing wave probe, where $\beta$ is replaced by $\varphi_0$,
+and scanning is achieved by varying the position of the wave with
+respect to atoms.
+
+The ``quantum addition'', $R$, and the quadrature variance,
+$(\Delta X^F_\beta)^2$, are both quadratic in $\a_1$. Therefore, they
+will havea nontrivial angular dependence, showing more peaks than
+classical diffraction. Furthermore, these peaks can be tuned very
+easily with $\beta$ or $\varphi_l$. Fig. \ref{fig:scattering} shows
+the angular dependence of $R$ for the case when the scattered mode is
+a standing wave and the probe is a travelling wave scattering from
+bosons in a 3D optical lattice. The first noticeable feature is the
+isotropic background which does not exist in classical
+diffraction. This background yields information about density
+fluctuations which, according to mean-field estimates (i.e.~inter-site
+correlations are ignored), are related by
+$R = K( \langle \hat{n}^2 \rangle - \langle \hat{n} \rangle^2 )/2$. In
+Fig. \ref{fig:scattering} we can see a significant signal of
+$R = |C|^2 N_K/2$, because it shows scattering from an ideal
+superfluid which has significant density fluctuations with
+correlations of infinte range. However, as the parameters of the
+lattice are tuned across the phase transition into a Mott insulator
+the signal goes to zero. This is because the Mott insulating phase has
+well localised atoms at each site which suppresses density
+fluctuations entirely leading to absolutely no ``quantum addition''.
 
 \begin{figure}[htbp!]
   \centering
   \includegraphics[width=\linewidth]{Ep1}
   \caption[Light Scattering Angular Distribution]{Light intensity
     scattered into a standing wave mode from a superfluid in a 3D
-    lattice (units of $R/N_K$). Arrows denote incoming travelling wave
-    probes. The Bragg condition, $\Delta \b{k} = \b{G}$, is not
-    fulfilled, so there is no classical diffraction, but intensity
-    still shows multiple peaks, whose heights are tunable by simple
-    phase shifts of the optical beams: (a) $\varphi_1=0$; (b)
-    $\varphi_1=\pi/2$. Interestingly, there is also a significant
-    uniform background level of scattering which does not occur in its
-    classical counterpart. }
-  \label{fig:Scattering}
+    lattice (units of $R/(|C|^2N_K)$). Arrows denote incoming
+    travelling wave probes. The classical Bragg condition,
+    $\Delta \b{k} = \b{G}$, is not fulfilled, so there is no classical
+    diffraction, but intensity still shows multiple peaks, whose
+    heights are tunable by simple phase shifts of the optical beams:
+    (a) $\varphi_1=0$; (b) $\varphi_1=\pi/2$. Interestingly, there is
+    also a significant uniform background level of scattering which
+    does not occur in its classical counterpart. }
+  \label{fig:scattering}
 \end{figure}
 
-In a deep lattice,
-\begin{equation} 
-  \hat{D}=\sum_i^K u_1^*({\bf r}_i) u_0({\bf r}_i) \hat{n}_i,
-\end{equation} 
-which for travelling
-[$u_l(\b{r})=\exp(i \b{k}_l \cdot \b{r}+i\varphi_l)$] or standing
-[$u_l(\b{r})=\cos(\b{k}_l \cdot \b{r}+\varphi_l)$] waves is just a
-density Fourier transform at one or several wave vectors
-$\pm(\b{k}_1 \pm \b{k}_0)$. The quadrature, as defined in section
-\ref{sec:a}, for two travelling waves is reduced to
-\begin{equation} 
-  \hat{X}^F_\beta = \sum_i^K \hat{n}_i\cos[(\b{k}_1 - \b{k}_2) \cdot
-  \b{r}_i - \beta].
-\end{equation} 
-Note that different light quadratures are differently coupled to the
-atom distribution, hence varying local oscillator phase and detection
-angle, one scans the coupling from maximal to zero. An identical
-expression exists for $\hat{D}$ for a standing wave, where $\beta$ is
-replaced by $\varphi_l$, and scanning is achieved by varying the
-position of the wave with respect to atoms. Thus, variance
-$(\Delta X^F_\beta)^2$ and quantum addition $R$, have a non-trivial
-angular dependence, showing more peaks than classical diffraction and
-the peaks can be tuned by the light-atom coupling.
+We can also observe maxima at several different angles in
+Fig. \ref{fig:scattering}. Interestingly, they occur at different
+angles than predicted by the classical Bragg condition. Moreover, the
+classical Bragg condition is actually not satisfied which means there
+actually is no classical diffraction on top of the ``quantum
+addition'' shown here. Therefore, these features would be easy to see
+in an experiment as they wouldn't be masked by a stronger classical
+signal.  We can even derive the generalised Bragg conditions for the
+peaks that we can see in Fig. \ref{fig:scattering}. 
 
-Fig. \ref{fig:Scattering} shows the angular dependence of $R$ for
-standing and travelling waves scattering from bosons in a 3D optical
-lattice. The isotropic background gives the density fluctuations
-[$R = K( \langle \hat{n}^2 \rangle - \langle \hat{n} \rangle^2 )/2$ in
-mean-field with inter-site correlations neglected]. The radius of the
-sphere changes from zero, when it is a Mott insulator with suppressed
-fluctuations, to half the atom number at $K$ sites, $N_K/2$, in the
-deep superfluid. There exist peaks at angles different than the
-classical Bragg ones and thus, can be observed without being masked by
-classical diffraction. Interestingly, even if 3D diffraction
-\cite{miyake2011} is forbidden as seen in Fig. \ref{fig:Scattering},
-the peaks are still present. As $(\Delta X^F_\beta)^2$ and $R$ are
-quadratic variables, the generalized Bragg conditions for the peaks
-are $2 \Delta \b{k} = \b{G}$ for quadratures of travelling waves,
-where $\Delta \b{k} = \b{k}_0 - \b{k}_1$ and $\b{G}$ is the reciprocal
+% Derive and show these Bragg conditions
+
+As $(\Delta X^F_\beta)^2$ and $R$ are quadratic variables,
+the generalized Bragg conditions for the peaks are
+$2 \Delta \b{k} = \b{G}$ for quadratures of travelling waves, where
+$\Delta \b{k} = \b{k}_0 - \b{k}_1$ and $\b{G}$ is the reciprocal
 lattice vector, and $2 \b{k}_1 = \b{G}$ for standing wave $\a_1$ and
 travelling $\a_0$, which is clearly different from the classical Bragg
 condition $\Delta \b{k} = \b{G}$. The peak height is tunable by the
 local oscillator phase or standing wave shift as seen in Fig.
-\ref{fig:Scattering}b.
+\ref{fig:scattering}b.
 
 In section \ref{sec:Efield} we have estimated the mean photon
 scattering rates integrated over the solid angle for the only two
@@ -187,97 +256,15 @@ where the measurement object was light
   n_{\Phi}= \left(\frac{\Omega_0}{\Delta_a}\right)^2 \frac{\Gamma K}{8}
   (\langle\hat{n}^2\rangle-\langle\hat{n}\rangle^2).
 \end{equation} 
-The background signal should reach $n_\Phi \approx 10^6$ s$^{-1}$ in
-Ref. \cite{weitenberg2011} (150 atoms in 2D), and
-$n_\Phi \approx 10^{11}$ s$^{-1}$ in Ref. \cite{miyake2011} ($10^5$
-atoms in 3D). These numbers show that the diffraction patterns we have
-seen due to the ``quantum addition'' should be visible using currently
-available technology, especially since the most prominent features,
-such as Bragg diffraction peaks, do not coincide at all with the
-classical diffraction pattern.
-
-\subsection{Matter-field interference measurements}
-
-We now focus on enhancing the interference term $\hat{B}$ in the
-operator $\hat{F}$. 
-
-Firstly, we will use this result to show how one can probe
-$\langle \hat{B} \rangle$ which in MF gives information about the
-matter-field amplitude, $\Phi = \langle b \rangle$. 
-
-Hence, by measuring the light quadrature we probe the kinetic energy
-and, in MF, the matter-field amplitude (order parameter) $\Phi$:
-$\langle \hat{X}^F_{\beta=0} \rangle = | \Phi |^2
-\mathcal{F}[W_1](2\pi/d) (K-1)$.
-
-Secondly, we show that it is also possible to access the fluctuations
-of matter-field quadratures $\hat{X}^b_\alpha = (b e^{-i\alpha} + \bd
-e^{i\alpha})/2$, which in MF can be probed by measuring the variance
-of $\hat{B}$. Across the phase transition, the matter field changes
-its state from Fock (in MI) to coherent (deep SF) through an
-amplitude-squeezed state as shown in Fig. \ref{Quads}(a,b). 
-
-Assuming $\Phi$ is real in MF:
-\begin{equation}
-  \label{intensity} 
-  \langle \ad_1 \a_1 \rangle = 2 |C|^2(K-1)\mathcal{F}^2[W_1](\frac{\pi}{d})
-  \times [ ( \langle b^2 \rangle - \Phi^2 )^2 + ( n - \Phi^2 ) ( 1 +n - \Phi^2 ) ]
-\end{equation} 
-and it is shown as a function of $U/(zJ^\text{cl})$ in
-Fig. \ref{Quads}. Thus, since measurement in the diffraction maximum
-yields $\Phi^2$ we can deduce $\langle b^2 \rangle - \Phi^2$ from the
-intensity. This quantity is of great interest as it gives us access to
-the quadrature variances of the matter-field
-\begin{equation} 
-  (\Delta X^b_{0,\pi/2})^2 = 1/4 + [(n - \Phi^2) \pm
-  (\langle b^2 \rangle - \Phi^2)]/2,
-\end{equation} 
-where $n=\langle\hat{n}\rangle$ is the mean on-site atomic density.
-
-\begin{figure}[htbp!]
-  \centering
-  \includegraphics[width=\linewidth]{Quads}
-  \captionsetup{justification=centerlast,font=small}
-  \caption[Mean-Field Matter Quadratures]{Photon number scattered in a
-    diffraction minimum, given by Eq. (\ref{intensity}), where
-    $\tilde{C} = 2 |C|^2 (K-1) \mathcal{F}^2 [W_1](\pi/d)$.  More
-    light is scattered from a MI than a SF due to the large
-    uncertainty in phase in the insulator. (a) The variances of
-    quadratures $\Delta X^b_0$ (solid) and $\Delta X^b_{\pi/2}$
-    (dashed) of the matter field across the phase transition. Level
-    1/4 is the minimal (Heisenberg) uncertainty. There are three
-    important points along the phase transition: the coherent state
-    (SF) at A, the amplitude-squeezed state at B, and the Fock state
-    (MI) at C. (b) The uncertainties plotted in phase space.}
-	\label{Quads}
-\end{figure}
-
-Probing $\hat{B}^2$ gives us access to kinetic energy fluctuations
-with 4-point correlations ($\bd_i b_j$ combined in pairs). Measuring
-the photon number variance, which is standard in quantum optics, will
-lead up to 8-point correlations similar to 4-point density
-correlations \cite{mekhov2007pra}. These are of significant interest,
-because it has been shown that there are quantum entangled states that
-manifest themselves only in high-order correlations
-\cite{kaszlikowski2008}.
-
-Surprisingly, inter-site terms scatter more light from a Mott
-insulator than a superfluid Eq. \eqref{intensity}, as shown in
-Fig. \eqref{Quads}, although the mean inter-site density
-$\langle \hat{n}(\b{r})\rangle $ is tiny in a MI. This reflects a
-fundamental effect of the boson interference in Fock states. It indeed
-happens between two sites, but as the phase is uncertain, it results
-in the large variance of $\hat{n}(\b{r})$ captured by light as shown
-in Eq. \eqref{intensity}. The interference between two macroscopic
-BECs has been observed and studied theoretically
-\cite{horak1999}. When two BECs in Fock states interfere a phase
-difference is established between them and an interference pattern is
-observed which disappears when the results are averaged over a large
-number of experimental realizations. This reflects the large
-shot-to-shot phase fluctuations corresponding to a large inter-site
-variance of $\hat{n}(\b{r})$. By contrast, our method enables the
-observation of such phase uncertainty in a Fock state directly between
-lattice sites on the microscopic scale in-situ.
+Therefore, applying these results to the scattering patters in
+Fig. \ref{fig:scattering} the background signal should reach
+$n_\Phi \approx 10^6$ s$^{-1}$ in Ref. \cite{weitenberg2011} (150
+atoms in 2D), and $n_\Phi \approx 10^{11}$ s$^{-1}$ in
+Ref. \cite{miyake2011} ($10^5$ atoms in 3D). These numbers show that
+the diffraction patterns we have seen due to the ``quantum addition''
+should be visible using currently available technology, especially
+since the most prominent features, such as Bragg diffraction peaks, do
+not coincide at all with the classical diffraction pattern.
 
 \subsection{Mapping the quantum phase diagram}
 
@@ -460,6 +447,89 @@ combined measurements of coherence, transport, and excitation spectra,
 all of which are destructive techniques. Our method is simpler as it
 only requires measurement of the quantity $R$ and additionally, it is
 nondestructive.
+
+\subsection{Matter-field interference measurements}
+
+We now focus on enhancing the interference term $\hat{B}$ in the
+operator $\hat{F}$. 
+
+Firstly, we will use this result to show how one can probe
+$\langle \hat{B} \rangle$ which in MF gives information about the
+matter-field amplitude, $\Phi = \langle b \rangle$. 
+
+Hence, by measuring the light quadrature we probe the kinetic energy
+and, in MF, the matter-field amplitude (order parameter) $\Phi$:
+$\langle \hat{X}^F_{\beta=0} \rangle = | \Phi |^2
+\mathcal{F}[W_1](2\pi/d) (K-1)$.
+
+Secondly, we show that it is also possible to access the fluctuations
+of matter-field quadratures $\hat{X}^b_\alpha = (b e^{-i\alpha} + \bd
+e^{i\alpha})/2$, which in MF can be probed by measuring the variance
+of $\hat{B}$. Across the phase transition, the matter field changes
+its state from Fock (in MI) to coherent (deep SF) through an
+amplitude-squeezed state as shown in Fig. \ref{Quads}(a,b). 
+
+Assuming $\Phi$ is real in MF:
+\begin{equation}
+  \label{intensity} 
+  \langle \ad_1 \a_1 \rangle = 2 |C|^2(K-1)\mathcal{F}^2[W_1](\frac{\pi}{d})
+  \times [ ( \langle b^2 \rangle - \Phi^2 )^2 + ( n - \Phi^2 ) ( 1 +n - \Phi^2 ) ]
+\end{equation} 
+and it is shown as a function of $U/(zJ^\text{cl})$ in
+Fig. \ref{Quads}. Thus, since measurement in the diffraction maximum
+yields $\Phi^2$ we can deduce $\langle b^2 \rangle - \Phi^2$ from the
+intensity. This quantity is of great interest as it gives us access to
+the quadrature variances of the matter-field
+\begin{equation} 
+  (\Delta X^b_{0,\pi/2})^2 = 1/4 + [(n - \Phi^2) \pm
+  (\langle b^2 \rangle - \Phi^2)]/2,
+\end{equation} 
+where $n=\langle\hat{n}\rangle$ is the mean on-site atomic density.
+
+\begin{figure}[htbp!]
+  \centering
+  \includegraphics[width=\linewidth]{Quads}
+  \captionsetup{justification=centerlast,font=small}
+  \caption[Mean-Field Matter Quadratures]{Photon number scattered in a
+    diffraction minimum, given by Eq. (\ref{intensity}), where
+    $\tilde{C} = 2 |C|^2 (K-1) \mathcal{F}^2 [W_1](\pi/d)$.  More
+    light is scattered from a MI than a SF due to the large
+    uncertainty in phase in the insulator. (a) The variances of
+    quadratures $\Delta X^b_0$ (solid) and $\Delta X^b_{\pi/2}$
+    (dashed) of the matter field across the phase transition. Level
+    1/4 is the minimal (Heisenberg) uncertainty. There are three
+    important points along the phase transition: the coherent state
+    (SF) at A, the amplitude-squeezed state at B, and the Fock state
+    (MI) at C. (b) The uncertainties plotted in phase space.}
+	\label{Quads}
+\end{figure}
+
+Probing $\hat{B}^2$ gives us access to kinetic energy fluctuations
+with 4-point correlations ($\bd_i b_j$ combined in pairs). Measuring
+the photon number variance, which is standard in quantum optics, will
+lead up to 8-point correlations similar to 4-point density
+correlations \cite{mekhov2007pra}. These are of significant interest,
+because it has been shown that there are quantum entangled states that
+manifest themselves only in high-order correlations
+\cite{kaszlikowski2008}.
+
+Surprisingly, inter-site terms scatter more light from a Mott
+insulator than a superfluid Eq. \eqref{intensity}, as shown in
+Fig. \eqref{Quads}, although the mean inter-site density
+$\langle \hat{n}(\b{r})\rangle $ is tiny in a MI. This reflects a
+fundamental effect of the boson interference in Fock states. It indeed
+happens between two sites, but as the phase is uncertain, it results
+in the large variance of $\hat{n}(\b{r})$ captured by light as shown
+in Eq. \eqref{intensity}. The interference between two macroscopic
+BECs has been observed and studied theoretically
+\cite{horak1999}. When two BECs in Fock states interfere a phase
+difference is established between them and an interference pattern is
+observed which disappears when the results are averaged over a large
+number of experimental realizations. This reflects the large
+shot-to-shot phase fluctuations corresponding to a large inter-site
+variance of $\hat{n}(\b{r})$. By contrast, our method enables the
+observation of such phase uncertainty in a Fock state directly between
+lattice sites on the microscopic scale in-situ.
 
 \section{Conclusions}
 
