@@ -27,7 +27,11 @@ general Hamiltonian that describes the coupling of atoms with
 far-detuned optical beams \cite{mekhov2012}. This will serve as the
 basis from which we explore the system in different parameter regimes,
 such as nondestructive measurement in free space or quantum
-measurement backaction in a cavity.
+measurement backaction in a cavity. Another interesting direction for
+this field of research are quantum optical lattices where the trapping
+potential is treated quantum mechanically. However this is beyond the
+scope of this work.
+\mynote{insert our paper citations here}
 
 We consider $N$ two-level atoms in an optical lattice with $M$
 sites. For simplicity we will restrict our attention to spinless
@@ -43,13 +47,9 @@ capable of describing a range of different experimental setups ranging
 from a small number of sites with a large filling factor (e.g.~BECs
 trapped in a double-well potential) to a an extended multi-site
 lattice with a low filling factor (e.g.~a system with one atom per
-site will exhibit the Mott insulator to superfluid quantum phase
+site which will exhibit the Mott insulator to superfluid quantum phase
 transition). \mynote{extra fermion citations, Piazza? Look up Gabi's
   AF paper.}
-
-\mynote{Potentially some more crap, but come to think of it the
-  content will strongly depend on what was included in the preceding
-  section on plain ultracold bosons}
 
 As we have seen in the previous section, an optical lattice can be
 formed with classical light beams that form standing waves. Depending
@@ -83,9 +83,9 @@ For simplicity, we will be considering one-dimensional lattices most
 of the time. However, the model itself is derived for any number of
 dimensions and since none of our arguments will ever rely on
 dimensionality our results straightforwardly generalise to 2- and 3-D
-systems. This simplification allows us to present a much simpler
-picture of the physical setup where we only need to concern ourselves
-with a single angle for each optical mode. As shown in
+systems. This simplification allows us to present a much more
+intuitive picture of the physical setup where we only need to concern
+ourselves with a single angle for each optical mode. As shown in
 Fig. \ref{fig:LatticeDiagram} the angle between the normal to the
 lattice and the probe and detected beam are denoted by $\theta_0$ and
 $\theta_1$ respectively. We will consider these angles to be tunable
@@ -199,11 +199,11 @@ equation for the lowering operator
 Therefore, by inserting this expression into the Heisenberg equation
 for the light mode $m$ given by
 \begin{equation}
-  \dot{\a}_m = - \sigma^- g^*_m u^*_m(\b{r})
+  \dot{\a}_m = - \sigma^- g_m u^*_m(\b{r})
 \end{equation}
 we get the following equation of motion
 \begin{equation}
-  \dot{\a}_m = \frac{i}{\Delta_a} \sum_l g_l g^*_m u_l(\b{r})
+  \dot{\a}_m = \frac{i}{\Delta_a} \sum_l g_l g_m u_l(\b{r})
   u^*_m(\b{r}) \a_l.
 \end{equation}
 An effective Hamiltonian which results in the same optical equations
@@ -311,30 +311,49 @@ This contribution can be separated into two parts, one which couples
 directly to the on-site atomic density and one that couples to the
 tunnelling operators. We will define the operator
 \begin{equation}
+  \label{eq:F}
   \hat{F}_{l,m} = \hat{D}_{l,m} + \hat{B}_{l,m},
 \end{equation}
 where $\hat{D}_{l,m}$ is the direct coupling to atomic density
 \begin{equation}
+  \label{eq:D}
   \hat{D}_{l,m} = \sum_{i}^K J^{l,m}_{i,i} \hat{n}_i,
 \end{equation}
 and $\hat{B}_{l,m}$ couples to the matter-field via the
 nearest-neighbour tunnelling operators
 \begin{equation}
+  \label{eq:B}
   \hat{B}_{l,m} = \sum_{\langle i, j \rangle}^K J^{l,m}_{i,j} \bd_i b_j,
 \end{equation}
-and we neglect couplings beyond nearest neighbours for the same reason
-as before when deriving the matter Hamiltonian.
+where $K$ denotes a sum over the illuminated sites and we neglect
+couplings beyond nearest neighbours for the same reason as before when
+deriving the matter Hamiltonian.
+
+\mynote{make sure all group papers are cited here} These equations
+encapsulate the simplicity and flexibility of the measurement scheme
+that we are proposing. The operators given above are entirely
+determined by the values of the $J^{l,m}_{i,j}$ coefficients and
+despite its simplicity, this is sufficient to give rise to a host of
+interesting phenomena via measurement back-action such as the
+generation of multipartite entangled spatial modes in an optical
+lattice \cite{elliott2015, atoms2015, mekhov2009pra}, the appearance
+of long-range correlated tunnelling capable of entangling distant
+lattice sites, and in the case of fermions, the break-up and
+protection of strongly interacting pairs \cite{mazzucchi2016,
+  kozlowski2016zeno}. Additionally, these coefficients are easy to
+manipulate experimentally by adjusting the optical geometry via the
+light mode functions $u_l(\b{r})$.
 
 It is important to note that we are considering a situation where the
 contribution of quantized light is much weaker than that of the
 classical trapping potential. If that was not the case, it would be
-necessary to determine thw Wannier functions in a self-consistent way
+necessary to determine the Wannier functions in a self-consistent way
 which takes into account the depth of the quantum poterntial generated
 by the quantized light modes. This significantly complicates the
 treatment, but can lead to interesting physics. Amongst other things,
 the atomic tunnelling and interaction coefficients will now depend on
-the quantum state of light.
-\mynote{cite Santiago's papers and Maschler/Igor EPJD}
+the quantum state of light.  \mynote{cite Santiago's papers and
+  Maschler/Igor EPJD}
 
 Therefore, combining these final simplifications we finally arrive at
 our quantum light-matter Hamiltonian
@@ -346,18 +365,25 @@ our quantum light-matter Hamiltonian
 \end{equation}
 where we have phenomologically included the cavity decay rates
 $\kappa_l$ of the modes $a_l$. A crucial observation about the
-structure of this Hamiltonian is that in the last term, the light
-modes $a_l$ couple to the matter in a global way. Instead of
+structure of this Hamiltonian is that in the interaction term, the
+light modes $a_l$ couple to the matter in a global way. Instead of
 considering individual coupling to each site, the optical field
 couples to the global state of the atoms within the illuminated region
 via the operator $\hat{F}_{l,m}$. This will have important
 implications for the system and is one of the leading factors
-responsible for many-body behaviour beyong the Bose-Hubbard
-Hamiltonian paradigm.
+responsible for many-body behaviour beyond the Bose-Hubbard
+Hamiltonian paradigm. 
+
+Furthermore, it is also vital to note that light couples to the matter
+via an operator, namely $\hat{F}_{l,m}$, which makes it sensitive to
+the quantum state of matter. This is a key element of our treatment of
+the ultimate quantum regime of light-matter interaction that goes
+beyond previous treatments.
 
 \subsection{Scattered light behaviour}
+\label{sec:a}
 
-Having derived the full quantum light-matter Hamiltonian we will no
+Having derived the full quantum light-matter Hamiltonian we will now
 look at the behaviour of the scattered light. We begin by looking at
 the equations of motion in the Heisenberg picture
 \begin{equation}
@@ -391,6 +417,7 @@ pumping $\eta_l$. We also limit ourselves to only a single scattered
 mode, $a_1$. This leads to a simple linear relationship between the
 light mode and the atomic operator $\hat{F}_{1,0}$
 \begin{equation}
+  \label{eq:a}
   \a_1 = \frac{U_{1,0} a_0} {\Delta_{p} + i \kappa} \hat{F} =
   C \hat{F},
 \end{equation}
@@ -400,19 +427,45 @@ cavity. Furthermore, since there is no longer any ambiguity in the
 indices $l$ and $m$, we have dropped indices on $\Delta_{1p} \equiv
 \Delta_p$, $\kappa_1 \equiv \kappa$, and $\hat{F}_{1,0} \equiv
 \hat{F}$. We also do the same for the operators $\hat{D}_{1,0} \equiv
-\hat{D}$ and $\hat{B}_{1,0} \equiv \hat{B}$.
+\hat{D}$, $\hat{B}_{1,0} \equiv \hat{B}$, and the coefficients
+$J^{1,0}_{i,j} \equiv J_{i,j}$.
 
-Whilst the light amplitude itself is only linear in atomic operators,
-we can easily have access to higher moments by simply simply
-considering higher moments of the $\a_1$ such as the photon number
-$\ad_1 \a_1$. Additionally, even though we only consider a single
-scattered mode, this model can be applied to free space by simply
-varying the direction of the scattered light mode if multiple
-scattering events can be neglected. This is likely to be the case
-since the interactions will be dominated by photons scattering from
-the much larger coherent probe.
+The operator $\a_1$ itself is not an observable. However, it is
+possible to combine the outgoing light field with a stronger local
+oscillator beam in order to measure the light quadrature
+\begin{equation}
+  \hat{X}_\phi = \frac{1}{2} \left( \a_1 e^{-i \phi} + \ad_1 e^{i \phi} \right),
+\end{equation}
+which in turn can expressed via the quadrature of $\hat{F}$,
+$\hat{X}^F_\beta$, as
+\begin{equation}
+  \hat{X}_\phi = |C| \hat{X}_\beta^F = \frac{|C|}{2} \left( \hat{F}
+    e^{-i \beta} + \hat{F}^\dagger e^{i \beta} \right),
+\end{equation}
+where $\beta = \phi - \phi_C$, $C = |C| \exp(i \phi_C)$, and $\phi$ is
+the local oscillator phase.
+
+Whilst the light amplitude and the quadratures are only linear in
+atomic operators, we can easily have access to higher moments via
+related quantities such as the photon number
+$\ad_1 \a_1 = |C|^2 \hat{F}^\dagger \hat{F}$ or the quadrature
+variance
+\begin{equation}
+  \label{eq:Xvar}
+  ( \Delta X_\phi )^2 = \langle \hat{X}_\phi^2 \rangle - \langle
+  \hat{X}_\phi \rangle^2 = \frac{1}{4} + |C|^2 (\Delta X^F_\beta)^2,
+\end{equation}
+which reflect atomic correlations and fluctuations.
+
+Finally, even though we only consider a single scattered mode, this
+model can be applied to free space by simply varying the direction of
+the scattered light mode if multiple scattering events can be
+neglected. This is likely to be the case since the interactions will
+be dominated by photons scattering from the much larger coherent
+probe.
 
 \subsection{Density and Phase Observables}
+\label{sec:B}
 
 Light scatters due to its interactions with the dipole moment of the
 atoms which for off-resonant light, like the type that we consider,
@@ -430,21 +483,22 @@ condensates even though the two components have initially well-defined
 atom numbers which is phase's conjugate variable.
 
 In our model light couples to the operator $\hat{F}$ which consists of
-a density opertor part, $\hat{D} = \sum_i J_{i,i} \hat{n}_i$, and a
-phase operator part, $\hat{B} = \sum_{\langle i, j \rangle} J_{i,j}
-\bd_i b_j$. Most of the time the density component dominates, $\hat{D}
-\gg \hat{B}$, and thus $\hat{F} \approx \hat{D}$. However, it is
-possible to engineer an optical geometry in which $\hat{D} = 0$
+a density component, $\hat{D} = \sum_i J_{i,i} \hat{n}_i$, and a phase
+component, $\hat{B} = \sum_{\langle i, j \rangle} J_{i,j} \bd_i
+b_j$. In general, the density component dominates,
+$\hat{D} \gg \hat{B}$, and thus $\hat{F} \approx \hat{D}$.  However,
+it is possible to engineer an optical geometry in which $\hat{D} = 0$
 leaving $\hat{B}$ as the dominant term in $\hat{F}$. This approach is
 fundamentally different from the aforementioned double-well proposals
 as it directly couples to the interference terms caused by atoms
 tunnelling rather than combining light scattered from different
 sources.
 
-For clarity we will consider a 1D lattice with lattice spacing $d$
-along the $x$-axis direction, but the results can be applied and
-generalised to higher dimensions. Central to engineering the $\hat{F}$
-operator are the coefficients $J_{i,j}$ given by
+For clarity we will consider a 1D lattice as shown in
+Fig. \ref{fig:LatticeDiagram} with lattice spacing $d$ along the
+$x$-axis direction, but the results can be applied and generalised to
+higher dimensions. Central to engineering the $\hat{F}$ operator are
+the coefficients $J_{i,j}$ given by
 \begin{equation}
   \label{eq:Jcoeff}
   J_{i,j} = \int \mathrm{d} x \,\,\, w(x - x_i) u_1^*(x) u_0(x) w(x - x_j).
@@ -453,156 +507,139 @@ The operators $\hat{B}$ and $\hat{D}$ depend on the values of
 $J_{i,i+1}$ and $J_{i,i}$ respectively. These coefficients are
 determined by the convolution of the coupling strength between the
 probe and scattered light modes, $u_1^*(x)u_0(x)$, with the relevant
-Wannier function overlap shown in Fig. \ref{fig:WannierOverlaps}. For
+Wannier function overlap shown in Fig. \ref{fig:WannierProducts}a. For
 the $\hat{B}$ operator we calculate the convolution with the nearest
-neighbour overlap, $W_1(x) \equiv w(x - d/2) w(x + d/2)$ shown in
-Fig. \ref{fig:WannierOverlaps}c, and for the $\hat{D}$ operator we
-calculate the convolution with the square of the Wannier function at a
-single site, $W_0(x) \equiv w^2(x)$ shown in
-Fig. \ref{fig:WannierOverlaps}b. Therefore, in order to enhance the
-$\hat{B}$ term we need to maximise the overlap between the light modes
-and the nearest neighbour Wannier overlap, $W_1(x)$. This can be
-achieved by concentrating the light between the sites rather than at
-the positions of the atoms. Ideally, one could measure between two
-sites similarly to single-site addressing, which would measure a
-single term $\langle \bd_i b_{i+1}+b_i \bd_{i+1}\rangle$, e.g.~by
-superposing a deeper optical lattice shifted by $d/2$ with respect to
-the original one, catching and measuring the atoms in the new lattice
-sites. A single-shot success rate of atom detection will be small. As
-single-site addressing is challenging, we proceed with the global
-scattering.
+neighbour overlap, $W_1(x) \equiv w(x - d/2) w(x + d/2)$, and for the
+$\hat{D}$ operator we calculate the convolution with the square of the
+Wannier function at a single site, $W_0(x) \equiv w^2(x)$. Therefore,
+in order to enhance the $\hat{B}$ term we need to maximise the overlap
+between the light modes and the nearest neighbour Wannier overlap,
+$W_1(x)$. This can be achieved by concentrating the light between the
+sites rather than at the positions of the atoms. Ideally, one could
+measure between two sites similarly to single-site addressing
+\cite{greiner2009, bloch2011}, which would measure a single term
+$\langle \bd_i b_{i+1}+b_i \bd_{i+1}\rangle$. This could be achieved,
+for example, by superposing a deeper optical lattice shifted by $d/2$
+with respect to the original one, catching and measuring the atoms in
+the new lattice sites. A single-shot success rate of atom detection
+will be small. As single-site addressing is challenging, we proceed
+with the global scattering.
 
-\mynote{Fix labels in this figure}
-\begin{figure}[htbp!]
-  \centering
-  \includegraphics[width=1.0\textwidth]{Wannier1}
-  \includegraphics[width=1.0\textwidth]{Wannier2}
-  \caption[Wannier Function Overlaps]{(a) The Wannier functions
-    corresponding to four neighbouring sites in a 1D
-    lattice. $\lambda$ is the wavelength of the trapping beams, thus
-    lattice sites occur every $\lambda/2$. (Bottom Left) The square of
-    a single Wannier function - this quantity is used when evaluating
-    $\hat{D}$. It's much larger than the overlap between two
-    neighbouring Wannier functions, but it is localised to the
-    position of the lattice site it belongs to. (Bottom Right) The
-    overlap of two neighbouring Wannier functions - this quantity is
-    used when evaluating $\hat{B}$. It is much smaller than the square
-    of a Wannier function, but since it's localised in between the
-    sites, thus $\hat{B}$ can be maximised while $\hat{D}$ minimised
-    by focusing the light in between the sites.}
-  \label{fig:WannierOverlaps}
-\end{figure}
-
-\mynote{show the expansion into an FT}
+\mynote{Potentially expand details of the derivation of these equations}
 In order to calculate the $J_{i,j}$ coefficients we perform numerical
-calculations using realistic Wannier functions. However, it is
-possible to gain some analytic insight into the behaviour of these
-values by looking at the Fourier transforms of the Wannier function
-overlaps, $\mathcal{F}[W_{0,1}](k)$, shown in Fig.
-\ref{fig:WannierFT}b. This is because the light mode product,
-$u_1^*(x) u_0(x)$, can be in general decomposed into a sum of
-oscillating exponentials of the form $e^{i k x}$ making the integral
-in Eq. \eqref{eq:Jcoeff} a sum of Fourier transforms of
-$W_{0,1}(x)$. We consider both the detected and probe beam to be
-standing waves which gives the following expressions for the $\hat{D}$
-and $\hat{B}$ operators
-\begin{eqnarray}
+calculations using realistic Wannier functions
+\cite{walters2013}. However, it is possible to gain some analytic
+insight into the behaviour of these values by looking at the Fourier
+transforms of the Wannier function overlaps,
+$\mathcal{F}[W_{0,1}](k)$, shown in Fig.
+\ref{fig:WannierProducts}b. This is because the for plane and standing
+wave light modes the product $u_1^*(x) u_0(x)$ can be in general
+decomposed into a sum of oscillating exponentials of the form
+$e^{i k x}$ making the integral in Eq. \eqref{eq:Jcoeff} a sum of
+Fourier transforms of $W_{0,1}(x)$. We consider both the detected and
+probe beam to be standing waves which gives the following expressions
+for the $\hat{D}$ and $\hat{B}$ operators
+\begin{align}
   \label{eq:FTs}
-  \hat{D} =
-  \frac{1}{2}[\mathcal{F}[W_0](k_-)\sum_m\hat{n}_m\cos(k_- x_m
-    +\varphi_-)
-    \nonumber\\ +\mathcal{F}[W_0](k_+)\sum_m\hat{n}_m\cos(k_+
-    x_m +\varphi_+)], \nonumber\\ \hat{B} =
-  \frac{1}{2}[\mathcal{F}[W_1](k_-)\sum_m\hat{B}_m\cos(k_- x_m
-    +\frac{k_-d}{2}+\varphi_-)
-    \nonumber\\ +\mathcal{F}[W_1](k_+)\sum_m\hat{B}_m\cos(k_+
-    x_m +\frac{k_+d}{2}+\varphi_+)],
-\end{eqnarray}
-where $k_\pm = k_{0x} \pm k_{1x}$, $k_{(0,1)x} = k_{0,1}
-\sin(\theta_{0,1}$), $\hat{B}_m=b^\dag_mb_{m+1}+b_mb^\dag_{m+1}$, and
+  \hat{D} = & \frac{1}{2}[\mathcal{F}[W_0](k_-)\sum_m\hat{n}_m\cos(k_-
+              x_m +\varphi_-) \nonumber\\ 
+            & + \mathcal{F}[W_0](k_+)\sum_m\hat{n}_m\cos(k_+ x_m +\varphi_+)],
+              \nonumber\\ 
+  \hat{B} = & \frac{1}{2}[\mathcal{F}[W_1](k_-)\sum_m\hat{B}_m\cos(k_- x_m
+              +\frac{k_-d}{2}+\varphi_-) \nonumber\\ 
+            & +\mathcal{F}[W_1](k_+)\sum_m\hat{B}_m\cos(k_+
+              x_m +\frac{k_+d}{2}+\varphi_+)],
+\end{align}
+where $k_\pm = k_{0x} \pm k_{1x}$,
+$k_{(0,1)x} = k_{0,1} \sin(\theta_{0,1}$),
+$\hat{B}_m=b^\dag_mb_{m+1}+b_mb^\dag_{m+1}$, and
 $\varphi_\pm=\varphi_0 \pm \varphi_1$. The key result is that the
 $\hat{B}$ operator is phase shifted by $k_\pm d/2$ with respect to the
 $\hat{D}$ operator since it depends on the amplitude of light in
-between the lattice sites and not at the positions of the atoms,
+between the lattice sites and not at the positions of the atoms
 allowing to decouple them at specific angles.
 
-\begin{figure}[htbp!]
-  \begin{center}
-    \includegraphics[width=\linewidth]{WF_S}
-  \end{center}
-  \caption[Wannier Function Fourier Transforms]{The Wannier function
-    products: (a) $W_0(x)$ (solid line, right axis), $W_1(x)$ (dashed
-    line, left axis) and their (b) Fourier transforms
-    $\mathcal{F}[W_{0,1}]$. The Density $J_{i,i}$ and
-    matter-interference $J_{i,i+1}$ coefficients in diffraction
-    maximum (c) and minimum (d) as are shown as functions of standing
-    wave shifts $\varphi$ or, if one were to measure the quadrature
-    variance $(\Delta X^F_\beta)^2$, the local oscillator phase
-    $\beta$. The black points indicate the positions, where light
-    measures matter interference $\hat{B} \ne 0$, and the density-term
-    is suppressed, $\hat{D} = 0$. The trapping potential depth is
-    approximately 5 recoil energies.}
-  \label{fig:WannierFT}
+\begin{figure}[hbtp!]
+  \centering
+  \includegraphics[width=0.8\linewidth]{BDiagram}
+  \caption[Maximising Light-Matter Coupling between Lattice
+  Sites]{Light field arrangements which maximise coupling, $u_1^*u_0$,
+    between lattice sites. The thin black line indicates the trapping
+    potential (not to scale). (a) Arrangement for the uniform pattern
+    $J_{i,i+1} = J_1$. (b) Arrangement for spatially varying pattern
+    $J_{i,i+1}=(-1)^m J_2$; here $u_0=1$ so it is not shown and $u_1$
+    is real thus $u_1^*u_0=u_1$. \label{fig:BDiagram}}
 \end{figure}
 
-The simplest case is to find a diffraction maximum where $J_{i,i+1} =
-J_B$. This can be achieved by crossing the light modes such that
-$\theta_0 = -\theta_1$ and $k_{0x} = k_{1x} = \pi/d$ and choosing the
-light mode phases such that $\varphi_+ = 0$. Fig. \ref{fig:WannierFT}c
-shows the value of the $J_{i,j}$ coefficients under these
-circumstances. In order to make the $\hat{B}$ contribution to light
-scattering dominant we need to set $\hat{D} = 0$ which from
-Eq. \eqref{eq:FTs} we see is possible if $\varphi_0 = -\varphi_1 =
-\arccos[-\mathcal{F}[W_0](2\pi/d)/\mathcal{F}[W_0](0)]/2$. This
-arrangement of light modes maximizes the interference signal,
+\begin{figure}[hbtp!]
+  \centering
+  \includegraphics[width=\linewidth]{WF_S}
+  \caption[Wannier Function Products]{The Wannier function products:
+    (a) $W_0(x)$ (solid line, right axis), $W_1(x)$ (dashed line, left
+    axis) and their (b) Fourier transforms $\mathcal{F}[W_{0,1}]$. The
+    Density $J_{i,i}$ and matter-interference $J_{i,i+1}$ coefficients
+    in diffraction maximum (c) and minimum (d) as are shown as
+    functions of standing wave shifts $\varphi$ or, if one were to
+    measure the quadrature variance $(\Delta X^F_\beta)^2$, the local
+    oscillator phase $\beta$. The black points indicate the positions,
+    where light measures matter interference $\hat{B} \ne 0$, and the
+    density-term is suppressed, $\hat{D} = 0$. The trapping potential
+    depth is approximately 5 recoil energies.}
+  \label{fig:WannierProducts}
+\end{figure}
+
+The simplest case is to find a diffraction maximum where
+$J_{i,i+1} = J_1$, where $J_1$ is a constant. This can be achieved by
+crossing the light modes such that $\theta_0 = -\theta_1$ and
+$k_{0x} = k_{1x} = \pi/d$ and choosing the light mode phases such that
+$\varphi_+ = 0$. Fig. \ref{fig:BDiagram}a shows the resulting light
+mode functions and their product along the lattice and
+Fig. \ref{fig:WannierProducts}c shows the value of the $J_{i,j}$
+coefficients under these circumstances. In order to make the $\hat{B}$
+contribution to light scattering dominant we need to set $\hat{D} = 0$
+which from Eq. \eqref{eq:FTs} we see is possible if
+\begin{equation}
+  \xi \equiv \varphi_0 = -\varphi_1 =
+  \frac{1}{2}\arccos[-\mathcal{F}[W_0]\left(\frac{2\pi}{d}\right)/\mathcal{F}[W_0](0)].
+\end{equation}
+This arrangement of light modes maximizes the interference signal,
 $\hat{B}$, by suppressing the density signal, $\hat{D}$, via
-interference compensating for the spreading of the Wannier
-functions. 
+interference compensating for the spreading of the Wannier functions.
 
 Another possibility is to obtain an alternating pattern similar
-corresponding to a classical diffraction minimum. We consider an
-arrangement where the beams are arranged such that $k_{0x} = 0$ and
+corresponding to a diffraction minimum. We consider an arrangement
+where the beams are arranged such that $k_{0x} = 0$ and
 $k_{1x} = \pi/d$ which gives the following expressions for the density
 and interference terms
-\begin{eqnarray}
+\begin{align}
   \label{eq:DMin}
-	\hat{D} = \mathcal{F}[W_0](\pi/d) \sum_m (-1)^m \hat{n}_m
-        \cos(\varphi_0) \cos(\varphi_1) \nonumber \\ \hat{B} =
-        -\mathcal{F}[W_1](\pi/d) \sum_m (-1)^m \hat{B}_m
-        \cos(\varphi_0) \sin(\varphi_1).
-\end{eqnarray}
-The corresponding $J_{i,j}$ coefficients are shown in
-Fig. \ref{fig:WannierFT}d for $\varphi_0=0$. It is clear that for
-$\varphi_1 = \pm \pi/2$, $\hat{D} = 0$, which is intuitive as this
-places the lattice sites at the nodes of the mode $u_1(x)$. This is a
-diffraction minimum as the light amplitude is also zero, $\langle
-\hat{B} \rangle = 0$, because contributions from alternating
-inter-site regions interfere destructively. However, the intensity
-$\langle \ad_1 \a \rangle = |C|^2 \langle \hat{B}^2 \rangle$ is
-proportional to the variance of $\hat{B}$ and is non-zero. 
+  \hat{D} = & \mathcal{F}[W_0](\pi/d) \sum_m (-1)^m \hat{n}_m
+              \cos(\varphi_0) \cos(\varphi_1) \nonumber \\ 
+  \hat{B} = & -\mathcal{F}[W_1](\pi/d) \sum_m (-1)^m \hat{B}_m
+              \cos(\varphi_0) \sin(\varphi_1).
+\end{align}
+The corresponding $J_{i,j}$ coefficients are given by
+$J_{i,i+1} = -(-1)^i J_2$, where $J_2$ is a constant, and are shown in
+Fig. \ref{fig:WannierProducts}d for $\varphi_0=0$. The light mode
+coupling along the lattice is shown in Fig. \ref{fig:BDiagram}b. It is
+clear that for $\varphi_1 = \pm \pi/2$, $\hat{D} = 0$, which is
+intuitive as this places the lattice sites at the nodes of the mode
+$u_1(x)$. This is a diffraction minimum as the light amplitude is also
+zero, $\langle \hat{B} \rangle = 0$, because contributions from
+alternating inter-site regions interfere destructively. However, the
+intensity $\langle \ad_1 \a \rangle = |C|^2 \langle \hat{B}^2 \rangle$
+is proportional to the variance of $\hat{B}$ and is non-zero.
 
-\mynote{explain quadrature}
 Alternatively, one can use the arrangement for a diffraction minimum
 described above, but use travelling instead of standing waves for the
-probe and detected beams and measure the light quadrature variance. In
-this case $\hat{X}^F_\beta = \hat{D} \cos(\beta) + \hat{B}
-\sin(\beta)$ and by varying the local oscillator phase, one can choose
-which conjugate operator to measure.
-
-\mynote{fix labels}
-\begin{figure}[hbtp!]
-	\includegraphics[width=\linewidth]{BDiagram}
-	\caption[Maximising Light-Matter Coupling between Lattice
-          Sites]{Light field arrangements which maximise coupling,
-          $u_1^*u_0$, between lattice sites. The thin black line
-          indicates the trapping potential (not to scale). (a)
-          Arrangement for the uniform pattern $J_{m,m+1} = J_1$. (b)
-          Arrangement for spatially varying pattern $J_{m,m+1}=(-1)^m
-          J_2$; here $u_0=1$ so it is not shown and $u_1$ is real thus
-          $u_1^*u_0=u_1$. \label{fig:BDiagram}}
-\end{figure}
+probe and detected beams and measure the light quadrature variance.
+In this case
+$\hat{X}^F_\beta = \hat{D} \cos(\beta) + \hat{B} \sin(\beta)$ and by
+varying the local oscillator phase, one can choose which conjugate
+operator to measure.
 
 \subsection{Electric Field Stength}
+\label{sec:Efield}
 
 The Electric field operator at position $\b{r}$ and at time $t$ is
 usually written in terms of its positive and negative components:
@@ -634,7 +671,7 @@ atom located at $\b{r}^\prime$ at the observation point $\b{r}$ is
 given by
 \begin{equation}
   \label{eq:Ep}
-  \b{\hat{E}}^{(+)}(\b{r},\b{r}^\prime,t) = \frac{\omega_a^2 d \sin \eta}{4 \pi
+  \b{\hat{E}}^{(+)}(\b{r},\b{r}^\prime,t) = \frac{\omega_a^2 d_A \sin \eta}{4 \pi
     \epsilon_0 c^2 |\b{r} - \b{r}^\prime|} \hat{\epsilon} \sigma^-
   \left( \b{r}^\prime, t - \frac{|\b{r} - \b{r}^\prime|}{c} \right),
 \end{equation}
@@ -644,9 +681,8 @@ in the far field, $\eta$ is the angle the dipole makes with
 $\b{r} - \b{r}^\prime$, $\hat{\epsilon}$ is the polarization vector
 which is perpendicular to $\b{r} - \b{r}^\prime$ and lies in the plane
 defined by $\b{r} - \b{r}^\prime$ and the dipole, $\omega_a$ is the
-atomic transition frequency, and $d$ is the dipole matrix element
+atomic transition frequency, and $d_A$ is the dipole matrix element
 between the two levels, and $c$ is the speed of light in vacuum.
-
 
 We have already derived an expression for the atomic lowering
 operator, $\sigma^-$, in Eq. \eqref{eq:sigmam} and it is given by
