@@ -160,6 +160,7 @@ Eq. \eqref{eq:D-3} into our expression for $R$ in Eq. \eqref{eq:R} and
 we will make use of the shorthand notation
 $A_i = u_1^*(\b{r}_i) u_0(\b{r}_i)$. The result is
 \begin{equation}
+  \label{eq:Rfluc}
   R = |C|^2 \sum_{i,j}^K A^*_i A_j \langle \delta \hat{n}_i \delta
   \hat{n}_j \rangle,
 \end{equation}
@@ -176,35 +177,46 @@ measure the quadrature of the light fields which in section
 case when both the scattered mode and probe are travelling waves the
 quadrature
 \begin{equation} 
+  \label{eq:Xtrav}
   \hat{X}^F_\beta = \frac{1}{2} \left( \hat{F} e^{-i \beta} +
-    \hat{F}^\dagger e^{i \beta} \right) = \sum_i^K \hat{n}_i\cos[(\b{k}_1 - \b{k}_2) \cdot
-  \b{r}_i - \beta].
+    \hat{F}^\dagger e^{i \beta} \right) = \sum_i^K \hat{n}_i\cos[(\b{k}_0 - \b{k}_1) \cdot
+  \b{r}_i + (\phi_0 - \phi_1) - \beta].
 \end{equation} 
 Note that different light quadratures are differently coupled to the
 atom distribution, hence by varying the local oscillator phase, and
 thus effectively $\beta$, and/or the detection angle one can scan the
 whole range of couplings. A similar expression exists for $\hat{D}$
-for a standing wave probe, where $\beta$ is replaced by $\varphi_0$,
-and scanning is achieved by varying the position of the wave with
-respect to atoms.
+for a standing wave probe, where instead of varying $\beta$ scanning
+is achieved by varying the position of the wave with respect to
+atoms. Additionally, the quadrature variance, $(\Delta X^F_\beta)^2$,
+will have a similar form to $R$ given in Eq. \eqref{eq:Rfluc},
+\begin{equation}
+  (\Delta X^F_\beta)^2 = |C|^2 \sum_{i.j}^K A_i^\beta A_j^\beta
+  \langle \dn_i \dn_j \rangle,
+\end{equation}
+where $A_i^\beta = (A_i e^{-i\beta} + A_i^* e^{i \beta})/2$.  However,
+this has the advantage that unlike in the case of $R$ there is no need
+to subtract a spatially varying classical signal to obtain this
+quantity.
 
-The ``quantum addition'', $R$, and the quadrature variance, $(\Delta
-X^F_\beta)^2$, are both quadratic in $\a_1$ and both rely heavily on
-the quantum state of the matter. Therefore, they will have a
-nontrivial angular dependence, showing more peaks than classical
+The ``quantum addition'', $R$, and the quadrature variance,
+$(\Delta X^F_\beta)^2$, are both quadratic in $\a_1$ and both rely
+heavily on the quantum state of the matter. Therefore, they will have
+a nontrivial angular dependence, showing more peaks than classical
 diffraction. Furthermore, these peaks can be tuned very easily with
 $\beta$ or $\varphi_l$. Fig. \ref{fig:scattering} shows the angular
 dependence of $R$ for the case when the scattered mode is a standing
-wave and the probe is a travelling wave scattering from bosons in a 3D
-optical lattice. The first noticeable feature is the isotropic
-background which does not exist in classical diffraction. This
-background yields information about density fluctuations which,
-according to mean-field estimates (i.e.~inter-site correlations are
-ignored), are related by $R = K( \langle \hat{n}^2 \rangle - \langle
-\hat{n} \rangle^2 )/2$. In Fig. \ref{fig:scattering} we can see a
-significant signal of $R = |C|^2 N_K/2$, because it shows scattering
-from an ideal superfluid which has significant density fluctuations
-with correlations of infinte range. However, as the parameters of the
+wave and the probe is a travelling wave scattering from an ideal
+superfluid in a 3D optical lattice. The first noticeable feature is
+the isotropic background which does not exist in classical
+diffraction. This background yields information about density
+fluctuations which, according to mean-field estimates (i.e.~inter-site
+correlations are ignored), are related by
+$R = K( \langle \hat{n}^2 \rangle - \langle \hat{n} \rangle^2 )/2$. In
+Fig. \ref{fig:scattering} we can see a significant signal of
+$R = |C|^2 N_K/2$, because it shows scattering from an ideal
+superfluid which has significant density fluctuations with
+correlations of infinte range. However, as the parameters of the
 lattice are tuned across the phase transition into a Mott insulator
 the signal goes to zero. This is because the Mott insulating phase has
 well localised atoms at each site which suppresses density
@@ -233,20 +245,125 @@ classical Bragg condition is actually not satisfied which means there
 actually is no classical diffraction on top of the ``quantum
 addition'' shown here. Therefore, these features would be easy to see
 in an experiment as they wouldn't be masked by a stronger classical
-signal.  We can even derive the generalised Bragg conditions for the
-peaks that we can see in Fig. \ref{fig:scattering}. 
+signal.  This difference in behaviour is due to the fact that
+classical diffraction is ignorant of any quantum correlations. This
+signal is given by the square of the light field amplitude squared
+\begin{equation}
+  |\langle \a_1 \rangle|^2 = |C|^2 \sum_{i,j} A_i^*
+  A_j \langle \n_i \rangle \langle \n_j \rangle,
+\end{equation}
+which is idependent of any two-point correlations unlike $R$. On the
+other hand the full light intensity (classical signal plus ``quantum
+addition'') of the quantum light does include higher-order
+correlations
+\begin{equation}
+  \langle \ad_1 \a_1 \rangle = |C|^2 \sum_{i,j} A_i^*
+  A_j \langle \n_i \n_j \rangle.
+\end{equation}
+Therefore, we see that in the fully quantum picture light scattering
+not only depends on the diffraction structure due to the distribution
+of atoms in the lattice, but also on the quantum correlations between
+different lattice sites which will be dependent on the quantum state
+of the matter. These correlations are imprinted in $R$ as shown in
+Eq. \eqref{eq:Rfluc} and it highlights the key feature of our model,
+i.e.~the light couples to the quantum state directly via operators.
 
-\mynote{Derive and show these Bragg conditions below}
+We can even derive the generalised Bragg conditions for the peaks that
+we can see in Fig. \ref{fig:scattering}. The exact conditions under
+which diffraction peaks emerge for the ``quantum addition'' will
+depend on the optical setup as well as on the quantum state of the
+matter as it is the density fluctuation correlations,
+$\langle \dn_i \dn_j \rangle$, that provide the structure for $R$ and
+not the lattice itself as seen in Eq. \eqref{eq:Rfluc}. For classical
+light it is straightforward to develop an intuitive physical picture
+to find the Bragg condition by considering angles at which the
+distance travelled by light scattered from different points in the
+lattice is equal to an integer multiple of wavelength. The ``quantum
+addition'' is more complicated and less intuitive as we now have to
+consider quantum correlations which are not only nonlocal, but can
+also be nagative.
 
-As $(\Delta X^F_\beta)^2$ and $R$ are quadratic variables,
-the generalized Bragg conditions for the peaks are
-$2 \Delta \b{k} = \b{G}$ for quadratures of travelling waves, where
-$\Delta \b{k} = \b{k}_0 - \b{k}_1$ and $\b{G}$ is the reciprocal
-lattice vector, and $2 \b{k}_1 = \b{G}$ for standing wave $\a_1$ and
-travelling $\a_0$, which is clearly different from the classical Bragg
-condition $\Delta \b{k} = \b{G}$. The peak height is tunable by the
-local oscillator phase or standing wave shift as seen in Fig.
-\ref{fig:scattering}b.
+We will consider scattering from a superfluid, because the Mott
+insulator has no ``quantum addition'' due to a lack of density
+fluctuations. The wavefunction of a superfluid on a lattice is given
+by
+\begin{equation}
+  \frac{1}{\sqrt{M^N N!}} \left( \sum_i^M \bd_i \right)^N |0 \rangle,
+\end{equation}
+where $| 0 \rangle$ denotes the vacuum state. This state has infinte
+range correlations and thus has the convenient property that all
+two-point density fluctuation correlations are equal regardless of
+their separation,
+i.e.~$\langle \dn_i \dn_j \rangle \equiv \langle \dn_a \dn_b \rangle$
+for all $(i \ne j)$, where the right hand side is a constant
+value. This allows us to extract all correlations from the sum in
+Eq. \eqref{eq:Rfluc} to obtain
+\begin{equation}
+  \label{eq:RSF}
+  \frac{R}{|C|^2} = (\langle \dn^2 \rangle - \langle \dn_a \dn_b \rangle) \sum_i^K
+  |A_i|^2 + \langle \dn_a \dn_b \rangle |A|^2 = \frac{N}{M} \sum_i^K
+  |A_i|^2 - \frac{N}{M^2} |A|^2,
+\end{equation}
+where $A = \sum_i^K A_i$, and we have dropped the index from
+$\langle \dn^2 \rangle$ as it is equal at every site. The second
+equality follows from the fact that for a superfluid state
+$\langle \dn^2 \rangle = N/M - N/M^2$ and
+$\langle \dn_a \dn_b \rangle = -N/M^2$. Naturally, we get an identical
+expression for the quadrature variance $(\Delta X^F_\beta)^2$ with the
+coefficients $A_i$ replaced by the real $A_i^\beta$.
+
+The ``quantum addition'' for the case when both the scattered and
+probe modes are travelling waves is actually trivial. It has no peaks
+and thus it has no generalised Bragg condition and it only consists of
+a uniform background. This is a consequence of the fact that
+travelling waves couple equally strongly with every site as only the
+phase differs. Therefore, since superfluid correlations lack structure
+as they're uniform we do no get a strong coherent peak. The
+contribution from the lattice structure is included in the classical
+Bragg peaks which we have subtracted in order to obtain the quantity
+$R$. However, if we consider the case where the scattered mode is
+collected as a standing wave using a pair of mirrors we get the
+diffraction pattern that we saw in Fig. \ref{fig:scattering}. This
+time we get strong visible peaks, because at certain angles the
+standing wave couples to the atoms maximally at all lattice sites and
+thus it uses the structure of the lattice to amplify the signal from
+the quantum fluctuations. This becomes clear when we look at
+Eq. \eqref{eq:RSF}. We can neglect the second term as it is always
+negative and it has the same angular distribution as the classical
+diffraction pattern and thus it is mostly zero except when the
+classical Bragg condition is satisfied. Since in
+Fig. \ref{fig:scattering} we have chosen an angle such that the Bragg
+is not satisfied this term is essentially zero. Therefore, we are left
+with the first term $\sum_i^K |A_i|^2$ which for a travelling wave
+probe and a standing wave scattered mode is
+\begin{equation}
+  \sum_i^K |A_i|^2 = \sum_i^K \cos^2(\b{k}_0 \cdot \b{r}_i + \phi_0) =
+  \frac{1}{2} \sum_i^K \left[1 + \cos(2 \b{k}_0 \cdot \b{r}_i + 2
+    \phi_0) \right].
+\end{equation}
+Therefore, it is straightforward to see that unless
+$2 \b{k}_0 = \b{G}$, where $\b{G}$ is a reciprocal lattice vector,
+there will be no coherent signal and we end up with the mean uniform
+signal of strength $N_k/2$. When this condition is satisifed all the
+cosine terms will be equal and they will add up constructively instead
+of cancelling each other out. Note that this new Bragg condition is
+different from the classical one $\b{k}_0 - \b{k}_1 = \b{G}$. This
+result makes it clear that the uniform background signal is not due to
+any coherent scattering, but rather due to the lack of structure in
+the quantum correlations. Furthermore, we see that the peak height is
+actually tunable via the phase, $\phi_0$, which is illustrated in
+Fig. \ref{fig:scattering}b.
+
+For light field quadratures the situation is different, because as we
+have seen in Eq. \eqref{eq:Xtrav} even for travelling waves we can
+tune the contributions to the signal from different sites by changing
+the angle of measurement or tuning the local oscillator signal
+$\beta$. The rest is similar to the case we discussed for $R$ with a
+standing wave mode and we can show that the new Bragg condition in
+this case is $2 (\b{k}_0 - \b{k}_1) = \b{G}$ which is different from
+the condition we had for $R$ and is still different from the classical
+condition $2 (\b{k}_0 - \b{k}_1) = \b{G}$. Furthermore, just like in
+Fig. \ref{fig:scattering}b the peak height can be tuned using $\beta$.
 
 A quantum signal that isn't masked by classical diffraction is very
 useful for future experimental realisability. However, it is still
