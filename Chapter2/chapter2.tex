@@ -71,11 +71,15 @@ quantum potential in contrast to the classical lattice trap.
   \centering
   \includegraphics[width=1.0\textwidth]{LatticeDiagram}
   \caption[Experimental Setup]{Atoms (green) trapped in an optical
-    lattice are illuminated by a coherent probe beam (red). The light
-    scatters (blue) in free space or into a cavity and is measured by
-    a detector. If the experiment is in free space light can scatter
-    in any direction. A cavity on the other hand enhances scattering
-    in one particular direction.}
+    lattice are illuminated by a coherent probe beam (red), $a_0$,
+    with a mode function $u_0(\b{r})$ which is at an angle $\theta_0$
+    to the normal to the lattice. The light scatters (blue) into the
+    mode $\a_1$ in free space or into a cavity and is measured by a
+    detector. Its mode function is given by $u_1(\b{r})$ and it is at
+    an angle $\theta_1$ relative to the normal to the lattice. If the
+    experiment is in free space light can scatter in any direction. A
+    cavity on the other hand enhances scattering in one particular
+    direction.}
   \label{fig:LatticeDiagram}
 \end{figure}
 
@@ -411,13 +415,15 @@ adiabatically follows the quantum state of matter.
 The above equation is quite general as it includes an arbitrary number
 of light modes which can be pumped directly into the cavity or
 produced via scattering from other modes. To simplify the equation
-slightly we will neglect the cavity resonancy shift, $U_{l,l}
-\hat{F}_{l,l}$ which is possible provided the cavity decay rate and/or
-probe detuning are large enough. We will also only consider probing
-with an external coherent beam, $a_0$, and thus we neglect any cavity
-pumping $\eta_l$. We also limit ourselves to only a single scattered
-mode, $a_1$. This leads to a simple linear relationship between the
-light mode and the atomic operator $\hat{F}_{1,0}$
+slightly we will neglect the cavity resonancy shift,
+$U_{l,l} \hat{F}_{l,l}$ which is possible provided the cavity decay
+rate and/or probe detuning are large enough. We will also only
+consider probing with an external coherent beam, $a_0$ with mode
+function $u_0(\b{r})$, and thus we neglect any cavity pumping
+$\eta_l$. We also limit ourselves to only a single scattered mode,
+$a_1$ with a mode function $u_1(\b{r})$. This leads to a simple linear
+relationship between the light mode and the atomic operator
+$\hat{F}_{1,0}$
 \begin{equation}
   \label{eq:a}
   \a_1 = \frac{U_{1,0} a_0} {\Delta_{p} + i \kappa} \hat{F} =
@@ -482,7 +488,16 @@ that one can couple to the interference term between two condensates
 \cite{cirac1996, castin1997, ruostekoski1997, ruostekoski1998,
   rist2012}. Such measurements establish a relative phase between the
 condensates even though the two components have initially well-defined
-atom numbers which is phase's conjugate variable.
+atom numbers which is phase's conjugate variable. In a lattice
+geometry, one would ideally measure between two sites similarly to
+single-site addressing \cite{greiner2009, bloch2011}, which would
+measure a single term $\langle \bd_i b_{i+1}+b_i
+\bd_{i+1}\rangle$. This could be achieved, for example, by superposing
+a deeper optical lattice shifted by $d/2$ with respect to the original
+one, catching and measuring the atoms in the new lattice
+sites. However, a single-shot success rate of atom detection will be
+small and as single-site addressing is challenging, we proceed with
+our global scattering scheme.
 
 In our model light couples to the operator $\hat{F}$ which consists of
 a density component, $\hat{D} = \sum_i J_{i,i} \hat{n}_i$, and a phase
@@ -494,7 +509,9 @@ leaving $\hat{B}$ as the dominant term in $\hat{F}$. This approach is
 fundamentally different from the aforementioned double-well proposals
 as it directly couples to the interference terms caused by atoms
 tunnelling rather than combining light scattered from different
-sources. Such a counter-intuitive configuration may affect works on
+sources. Furthermore, it is not limited to a double-wellsetup and
+naturally extends to a lattice structure which is a key
+advantage. Such a counter-intuitive configuration may affect works on
 quantum gases trapped in quantum potentials \cite{mekhov2012,
   mekhov2008, larson2008, chen2009, habibian2013, ivanov2014,
   caballero2015} and quantum measurement-induced preparation of
@@ -524,24 +541,18 @@ Wannier function at a single site, $W_0(x) \equiv w^2(x)$. Therefore,
 in order to enhance the $\hat{B}$ term we need to maximise the overlap
 between the light modes and the nearest neighbour Wannier overlap,
 $W_1(x)$. This can be achieved by concentrating the light between the
-sites rather than at the positions of the atoms. Ideally, one could
-measure between two sites similarly to single-site addressing
-\cite{greiner2009, bloch2011}, which would measure a single term
-$\langle \bd_i b_{i+1}+b_i \bd_{i+1}\rangle$. This could be achieved,
-for example, by superposing a deeper optical lattice shifted by $d/2$
-with respect to the original one, catching and measuring the atoms in
-the new lattice sites. A single-shot success rate of atom detection
-will be small. As single-site addressing is challenging, we proceed
-with the global scattering.
+sites rather than at the positions of the atoms. 
 
-\mynote{Potentially expand details of the derivation of these equations}
+\mynote{Potentially expand details of the derivation of these
+  equations} 
+
 In order to calculate the $J_{i,j}$ coefficients we perform numerical
 calculations using realistic Wannier functions
 \cite{walters2013}. However, it is possible to gain some analytic
 insight into the behaviour of these values by looking at the Fourier
 transforms of the Wannier function overlaps,
 $\mathcal{F}[W_{0,1}](k)$, shown in Fig.
-\ref{fig:WannierProducts}b. This is because the for plane and standing
+\ref{fig:WannierProducts}b. This is because for plane and standing
 wave light modes the product $u_1^*(x) u_0(x)$ can be in general
 decomposed into a sum of oscillating exponentials of the form
 $e^{i k x}$ making the integral in Eq. \eqref{eq:Jcoeff} a sum of
@@ -598,46 +609,59 @@ allowing to decouple them at specific angles.
 \end{figure}
 
 The simplest case is to find a diffraction maximum where
-$J_{i,i+1} = J_1$, where $J_1$ is a constant. This can be achieved by
-crossing the light modes such that $\theta_0 = -\theta_1$ and
-$k_{0x} = k_{1x} = \pi/d$ and choosing the light mode phases such that
-$\varphi_+ = 0$. Fig. \ref{fig:BDiagram}a shows the resulting light
-mode functions and their product along the lattice and
-Fig. \ref{fig:WannierProducts}c shows the value of the $J_{i,j}$
-coefficients under these circumstances. In order to make the $\hat{B}$
-contribution to light scattering dominant we need to set $\hat{D} = 0$
-which from Eq. \eqref{eq:FTs} we see is possible if
+$J_{i,i+1} = J^B_\mathrm{max}$, where $J^B_\mathrm{max}$ is a
+constant. This results in a diffraction maximum where each bond
+(inter-site term) scatters light in phase and the operator is given by
+\begin{equation}
+  \hat{B} = J^B_\mathrm{max} \sum_m^K \hat{B}_m .
+\end{equation}
+This can be achieved by crossing the light modes such that
+$\theta_0 = -\theta_1$ and $k_{0x} = k_{1x} = \pi/d$ and choosing the
+light mode phases such that $\varphi_+ = 0$. Fig. \ref{fig:BDiagram}a
+shows the resulting light mode functions and their product along the
+lattice and Fig. \ref{fig:WannierProducts}c shows the value of the
+$J_{i,j}$ coefficients under these circumstances. In order to make the
+$\hat{B}$ contribution to light scattering dominant we need to set
+$\hat{D} = 0$ which from Eq. \eqref{eq:FTs} we see is possible if
 \begin{equation}
   \xi \equiv \varphi_0 = -\varphi_1 =
-  \frac{1}{2}\arccos[-\mathcal{F}[W_0]\left(\frac{2\pi}{d}\right)/\mathcal{F}[W_0](0)].
+  \frac{1}{2}\arccos\left[\frac{-\mathcal{F}[W_0](2\pi/d)}{\mathcal{F}[W_0](0)}\right].
 \end{equation}
-This arrangement of light modes maximizes the interference signal,
+Under these conditions, the coefficient $J^B_\mathrm{max}$ is simply
+given by $J^B_\mathrm{max} = \mathcal{F}[W_1](2 \pi / d)$. This
+arrangement of light modes maximizes the interference signal,
 $\hat{B}$, by suppressing the density signal, $\hat{D}$, via
 interference compensating for the spreading of the Wannier functions.
 
 Another possibility is to obtain an alternating pattern similar
-corresponding to a diffraction minimum. We consider an arrangement
+corresponding to a diffraction minimum where each bond scatters light
+in anti-phase with its neighbours giving
+\begin{equation}
+  \hat{B} = J^B_\mathrm{min} \sum_m^K (-1)^m \hat{B}_m,
+\end{equation}
+where $J^B_\mathrm{min}$ is a constant. We consider an arrangement
 where the beams are arranged such that $k_{0x} = 0$ and
 $k_{1x} = \pi/d$ which gives the following expressions for the density
 and interference terms
 \begin{align}
   \label{eq:DMin}
-  \hat{D} = & \mathcal{F}[W_0](\pi/d) \sum_m (-1)^m \hat{n}_m
+  \hat{D} = & \mathcal{F}[W_0]\left(\frac{\pi}{d}\right) \sum_m (-1)^m \hat{n}_m
               \cos(\varphi_0) \cos(\varphi_1) \nonumber \\ 
-  \hat{B} = & -\mathcal{F}[W_1](\pi/d) \sum_m (-1)^m \hat{B}_m
+  \hat{B} = & -\mathcal{F}[W_1]\left(\frac{\pi}{d}\right) \sum_m (-1)^m \hat{B}_m
               \cos(\varphi_0) \sin(\varphi_1).
 \end{align}
-The corresponding $J_{i,j}$ coefficients are given by
-$J_{i,i+1} = -(-1)^i J_2$, where $J_2$ is a constant, and are shown in
-Fig. \ref{fig:WannierProducts}d for $\varphi_0=0$. The light mode
-coupling along the lattice is shown in Fig. \ref{fig:BDiagram}b. It is
-clear that for $\varphi_1 = \pm \pi/2$, $\hat{D} = 0$, which is
-intuitive as this places the lattice sites at the nodes of the mode
-$u_1(x)$. This is a diffraction minimum as the light amplitude is also
-zero, $\langle \hat{B} \rangle = 0$, because contributions from
-alternating inter-site regions interfere destructively. However, the
-intensity $\langle \ad_1 \a \rangle = |C|^2 \langle \hat{B}^2 \rangle$
-is proportional to the variance of $\hat{B}$ and is non-zero.
+For $\varphi_0 = 0$ the corresponding $J_{i,j}$ coefficients are given
+by $J_{i,i+1} = (-1)^i J^B_\mathrm{min}$, where
+$J^B_\mathrm{min} = -\mathcal{F}[W_1](\pi / d)$, and are shown in
+Fig. \ref{fig:WannierProducts}d. The light mode coupling along the
+lattice is shown in Fig. \ref{fig:BDiagram}b. It is clear that for
+$\varphi_1 = \pm \pi/2$, $\hat{D} = 0$, which is intuitive as this
+places the lattice sites at the nodes of the mode $u_1(x)$. This is a
+diffraction minimum as the light amplitude is also zero,
+$\langle \hat{B} \rangle = 0$, because contributions from alternating
+inter-site regions interfere destructively. However, the intensity
+$\langle \ad_1 \a \rangle = |C|^2 \langle \hat{B}^2 \rangle$ is
+proportional to the variance of $\hat{B}$ and is non-zero.
 
 Alternatively, one can use the arrangement for a diffraction minimum
 described above, but use travelling instead of standing waves for the

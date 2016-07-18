@@ -25,11 +25,11 @@ optical lattices. Here, we deal with the first of the three options.
 
 In this chapter we develop a method to measure properties of ultracold
 gases in optical lattices by light scattering. In the previous chapter
-we have shown that quantum light field couples to the bosons via the
-operator $\hat{F}$. This is the key element of the scheme we propose
-as this makes it sensitive to the quantum state of the matter and all
-of its possible superpositions which will be reflected in the quantum
-state of the light itself. We have also shown in section
+we have shown that the quantum light field couples to the bosons via
+the operator $\hat{F}$. This is the key element of the scheme we
+propose as this makes it sensitive to the quantum state of the matter
+and all of its possible superpositions which will be reflected in the
+quantum state of the light itself. We have also shown in section
 \ref{sec:derivation} that this coupling consists of two parts, a
 density component $\hat{D}$ given by Eq. \eqref{eq:D}, and a phase
 component $\hat{B}$ given by Eq. \eqref{eq:B}. Therefore, when probing
@@ -62,7 +62,7 @@ fixed-density scattering. It was only recently that an experiment
 distinguished a Mott insulator from a Bose glass \cite{derrico2014}
 via a series of destructive measurements. Our proposal, on the other
 hand, is nondestructive and is capable of extracting all the relevant
-information in a single experiment.
+information in a single experiment making our proposal timely.
 
 Having shown the possibilities created by this nondestructive
 measurement scheme we move on to considering light scattering from the
@@ -155,9 +155,9 @@ which we will call the ``quantum addition'' to light scattering. By
 construction $R$ is simply the full light intensity minus the
 classical field diffraction. In order to justify its name we will show
 that this quantity depends purely quantum mechanical properties of the
-ultracold gase. We will substitute $\a_1 = C \hat{D}$ using
+ultracold gas. We substitute $\a_1 = C \hat{D}$ using
 Eq. \eqref{eq:D-3} into our expression for $R$ in Eq. \eqref{eq:R} and
-we will make use of the shorthand notation
+we make use of the shorthand notation
 $A_i = u_1^*(\b{r}_i) u_0(\b{r}_i)$. The result is
 \begin{equation}
   \label{eq:Rfluc}
@@ -171,25 +171,27 @@ quantum mechanical property of a system. Therefore, $R$, the ``quantum
 addition'' faithfully represents the new contribution from the quantum
 light-matter interaction to the diffraction pattern.
 
-If instead we are interested in quantities linear in $\hat{D}$, we can
-measure the quadrature of the light fields which in section
-\ref{sec:a} we saw that $\hat{X}_\phi = |C| \hat{X}^F_\beta$. For the
-case when both the scattered mode and probe are travelling waves the
-quadrature
+Another interesting quantity to measure are the quadratures of the
+light fields which we have seen in section \ref{sec:a} are related to
+the quadrature of $\hat{F}$ by $\hat{X}_\phi = |C|
+\hat{X}^F_\beta$. An interesting feature of quadratures is that the
+coupling strength at different sites can be tuned using the local
+oscillator phase $\beta$. To see this we consider the case when both
+the scattered mode and probe are travelling waves the quadrature
 \begin{equation} 
   \label{eq:Xtrav}
   \hat{X}^F_\beta = \frac{1}{2} \left( \hat{F} e^{-i \beta} +
     \hat{F}^\dagger e^{i \beta} \right) = \sum_i^K \hat{n}_i\cos[(\b{k}_0 - \b{k}_1) \cdot
   \b{r}_i + (\phi_0 - \phi_1) - \beta].
 \end{equation} 
-Note that different light quadratures are differently coupled to the
-atom distribution, hence by varying the local oscillator phase, and
-thus effectively $\beta$, and/or the detection angle one can scan the
-whole range of couplings. A similar expression exists for $\hat{D}$
-for a standing wave probe, where instead of varying $\beta$ scanning
-is achieved by varying the position of the wave with respect to
-atoms. Additionally, the quadrature variance, $(\Delta X^F_\beta)^2$,
-will have a similar form to $R$ given in Eq. \eqref{eq:Rfluc},
+Different light quadratures are differently coupled to the atom
+distribution, hence by varying the local oscillator phase, $\beta$,
+and/or the detection angle one can scan the whole range of
+couplings. This is similar to the case for $\hat{D}$ for a standing
+wave probe, where instead of varying $\beta$ scanning is achieved by
+varying the position of the wave with respect to atoms. Additionally,
+the quadrature variance, $(\Delta X^F_\beta)^2$, will have a similar
+form to $R$ given in Eq. \eqref{eq:Rfluc},
 \begin{equation}
   (\Delta X^F_\beta)^2 = |C|^2 \sum_{i.j}^K A_i^\beta A_j^\beta
   \langle \dn_i \dn_j \rangle,
@@ -202,18 +204,18 @@ quantity.
 The ``quantum addition'', $R$, and the quadrature variance,
 $(\Delta X^F_\beta)^2$, are both quadratic in $\a_1$ and both rely
 heavily on the quantum state of the matter. Therefore, they will have
-a nontrivial angular dependence, showing more peaks than classical
+a nontrivial angular dependence showing more peaks than classical
 diffraction. Furthermore, these peaks can be tuned very easily with
 $\beta$ or $\varphi_l$. Fig. \ref{fig:scattering} shows the angular
-dependence of $R$ for the case when the scattered mode is a standing
-wave and the probe is a travelling wave scattering from an ideal
-superfluid in a 3D optical lattice. The first noticeable feature is
-the isotropic background which does not exist in classical
+dependence of $R$ for the case when the probe is a travelling wave
+scattering from an ideal superfluid in a 3D optical lattice into a
+standing wave scattered mode. The first noticeable feature is the
+isotropic background which does not exist in classical
 diffraction. This background yields information about density
 fluctuations which, according to mean-field estimates (i.e.~inter-site
 correlations are ignored), are related by
-$R = K( \langle \hat{n}^2 \rangle - \langle \hat{n} \rangle^2 )/2$. In
-Fig. \ref{fig:scattering} we can see a significant signal of
+$R = |C|^2 K( \langle \hat{n}^2 \rangle - \langle \hat{n} \rangle^2
+)/2$. In Fig. \ref{fig:scattering} we can see a significant signal of
 $R = |C|^2 N_K/2$, because it shows scattering from an ideal
 superfluid which has significant density fluctuations with
 correlations of infinte range. However, as the parameters of the
@@ -246,8 +248,8 @@ actually is no classical diffraction on top of the ``quantum
 addition'' shown here. Therefore, these features would be easy to see
 in an experiment as they wouldn't be masked by a stronger classical
 signal.  This difference in behaviour is due to the fact that
-classical diffraction is ignorant of any quantum correlations. This
-signal is given by the square of the light field amplitude squared
+classical diffraction is ignorant of any quantum correlations as it is
+given by the square of the light field amplitude squared
 \begin{equation}
   |\langle \a_1 \rangle|^2 = |C|^2 \sum_{i,j} A_i^*
   A_j \langle \n_i \rangle \langle \n_j \rangle,
@@ -263,10 +265,11 @@ correlations
 Therefore, we see that in the fully quantum picture light scattering
 not only depends on the diffraction structure due to the distribution
 of atoms in the lattice, but also on the quantum correlations between
-different lattice sites which will be dependent on the quantum state
-of the matter. These correlations are imprinted in $R$ as shown in
-Eq. \eqref{eq:Rfluc} and it highlights the key feature of our model,
-i.e.~the light couples to the quantum state directly via operators.
+different lattice sites which will in turn be dependent on the quantum
+state of the matter. These correlations are imprinted in $R$ as shown
+in Eq. \eqref{eq:Rfluc} and it highlights the key feature of our
+model, i.e.~the light couples to the quantum state directly via
+operators.
 
 We can even derive the generalised Bragg conditions for the peaks that
 we can see in Fig. \ref{fig:scattering}. The exact conditions under
@@ -278,22 +281,17 @@ not the lattice itself as seen in Eq. \eqref{eq:Rfluc}. For classical
 light it is straightforward to develop an intuitive physical picture
 to find the Bragg condition by considering angles at which the
 distance travelled by light scattered from different points in the
-lattice is equal to an integer multiple of wavelength. The ``quantum
-addition'' is more complicated and less intuitive as we now have to
-consider quantum correlations which are not only nonlocal, but can
-also be nagative.
+lattice is equal to an integer multiple of the wavelength. The
+``quantum addition'' is more complicated and less intuitive as we now
+have to consider quantum correlations which are not only nonlocal, but
+can also be negative.
 
 We will consider scattering from a superfluid, because the Mott
 insulator has no ``quantum addition'' due to a lack of density
 fluctuations. The wavefunction of a superfluid on a lattice is given
-by
-\begin{equation}
-  \frac{1}{\sqrt{M^N N!}} \left( \sum_i^M \bd_i \right)^N |0 \rangle,
-\end{equation}
-where $| 0 \rangle$ denotes the vacuum state. This state has infinte
-range correlations and thus has the convenient property that all
-two-point density fluctuation correlations are equal regardless of
-their separation,
+by \textbf{Eq. (??)}. This state has infinte range correlations and
+thus has the convenient property that all two-point density
+fluctuation correlations are equal regardless of their separation,
 i.e.~$\langle \dn_i \dn_j \rangle \equiv \langle \dn_a \dn_b \rangle$
 for all $(i \ne j)$, where the right hand side is a constant
 value. This allows us to extract all correlations from the sum in
@@ -316,26 +314,27 @@ The ``quantum addition'' for the case when both the scattered and
 probe modes are travelling waves is actually trivial. It has no peaks
 and thus it has no generalised Bragg condition and it only consists of
 a uniform background. This is a consequence of the fact that
-travelling waves couple equally strongly with every site as only the
-phase differs. Therefore, since superfluid correlations lack structure
-as they're uniform we do no get a strong coherent peak. The
-contribution from the lattice structure is included in the classical
-Bragg peaks which we have subtracted in order to obtain the quantity
-$R$. However, if we consider the case where the scattered mode is
-collected as a standing wave using a pair of mirrors we get the
-diffraction pattern that we saw in Fig. \ref{fig:scattering}. This
-time we get strong visible peaks, because at certain angles the
-standing wave couples to the atoms maximally at all lattice sites and
-thus it uses the structure of the lattice to amplify the signal from
-the quantum fluctuations. This becomes clear when we look at
-Eq. \eqref{eq:RSF}. We can neglect the second term as it is always
-negative and it has the same angular distribution as the classical
-diffraction pattern and thus it is mostly zero except when the
-classical Bragg condition is satisfied. Since in
-Fig. \ref{fig:scattering} we have chosen an angle such that the Bragg
-is not satisfied this term is essentially zero. Therefore, we are left
-with the first term $\sum_i^K |A_i|^2$ which for a travelling wave
-probe and a standing wave scattered mode is
+travelling waves couple equally strongly with every atom as only the
+phase is different between lattice sites. Therefore, since superfluid
+correlations lack structure as they're uniform we do no get a strong
+coherent peak. The contribution from the lattice structure is included
+in the classical Bragg peaks which we have subtracted in order to
+obtain the quantity $R$. However, if we consider the case where the
+scattered mode is collected as a standing wave using a pair of mirrors
+we get the diffraction pattern that we saw in
+Fig. \ref{fig:scattering}. This time we get strong visible peaks,
+because at certain angles the standing wave couples to the atoms
+maximally at all lattice sites and thus it uses the structure of the
+lattice to amplify the signal from the quantum fluctuations. This
+becomes clear when we look at Eq. \eqref{eq:RSF}. We can neglect the
+second term as it is always negative and it has the same angular
+distribution as the classical diffraction pattern and thus it is
+mostly zero except when the classical Bragg condition is
+satisfied. Since in Fig. \ref{fig:scattering} we have chosen an angle
+such that the Bragg is not satisfied this term is essentially
+zero. Therefore, we are left with the first term $\sum_i^K |A_i|^2$
+which for a travelling wave probe and a standing wave scattered mode
+is
 \begin{equation}
   \sum_i^K |A_i|^2 = \sum_i^K \cos^2(\b{k}_0 \cdot \b{r}_i + \phi_0) =
   \frac{1}{2} \sum_i^K \left[1 + \cos(2 \b{k}_0 \cdot \b{r}_i + 2
@@ -344,14 +343,15 @@ probe and a standing wave scattered mode is
 Therefore, it is straightforward to see that unless
 $2 \b{k}_0 = \b{G}$, where $\b{G}$ is a reciprocal lattice vector,
 there will be no coherent signal and we end up with the mean uniform
-signal of strength $N_k/2$. When this condition is satisifed all the
-cosine terms will be equal and they will add up constructively instead
-of cancelling each other out. Note that this new Bragg condition is
-different from the classical one $\b{k}_0 - \b{k}_1 = \b{G}$. This
-result makes it clear that the uniform background signal is not due to
-any coherent scattering, but rather due to the lack of structure in
-the quantum correlations. Furthermore, we see that the peak height is
-actually tunable via the phase, $\phi_0$, which is illustrated in
+signal of strength $|C|^2 N_k/2$. When this condition is satisifed all
+the cosine terms will be equal and they will add up constructively
+instead of cancelling each other out. Note that this new Bragg
+condition is different from the classical one
+$\b{k}_0 - \b{k}_1 = \b{G}$. This result makes it clear that the
+uniform background signal is not due to any coherent scattering, but
+rather due to the lack of structure in the quantum
+correlations. Furthermore, we see that the peak height is actually
+tunable via the phase, $\phi_0$, which is illustrated in
 Fig. \ref{fig:scattering}b.
 
 For light field quadratures the situation is different, because as we
@@ -362,7 +362,7 @@ $\beta$. The rest is similar to the case we discussed for $R$ with a
 standing wave mode and we can show that the new Bragg condition in
 this case is $2 (\b{k}_0 - \b{k}_1) = \b{G}$ which is different from
 the condition we had for $R$ and is still different from the classical
-condition $2 (\b{k}_0 - \b{k}_1) = \b{G}$. Furthermore, just like in
+condition $\b{k}_0 - \b{k}_1 = \b{G}$. Furthermore, just like in
 Fig. \ref{fig:scattering}b the peak height can be tuned using $\beta$.
 
 A quantum signal that isn't masked by classical diffraction is very
@@ -411,7 +411,7 @@ valid description of the physics. A prominent example is the
 Bose-Hubbard model in 1D \cite{cazalilla2011, ejima2011, kuhner2000,
   pino2012, pino2013}. Observing the transition in 1D by light at
 fixed density was considered to be difficult \cite{rogers2014} or even
-impossible \cite{roth2003}. This is, because the one-dimensional
+impossible \cite{roth2003}. This is because the one-dimensional
 quantum phase transition is in a different universality class than its
 higher dimensional counterparts. The energy gap, which is the order
 parameter, decays exponentially slowly across the phase transition
@@ -453,26 +453,25 @@ addition is given by
 This alone allows us to analyse the phase transition quantitatively
 using our method. Unlike in higher dimensions where an order parameter
 can be easily defined within the mean-field approximation as a simple
-expectation value of some quantity, the situation in 1D is more
-complex as it is difficult to directly access the excitation energy
-gap which defines this phase transition. However, a valid description
-of the relevant 1D low energy physics is provided by Luttinger liquid
-theory \cite{giamarchi}. In this model correlations in the supefluid
-phase as well as the superfluid density itself are characterised by
-the Tomonaga-Luttinger parameter, $K_b$. This parameter also
-identifies the critical point in the thermodynamic limit at $K_b =
-1/2$. This quantity can be extracted from various correlation
-functions and in our case it can be extracted directly from $R$
-\cite{ejima2011}. This quantity was used in numerical calculations
-that used highly efficient density matrix renormalisation group (DMRG)
-methods to calculate the ground state to subsequently fit the
-Luttinger theoru to extract this parameter $K_b$. These calculations
-yield a theoretical estimate of the critical point in the
-thermodynamic limit for commensurate filling in 1D to be at
-$U/2J^\text{cl} \approx 1.64$ \cite{ejima2011}. Our proposal provides
-a method to directly measure $R$ nondestructively in a lab which can
-then be used to experimentally determine the location of the critical
-point in 1D.
+expectation value, the situation in 1D is more complex as it is
+difficult to directly access the excitation energy gap which defines
+this phase transition. However, a valid description of the relevant 1D
+low energy physics is provided by Luttinger liquid theory
+\cite{giamarchi}. In this model correlations in the supefluid phase as
+well as the superfluid density itself are characterised by the
+Tomonaga-Luttinger parameter, $K_b$. This parameter also identifies
+the critical point in the thermodynamic limit at $K_b = 1/2$. This
+quantity can be extracted from various correlation functions and in
+our case it can be extracted directly from $R$ \cite{ejima2011}. This
+quantity was used in numerical calculations that used highly efficient
+density matrix renormalisation group (DMRG) methods to calculate the
+ground state to subsequently fit the Luttinger theory to extract this
+parameter $K_b$. These calculations yield a theoretical estimate of
+the critical point in the thermodynamic limit for commensurate filling
+in 1D to be at $U/2J^\text{cl} \approx 1.64$ \cite{ejima2011}. Our
+proposal provides a method to directly measure $R$ nondestructively in
+a lab which can then be used to experimentally determine the location
+of the critical point in 1D.
 
 However, whilst such an approach will yield valuable quantitative
 results we will instead focus on its qualitative features which give a
@@ -481,7 +480,7 @@ $R$. This is because the superfluid to Mott insulator phase transition
 is well understood, so there is no reason to dwell on its quantitative
 aspects. However, our method is much more general than the
 Bose-Hubbard model as it can be easily applied to many other systems
-such as fermions, photonic circuits, optical lattices qith quantum
+such as fermions, photonic circuits, optical lattices with quantum
 potentials, etc. Therefore, by providing a better physical picture of
 what information is carried by the ``quantum addition'' it should be
 easier to see its usefuleness in a broader context.
@@ -527,22 +526,23 @@ system \cite{batrouni2002}.
 \end{figure}
 
 We then consider probing these ground states using our optical scheme
-and we calculate the ``quantum addition'', $R$. The angular dependence
-of $R$ for a Mott insulator and a superfluid is shown in
-Fig. \ref{fig:SFMI}a, and we note that there are two variables
-distinguishing the states. Firstly, maximal $R$, $R_\text{max} \propto
-\sum_i \langle \delta \hat{n}_i^2 \rangle$, probes the fluctuations
-and compressibility $\kappa'$ ($\langle \delta \hat{n}^2_i \rangle
-\propto \kappa' \langle \hat{n}_i \rangle$).  The Mott insulator is
-incompressible and thus will have very small on-site fluctuations and
-it will scatter little light leading to a small $R_\text{max}$. The
-deeper the system is in the insulating phase (i.e. that larger the
-$U/2J^\text{cl}$ ratio is), the smaller these values will be until
-ultimately it will scatter no light at all in the $U \rightarrow
-\infty$ limit. In Fig. \ref{fig:SFMI}a this can be seen in the value
-of the peak in $R$. The value $R_\text{max}$ in the superfluid phase
-($U/2J^\text{cl} = 0$) is larger than its value in the Mott insulating
-phase ($U/2J^\text{cl} = 10$) by a factor of
+and we calculate the ``quantum addition'', $R$, based on these ground
+states. The angular dependence of $R$ for a Mott insulator and a
+superfluid is shown in Fig. \ref{fig:SFMI}a, and we note that there
+are two variables distinguishing the states. Firstly, maximal $R$,
+$R_\text{max} \propto \sum_i \langle \delta \hat{n}_i^2 \rangle$,
+probes the fluctuations and compressibility $\kappa'$
+($\langle \delta \hat{n}^2_i \rangle \propto \kappa' \langle \hat{n}_i
+\rangle$).  The Mott insulator is incompressible and thus will have
+very small on-site fluctuations and it will scatter little light
+leading to a small $R_\text{max}$. The deeper the system is in the
+insulating phase (i.e. that larger the $U/2J^\text{cl}$ ratio is), the
+smaller these values will be until ultimately it will scatter no light
+at all in the $U \rightarrow \infty$ limit. In Fig. \ref{fig:SFMI}a
+this can be seen in the value of the peak in $R$. The value
+$R_\text{max}$ in the superfluid phase ($U/2J^\text{cl} = 0$) is
+larger than its value in the Mott insulating phase
+($U/2J^\text{cl} = 10$) by a factor of
 $\sim$25. Figs. \ref{fig:SFMI}(b,d) show how the value of
 $R_\text{max}$ changes across the phase transition. There are a few
 things to note at this point. Firstly, if we follow the transition
@@ -552,7 +552,7 @@ that the transition is very smooth and it is hard to see a definite
 critical point. This is due to the energy gap closing exponentially
 slowly which makes precise identification of the critical point
 extremely difficult. The best option at this point would be to fit
-Tomonage-Luttinger theory to the results in order to find this
+Tomonaga-Luttinger theory to the results in order to find this
 critical point. However, we note that there is a drastic change in
 signal as the chemical potential (and thus the density) is
 varied. This is highlighted in Fig. \ref{fig:SFMI}b which shows how
@@ -570,18 +570,20 @@ the dip in the $R$. This can be seen in
 Fig. \ref{fig:SFMI}a. Furthermore, just like for $R_\text{max}$ we see
 that the transition is much sharper as $\mu$ is varied. This is shown
 in Figs. \ref{fig:SFMI}(c,e). Notably, the difference in angle between
-a superfluid and an insulating state is fairly significant $\sim
-20^\circ$ which should make the two phases easy to identify using this
-measure. In this particular case, measuring $W_R$ in the Mott phase is
-not very practical as the insulating phase does not scatter light
-(small $R_\mathrm{max}$). The phase transition information is easier
-extracted from $R_\mathrm{max}$. However, this is not always the case
-and we will shortly see how certain phases of matter scatter a lot of
-light and can be distinguished using measurements of $W_R$. Another
-possible concern with experimentally measuring $W_R$ is that it might
-be obstructed by the classical diffraction maxima which appear at
-angles corresponding to the minima in $R$. However, the width of such
-a peak is much smaller as its width is proportional to $1/M$.
+a superfluid and an insulating state is fairly significant
+$\sim 20^\circ$ which should make the two phases easy to identify
+using this measure. In this particular case, measuring $W_R$ in the
+Mott phase is not very practical as the insulating phase does not
+scatter light (small $R_\mathrm{max}$). The phase transition
+information is easier extracted from $R_\mathrm{max}$. However, this
+is not always the case and we will shortly see how certain phases of
+matter scatter a lot of light and can be distinguished using
+measurements of $W_R$ where $R_\mathrm{max}$ is not
+sufficient. Another possible concern with experimentally measuring
+$W_R$ is that it might be obstructed by the classical diffraction
+maxima which appear at angles corresponding to the minima in
+$R$. However, the width of such a peak is much smaller as its width is
+proportional to $1/M$.
 
 So far both variables we considered, $R_\text{max}$ and $W_R$, provide
 similar information. They both take on values at one of its extremes
@@ -601,34 +603,33 @@ Hamiltonian can be shown to be
 where $V$ is the strength of the superlattice potential, $r$ is the
 ratio of the superlattice and trapping wave vectors and $\phi$ is some
 phase shift between the two lattice potentials \cite{roux2008}. The
-first two terms are the standard Bose-Hubbard Hamiltonian. The only
-modification is an additionally spatially varying potential shift. We
+first two terms are the standard Bose-Hubbard Hamiltonian and the only
+modification is an additional spatially varying potential shift. We
 will only consider the phase diagram at fixed density as the
 introduction of disorder makes the usual interpretation of the phase
 diagram in the ($\mu/2J^\text{cl}$, $U/2J^\text{cl}$) plane for a
 fixed ratio $V/U$ complicated due to the presence of multiple
-compressible and incompressible phases between successive MI lobes
-\cite{roux2008}. Therefore, the chemical potential no longer appears
-in the Hamiltonian as we are no longer considering the grand canonical
-ensemble.
+compressible and incompressible phases between successive Mott
+insulator lobes \cite{roux2008}. Therefore, the chemical potential no
+longer appears in the Hamiltonian as we are no longer considering the
+grand canonical ensemble.
 
 The reason for considering such a system is that it introduces a
 third, competing phase, the Bose glass into our phase diagram. It is
 an insulating phase like the Mott insulator, but it has local
 superfluid susceptibility making it compressible. Therefore this
-localized insulating phase will have exponentially decaying
-correlations just like the Mott phase, but it will have large on-site
-fluctuations just like the compressible superfluid phase. As these are
-the two physical variables encoded in $R$ measuring both
-$R_\text{max}$ and $W_R$ will provide us with enough information to
-distinguish all three phases. In a Bose glass we have finite
-compressibility, but exponentially decaying correlations. This gives a
-large $R_\text{max}$ and a large $W_R$. A Mott insulator will also
-have exponentially decaying correlations since it is an insulator, but
-it will be incompressible. Thus, it will scatter light with a small
-$R_\text{max}$ and large $W_R$. Finally, a superfluid will have long
-range correlations and large compressibility which results in a large
-$R_\text{max}$ and a small $W_R$.
+localized insulating phase has exponentially decaying correlations
+just like the Mott phase, but it has large on-site fluctuations just
+like the compressible superfluid phase. As these are the two physical
+variables encoded in $R$ measuring both $R_\text{max}$ and $W_R$ will
+provide us with enough information to distinguish all three phases. In
+a Bose glass we have finite compressibility, but exponentially
+decaying correlations. This gives a large $R_\text{max}$ and a large
+$W_R$. A Mott insulator also has exponentially decaying correlations
+since it is an insulator, but it is incompressible. Thus, it will
+scatter light with a small $R_\text{max}$ and large $W_R$. Finally, a
+superfluid has long range correlations and large compressibility which
+results in a large $R_\text{max}$ and a small $W_R$.
 
 \begin{figure}[htbp!]  
   \centering
@@ -664,52 +665,96 @@ unit density. However, despite the lack of an easily distinguishable
 critical point, as we have already discussed, it is possible to
 quantitatively extract the location of the transition lines by
 extracting the Tomonaga-Luttinger parameter from the scattered light,
-$R$, in the same way it was done for an unperturbed BHM
+$R$, in the same way it was done for an unperturbed Bose-Hubbard model
 \cite{ejima2011}.
-
-Only recently \cite{derrico2014} a Bose glass phase was studied by
-combined measurements of coherence, transport, and excitation spectra,
-all of which are destructive techniques. Our method is simpler as it
-only requires measurement of the quantity $R$ and additionally, it is
-nondestructive.
 
 \subsection{Matter-field interference measurements}
 
-We now focus on enhancing the interference term $\hat{B}$ in the
-operator $\hat{F}$. 
+We have shown in section \ref{sec:B} that certain optical arrangements
+lead to a different type of light-matter interaction where coupling is
+maximised in between lattice sites rather than at the sites themselves
+yielding $\a_1 = C\hat{B}$. This leads to the optical fields
+interacting directly with the interference terms $\bd_i b_{i+1}$ via
+the operator $\hat{B}$ given by Eq. \eqref{eq:B}. This opens up a
+whole new way of probing and interacting with a quantum gas trapped in
+an optical lattice as this gives an in-situ method for probing the
+inter-site interference terms at its shortest possible distance,
+i.e.~the lattice period.
 
-Firstly, we will use this result to show how one can probe
-$\langle \hat{B} \rangle$ which in MF gives information about the
-matter-field amplitude, $\Phi = \langle b \rangle$. 
+% I mention mean-field here, but do not explain it. That should be
+% done in Chapter 2.1}
 
-Hence, by measuring the light quadrature we probe the kinetic energy
-and, in MF, the matter-field amplitude (order parameter) $\Phi$:
-$\langle \hat{X}^F_{\beta=0} \rangle = | \Phi |^2
-\mathcal{F}[W_1](2\pi/d) (K-1)$.
-
-Secondly, we show that it is also possible to access the fluctuations
-of matter-field quadratures $\hat{X}^b_\alpha = (b e^{-i\alpha} + \bd
-e^{i\alpha})/2$, which in MF can be probed by measuring the variance
-of $\hat{B}$. Across the phase transition, the matter field changes
-its state from Fock (in MI) to coherent (deep SF) through an
-amplitude-squeezed state as shown in Fig. \ref{Quads}(a,b). 
-
-Assuming $\Phi$ is real in MF:
+Unlike in the previous sections, here we will use the mean-field
+description of the Bose-Hubbard model in order to obtain a simple
+physical picture of what information is contained in the quantum
+light. In the mean-field approximation the inter-site interference
+terms become
 \begin{equation}
-  \label{intensity} 
-  \langle \ad_1 \a_1 \rangle = 2 |C|^2(K-1)\mathcal{F}^2[W_1](\frac{\pi}{d})
-  \times [ ( \langle b^2 \rangle - \Phi^2 )^2 + ( n - \Phi^2 ) ( 1 +n - \Phi^2 ) ]
-\end{equation} 
-and it is shown as a function of $U/(zJ^\text{cl})$ in
-Fig. \ref{Quads}. Thus, since measurement in the diffraction maximum
-yields $\Phi^2$ we can deduce $\langle b^2 \rangle - \Phi^2$ from the
-intensity. This quantity is of great interest as it gives us access to
-the quadrature variances of the matter-field
+  \bd_i b_j = \Phi \bd_i + \Phi^* b_j - |\Phi|^2,
+\end{equation}
+where $\langle b_i \rangle = \Phi$ which we assume is uniform across
+the whole lattice. This approach has the advantage that the quantity
+$\Phi$ is the mean-field order parameter of the superfluid to Mott
+insulator phase transition and is effectively a good measure of the
+superfluid character of the quantum ground state. This greatly
+simplifies the physical interpretation of our results.
+
+Firstly, we will show that our nondestructive measurement scheme
+allows one to probe the mean-field order parameter, $\Phi$,
+directly. Normally, this is achieved by releasing the trapped gas and
+performing a time-of-flight measurement. Here, this can be achieved
+in-situ. In section \ref{sec:B} we showed that one of the possible
+optical arrangement leads to a diffraction maximum with the matter
+operator
+\begin{equation}
+  \label{eq:Bmax}
+  \hat{B} = J^B_\mathrm{max} \sum_i \left( \bd_i b_{i+1} + b_i \bd_{i+1} \right),
+\end{equation}
+where $J^B_\mathrm{max} = \mathcal{F}[W_1](2\pi/d)$. Therefore, by measuring the
+expectation value of the quadrature we obtain the following quantity
+\begin{equation}
+  \langle \hat{X}^F_{\beta=0} \rangle = J^B_\mathrm{max} (K-1) | \Phi |^2 .
+\end{equation}
+This quantity is directly proportional to square of the order
+parameter $\Phi$ and thus lets us very easily follow this quantity
+across the phase transition with a very simple quadrature measurement
+setup. 
+
+In the mean-field treatment, the order parameter also lets us deduce a
+different quantity, namely matter-field quadratures
+$\hat{X}^b_\alpha = (b e^{-i\alpha} + \bd e^{i\alpha})/2$. Quadrature
+measurements of optical fields are a standard and common tool in
+quantum optics. However, this is not the case for matter-fields as
+normally most interactions lead to an effective coupling with the
+density as we have seen in the previous sections. Therefore, such
+measurements provide us with new opportunities to study the quantum
+matter state which was previously unavailable. We will take $\Phi$ to
+be real which in the standard Bose-Hubbard Hamiltonian can be selected
+via an inherent gauge degree of freedom in the order parameter. Thus,
+the quadratures themself straightforwardly become
+\begin{equation}
+  \hat{X}^b_\alpha = \frac{\Phi}{2} (e^{-i\alpha} + e^{i\alpha}) =
+  \Phi \cos(\alpha).
+\end{equation}
+From our measurement of the light field quadrature we have already
+obtained the value of $\Phi$ and thus we immediately also know the
+values of the matter-field quadratures. Unfortunately, the variance of
+the quadrature is a more complicated quantity given by
 \begin{equation} 
-  (\Delta X^b_{0,\pi/2})^2 = 1/4 + [(n - \Phi^2) \pm
-  (\langle b^2 \rangle - \Phi^2)]/2,
+  (\Delta X^b_{0,\pi/2})^2 = \frac{1}{4} + [(n - \Phi^2) \pm
+  \frac{1}{2}(\langle b^2 \rangle - \Phi^2)],
 \end{equation} 
-where $n=\langle\hat{n}\rangle$ is the mean on-site atomic density.
+where we have arbitrarily selected two orthogonal quadratures
+$\alpha =0 $ and $\alpha = \pi / 2$. This quantity cannot be estimated
+from light quadrature measurements alone as we do not know the value
+of $\langle b^2 \rangle$. To obtain the value of
+$\langle b^2 \rangle$this quantity we need to consider a second-order
+light observable such as light intensity. However, in the diffraction
+maximum this signal will be dominated by a contribution proportional
+to $K^2 \Phi^4$ whereas the terms containing information on
+$\langle b^2 \rangle$ will only scale as $K$. Therefore, it would be
+difficult to extract the quantity that we need by measuring in the
+difraction maximum.
 
 \begin{figure}[htbp!]
   \centering
@@ -729,32 +774,58 @@ where $n=\langle\hat{n}\rangle$ is the mean on-site atomic density.
 	\label{Quads}
 \end{figure}
 
-Probing $\hat{B}^2$ gives us access to kinetic energy fluctuations
-with 4-point correlations ($\bd_i b_j$ combined in pairs). Measuring
-the photon number variance, which is standard in quantum optics, will
-lead up to 8-point correlations similar to 4-point density
-correlations \cite{mekhov2007pra}. These are of significant interest,
-because it has been shown that there are quantum entangled states that
-manifest themselves only in high-order correlations
-\cite{kaszlikowski2008}.
+We now consider the alternative arrangement in which we probe the
+diffraction minimum and the matter operator is given by
+\begin{equation}
+  \label{eq:Bmin}
+  \hat{B} = J^B_\mathrm{min} \sum_i (-1)^i \left( \bd_i b_{i+1} b_i
+    \bd_{i+1} \right),
+\end{equation}
+where $J^B_\mathrm{min} = - \mathcal{F}[W_1](\pi / d)$ and which
+unlike the previous case is no longer proportional to the Bose-Hubbard
+kinetic energy term. Unlike in the diffraction maximum the light
+intensity in the diffraction minimum does not have the term
+proportional to $K^2$ and thus we obtain the following quantity
+\begin{equation}
+  \label{intensity}
+  \langle \ad_1 \a_1 \rangle = 2 |C|^2(K-1) \mathcal{F}^2[W_1]
+  (\frac{\pi}{d}) [ ( \langle b^2 \rangle - \Phi^2 )^2 + ( n - \Phi^2 ) ( 1 +n - \Phi^2 ) ],
+\end{equation}
+This is plotted in Fig. \ref{Quads} as a function of
+$U/(zJ^\text{cl})$. Now, we can easily deduce the value of
+$\langle b^2 \rangle$ since we will already know the mean density,
+$n$, from our experimental setup and we have seen that we can obtain
+$\Phi^2$ from the diffraction maximum. Thus, we now have access to the
+quadrature variance of the matter-field as well giving us a more
+complete picture of the matter-field amplitude than previously
+possible.
 
-Surprisingly, inter-site terms scatter more light from a Mott
-insulator than a superfluid Eq. \eqref{intensity}, as shown in
-Fig. \eqref{Quads}, although the mean inter-site density
-$\langle \hat{n}(\b{r})\rangle $ is tiny in a MI. This reflects a
-fundamental effect of the boson interference in Fock states. It indeed
-happens between two sites, but as the phase is uncertain, it results
-in the large variance of $\hat{n}(\b{r})$ captured by light as shown
-in Eq. \eqref{intensity}. The interference between two macroscopic
-BECs has been observed and studied theoretically
-\cite{horak1999}. When two BECs in Fock states interfere a phase
-difference is established between them and an interference pattern is
-observed which disappears when the results are averaged over a large
-number of experimental realizations. This reflects the large
-shot-to-shot phase fluctuations corresponding to a large inter-site
-variance of $\hat{n}(\b{r})$. By contrast, our method enables the
-observation of such phase uncertainty in a Fock state directly between
-lattice sites on the microscopic scale in-situ.
+A surprising feature seen in Fig. \ref{Quads} is that the inter-site
+terms scatter more light from a Mott insulator than a superfluid
+Eq. \eqref{intensity}, although the mean inter-site density
+$\langle \hat{n}(\b{r})\rangle $ is tiny in the Mott insulating
+phase. This reflects a fundamental effect of the boson interference in
+Fock states. It indeed happens between two sites, but as the phase is
+uncertain, it results in the large variance of $\hat{n}(\b{r})$
+captured by light as shown in Eq. \eqref{intensity}. The interference
+between two macroscopic BECs has been observed and studied
+theoretically \cite{horak1999}. When two BECs in Fock states interfere
+a phase difference is established between them and an interference
+pattern is observed which disappears when the results are averaged
+over a large number of experimental realizations. This reflects the
+large shot-to-shot phase fluctuations corresponding to a large
+inter-site variance of $\hat{n}(\b{r})$. By contrast, our method
+enables the observation of such phase uncertainty in a Fock state
+directly between lattice sites on the microscopic scale in-situ.
+
+More generally, beyond mean-field, probing $\hat{B}^\dagger \hat{B}$
+via light intensity measurements gives us access with 4-point
+correlations ($\bd_i b_j$ combined in pairs). Measuring the photon
+number variance, which is standard in quantum optics, will lead up to
+8-point correlations similar to 4-point density correlations
+\cite{mekhov2007pra}. These are of significant interest, because it
+has been shown that there are quantum entangled states that manifest
+themselves only in high-order correlations \cite{kaszlikowski2008}.
 
 \section{Conclusions}
 
@@ -771,20 +842,19 @@ at measuring the matter-field interference via the operator $\hat{B}$
 by concentrating light between the sites. This corresponds to probing
 interference at the shortest possible distance in an optical
 lattice. This is in contrast to standard destructive time-of-flight
-measurements which deal with far-field interference and a relatively
-near-field one was used in Ref. \cite{miyake2011}. This defines most
-processes in optical lattices. E.g. matter-field phase changes may
-happen not only due to external gradients, but also due to intriguing
-effects such quantum jumps leading to phase flips at neighbouring
-sites and sudden cancellation of tunneling \cite{vukics2007}, which
-should be accessible by our method. We showed how in mean-field, one
-can measure the matter-field amplitude (order parameter), quadratures
-and squeezing. This can link atom optics to areas where quantum optics
-has already made progress, e.g., quantum imaging \cite{golubev2010,
-  kolobov1999}, using an optical lattice as an array of multimode
-nonclassical matter-field sources with a high degree of entanglement
-for quantum information processing. Since our scheme is based on
-off-resonant scattering, and thus being insensitive to a detailed
-atomic level structure, the method can be extended to molecules
-\cite{LP2013}, spins, and fermions \cite{ruostekoski2009}.
+measurements which deal with far-field interference. This quantity
+defines most processes in optical lattices. E.g. matter-field phase
+changes may happen not only due to external gradients, but also due to
+intriguing effects such quantum jumps leading to phase flips at
+neighbouring sites and sudden cancellation of tunneling
+\cite{vukics2007}, which should be accessible by our method. We showed
+how in mean-field, one can measure the matter-field amplitude (order
+parameter), quadratures and squeezing. This can link atom optics to
+areas where quantum optics has already made progress, e.g., quantum
+imaging \cite{golubev2010, kolobov1999}, using an optical lattice as
+an array of multimode nonclassical matter-field sources with a high
+degree of entanglement for quantum information processing. Since our
+scheme is based on off-resonant scattering, and thus being insensitive
+to a detailed atomic level structure, the method can be extended to
+molecules \cite{LP2013}, spins, and fermions \cite{ruostekoski2009}.
 
