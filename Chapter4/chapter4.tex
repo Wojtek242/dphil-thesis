@@ -1,0 +1,158 @@
+%*******************************************************************************
+%*********************************** Fourth Chapter *****************************
+%*******************************************************************************
+
+\chapter{Quantum Measurement Backaction}  
+% Title of the Fourth Chapter
+
+\ifpdf
+    \graphicspath{{Chapter4/Figs/Raster/}{Chapter4/Figs/PDF/}{Chapter4/Figs/}}
+\else
+    \graphicspath{{Chapter4/Figs/Vector/}{Chapter4/Figs/}}
+\fi
+
+
+%********************************** %First Section  **************************************
+
+\section{Introduction}
+
+This thesis is entirely concerned with the question of measuring a
+quantum many-body system using quantized light. However, so far we
+have only looked at expectation values in a nondestructive context
+where we neglect the effect of the quantum wavefunction collapse. We
+have shown that light provides information about various statistical
+quantities of the quantum states of the atoms such as their
+correlation functions. In general, any quantum measurement affects the
+system even if it doesn't physically destroy it. In our model both
+optical and matter fields are quantized and their interaction leads to
+entanglement between the two subsystems. When a photon is detected and
+the electromagnetic wavefunction of the optical field collapses, the
+matter state is also affected due to this entanglement resulting in
+quantum measurement backaction. Therefore, in order to determine these
+quantities multiple measurements have to be performed to establish a
+precise measurement of the expectation value which will require
+repeated preparations of the initial state.
+
+In the following chapters, we consider a different approach to quantum
+measurement in open systems and instead of considering expectation
+values we look at a single experimental run and the resulting dynamics
+due to measurement backaction. Previously we were mostly interested in
+extracting information about the quantum state of the atoms from the
+scattered light. The flexibility in the measurement model was used to
+enable probing of as many different quantum properties of the
+ultracold gas as possible. By focusing on measurement backaction we
+instead investigate the effect of photodetections on the dynamics of
+the many-body gas as well as the possible quantum states that we can
+prepare instead of what information can be extracted.
+
+In this chapter, we introduce the necessary theory of quantum
+measurement and backaction in open systems in order to lay a
+foundation for the material that follows in which we apply these
+concepts to a bosonic quantum gas. We first introduce the concept of
+quantum trajectories which represent a single continuous series of
+photon detections. We also present an alternative approach to open
+systems in which the measurement outcomes are discarded as this will
+be useful when trying to learn about dynamical features common to
+every trajectory. In this case we use the density matrix formalism
+which obeys the master equation. This approach is more common in
+dissipative systems and we will highlight the differences between
+these two different types of open systems. We conclude this chapter
+with a new concept that will be central to all subsequent
+discussions. In our model measurement is global, it couples to
+operators that correspond to global properties of the quantum gas
+rather than single-site quantities. This enables the possibility of
+performing measurements that cannot distinguish certain sites from
+each other. Due to a lack of ``which-way'' information this leads to
+the creation of spatially nontrivial virtual lattices on top of the
+physical lattice. This turns out to have significant consequences on
+the dynamics of the system.
+
+\section{Quantum Trajectories}
+
+A simple intuitive concept of a quantum trajectory is that it is the
+path taken by a quantum state over time during a single experimental
+realisation. In particular, we consider states conditioned upon
+measurement results such as the photodetection times. Such a
+trajectory is generally stochastic in nature as light scattering is
+not a deterministic process. Furthermore, they are in general
+discotinuous as each detection event brings about a drastic change in
+the quantum state due to the wavefunction collapse of the light field.
+
+Before we discuss specifics relevant to our model of quantized light
+interacting with a quantum gas we present a more general overview
+which will be useful as some of the results in the following chapters
+are more general. Measurement always consists of at least two
+competing processes, two possible outcomes. If there is no competition
+and only one outcome is possible then our measurement is meaningless
+as it does not reveal any information about the system. In its
+simplest form measurement consists of a series of events, such as the
+detections of photons. Even though, on an intuitive level it seems
+that we have defined only a single outcome, the event, this
+arrangement actually consists of two mutually exclusive outcomes. At
+any point in time an event either happens or it does not, a photon is
+either detected or the detector remains silent, also known as a null
+result. Both outcomes reveal some information about the system we are
+investigating. For example, let us consider measuring the number of
+atoms by measuring the number of photons they scatter. Each atom will
+on average scatter a certain number of photons contributing to the
+detection rate we observe. Therefore, if we record multiple photons at
+a high rate we learn that the illuminated region must contain many
+atoms. On the other hand, if there are few atoms to scatter the light
+we will observe few detection events which we interpret as a
+continuous series of non-detection events interspersed with the
+occasional detector click. This trajectory informs us that there are
+much fewer atoms being illuminated than previously.
+
+Basic quantum mechanics tells us that such measurements will in
+general affect the quantum state in some way. Each event will cause a
+discontinuous quantum jump in the wavefunction of the system and it
+will have a jump operator, $\c$, associated with it. The effect of an
+event on the quantum state is simply the result of applying this jump
+operator to the wavefunction, $| \psi (t) \rangle$,
+\begin{equation}
+  | \psi(t + \mathrm{d}t) \rangle = \frac{\c | \psi(t) \rangle}
+  {\sqrt{\langle \cd \c \rangle (t)}},
+\end{equation}
+where the denominator is simply a normalising factor. The exact form
+of the jump operator $\c$ will depend on the nature of the measurement
+we are considering. For example, if we consider measuring the photons
+escaping from a leaky cavity then $\c = \sqrt{2 \kappa} \hat{a}$,
+where $\kappa$ is the cavity decay rate and $\hat{a}$ is the
+annihilation operator of a photon in the cavity field. The null
+measurement outcome has to be treated differently as it does not occur
+at discrete time points like the detection events themselves. Its
+effect is accounted for by a modification to the isolated Hamiltonian,
+$\hat{H}_0$, time evolution in the form
+\begin{equation}
+  | \psi (t + \mathrm{d}t) \rangle = \left\{ \hat{1} - \mathrm{d}t
+    \left[ i \hat{H}_0 + \frac{\cd \c}{2} - \frac{\langle \cd \c
+        \rangle (t)}{2} \right] \right\} | \psi (t) \rangle.
+\end{equation}
+The effect of both outcomes can be included in a single stochastic
+Schr\"{o}dinger equation given by
+\begin{equation}
+  \label{eq:SSE}
+  \mathrm{d} | \psi(t) \rangle = \left[ \mathrm{d} N(t) \left(
+      \frac{\c} {\sqrt{ \langle \cd \c \rangle (t)}} - \hat{1} \right)
+    + \mathrm{d} t \left( \frac{\langle \cd \c \rangle (t)}{2} -
+      \frac{ \cd \c}{2} - i \hat{H} \right) \right] | \psi(t) \rangle,
+\end{equation}
+where $\mathrm{d}N(t)$ is the stochastic increment to the number of
+photodetections up to time $t$ which is equal to $1$ whenever a
+quantum jump occurs and $0$ otherwise. Note that this equation has a
+straightforward generalisation to multiple jump operators which we do
+not consider here at all.
+
+All trajectories that we calculate in the follwing chapters are
+described by the stochastic Schr\"{o}dinger equation in
+Eq. \eqref{eq:SSE}. The most straightforward way to solve it is to
+replace the differentials by small time-setps $\delta t$. Then we
+generate a random number $R(t)$ at every time-step and a jump is
+applied, i.e.~$\mathrm{d}N(t) = 1$, if 
+\begin{equation}
+  R(t) < \langle \cd \c \rangle (t) \delta t.
+\end{equation}
+
+\section{The Master Equation}
+
+\section{Global Measurement and ``Which-Way'' Information}
