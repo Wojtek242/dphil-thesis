@@ -11,26 +11,17 @@
     \graphicspath{{Chapter2/Figs/Vector/}{Chapter2/Figs/}}
 \fi
 
+\section{Introduction}
 
-%********************************** % First Section  ****************************
+In this chapter, we derive a general Hamiltonian that describes the
+coupling of atoms with far-detuned optical beams
+\cite{mekhov2012}. This will serve as the basis from which we explore
+the system in different parameter regimes, such as nondestructive
+measurement in free space or quantum measurement backaction in a
+cavity. Another interesting direction for this field of research are
+quantum optical lattices where the trapping potential is treated
+quantum mechanically. However this is beyond the scope of this work.
 
-\section{Ultracold Atoms in Optical Lattices}
-
-%********************************** % Second Section  ***************************
-
-\section{Quantum Optics of Quantum Gases}
-
-Having introduced and described the behaviour of ultracold bosons
-trapped and manipulated using classical light, it is time to extend
-the discussion to quantized optical fields. We will first derive a
-general Hamiltonian that describes the coupling of atoms with
-far-detuned optical beams \cite{mekhov2012}. This will serve as the
-basis from which we explore the system in different parameter regimes,
-such as nondestructive measurement in free space or quantum
-measurement backaction in a cavity. Another interesting direction for
-this field of research are quantum optical lattices where the trapping
-potential is treated quantum mechanically. However this is beyond the
-scope of this work.
 \mynote{insert our paper citations here}
 
 We consider $N$ two-level atoms in an optical lattice with $M$
@@ -48,8 +39,9 @@ from a small number of sites with a large filling factor (e.g.~BECs
 trapped in a double-well potential) to a an extended multi-site
 lattice with a low filling factor (e.g.~a system with one atom per
 site which will exhibit the Mott insulator to superfluid quantum phase
-transition). \mynote{extra fermion citations, Piazza? Look up Gabi's
-  AF paper.}
+transition). 
+
+\mynote{extra fermion citations, Piazza? Look up Gabi's AF paper.}
 
 As we have seen in the previous section, an optical lattice can be
 formed with classical light beams that form standing waves. Depending
@@ -69,7 +61,7 @@ quantum potential in contrast to the classical lattice trap.
 
 \begin{figure}[htbp!]
   \centering
-  \includegraphics[width=1.0\textwidth]{LatticeDiagram}
+  \includegraphics[width=\linewidth]{LatticeDiagram}
   \caption[Experimental Setup]{Atoms (green) trapped in an optical
     lattice are illuminated by a coherent probe beam (red), $a_0$,
     with a mode function $u_0(\b{r})$ which is at an angle $\theta_0$
@@ -98,7 +90,7 @@ the light modes. However, it is much more intuitive to consider
 variable angles in our model as this lends itself to a simpler
 geometrical representation.
 
-\subsection{Derivation of the Hamiltonian}
+\section{Derivation of the Hamiltonian}
 \label{sec:derivation}
 
 A general many-body Hamiltonian coupled to a quantized light field in
@@ -235,12 +227,12 @@ inclusion of this scattered light would not be difficult due to the
 linearity of the dipoles we assumed.
 
 Normally we will consider scattering of modes $a_l$ much weaker than
-the field forming the lattice potential $V_\mathrm{cl}(\b{r})$. We now
-proceed in the same way as when deriving the conventional Bose-Hubbard
-Hamiltonian in the zero temperature limit. The field operators
+the field forming the lattice potential
+$V_\mathrm{cl}(\b{r})$. Therefore, we assume that the trapping is
+entirely due to the classical potential and the field operators
 $\Psi(\b{r})$ can be expanded using localised Wannier functions of
-$V_\mathrm{cl}(\b{r})$ and by keeping only the lowest vibrational
-state we get
+$V_\mathrm{cl}(\b{r})$. By keeping only the lowest vibrational state
+we get
 \begin{equation}
   \Psi(\b{r}) = \sum_i^M b_i w(\b{r} - \b{r}_i),
 \end{equation} 
@@ -386,7 +378,9 @@ the quantum state of matter. This is a key element of our treatment of
 the ultimate quantum regime of light-matter interaction that goes
 beyond previous treatments.
 
-\subsection{Scattered light behaviour}
+\section{The Bose-Hubbard Hamiltonian}
+
+\section{Scattered light behaviour}
 \label{sec:a}
 
 Having derived the full quantum light-matter Hamiltonian we will now
@@ -472,7 +466,7 @@ neglected. This is likely to be the case since the interactions will
 be dominated by photons scattering from the much larger coherent
 probe.
 
-\subsection{Density and Phase Observables}
+\section{Density and Phase Observables}
 \label{sec:B}
 
 Light scatters due to its interactions with the dipole moment of the
@@ -671,7 +665,7 @@ $\hat{X}^F_\beta = \hat{D} \cos(\beta) + \hat{B} \sin(\beta)$ and by
 varying the local oscillator phase, one can choose which conjugate
 operator to measure.
 
-\subsection{Electric Field Stength}
+\section{Electric Field Stength}
 \label{sec:Efield}
 
 The Electric field operator at position $\b{r}$ and at time $t$ is
@@ -839,50 +833,54 @@ Therefore, we can now express the quantity $n_{\Phi}$ as
   n_{\Phi} = \frac{1}{8} \left(\frac{\Omega_0}{\Delta_a}\right)^2 \frac{\Gamma}{2} N_K.
 \end{equation}
 Estimates of the scattering rate using real experimental parameters
-are given in Table \ref{tab:photons}.
+are given in Table \ref{tab:photons}. Rubidium atom data has been
+taken from Ref. \cite{steck}. Miyake \emph{et al.} experimental
+parameters are from Ref. \cite{miyake2011}. The $5^2S_{1/2}$,
+$F=2 \rightarrow 5^2P_{3/2}$, $F^\prime = 3$ transition of $^{87}$Rb
+is considered. For this transition the Rabi frequency is actually
+larger than the detuning and and effects of saturation should be taken
+into account in a more complete analysis. However, it is included for
+discussion. The detuning was specified as ``a few linewidths'' and
+note that it is much smaller than $\Omega_0$. The Rabi fequency is
+$\Omega_0 = (d_\mathrm{eff}/\hbar)\sqrt{2 I / c \epsilon_0}$ which is
+obtained from definition of Rabi frequency,
+$\Omega = \mathbf{d} \cdot \mathbf{E} / \hbar$, assuming the electric
+field is parallel to the dipole, and the relation
+$I = c \epsilon_0 |E|^2 /2$. We used
+$d_\mathrm{eff} = 1.73 \times 10^{-29}$ Cm \cite{steck}. Weitenberg
+\emph{et al.} experimental parameters are based on
+Ref. \cite{weitenberg2011, weitenbergThesis}. The
+$5^2S_{1/2} \rightarrow 5^2P_{3/2}$ transition of $^{87}$Rb is
+used. Ref. \cite{weitenberg2011} gives the free space detuning to be
+$\Delta_\mathrm{free} = - 2 \pi \cdot 45$ MHz, but
+Ref. \cite{weitenbergThesis} clarifies that the relevant detuning is
+$\Delta = \Delta_\mathrm{free} + \Delta_\mathrm{lat}$, where
+$\Delta_\mathrm{lat} = - 2 \pi \cdot 40$
+MHz. Ref. \cite{weitenbergThesis} uses a saturation parameter
+$s_\mathrm{tot}$ to quantify the intensity of the beams which is
+related to the Rabi frequency,
+$s_\mathrm{tot} = 2 \Omega^2 / \Gamma^2$ \cite{steck,foot}. We can
+extract $s_\mathrm{tot}$ for the experiment from the total scattering
+rate by
+$\Gamma_\mathrm{sc} = (\Gamma/2) (s_\mathrm{tot}) /
+(1+s_\mathrm{tot}+(2 \Delta / \Gamma)^2)$. A scattering rate of 60 kHz
+per atom \cite{weitenberg2011} gives $s_\mathrm{tot} = 2.5$.
 
 \begin{table}[!htbp]
   \centering
-  \begin{tabular}{|c|c|c|}
-    \hline
-    Value & Miyake \emph{et al.} & Weitenberg \emph{et al.} \\ \hline
-    $\omega_a$ & \multicolumn{2}{|c|}{$2 \pi \cdot 384$ THz}\\ \hline
-    $\Gamma$ & \multicolumn{2}{|c|}{$2 \pi \cdot 6.07$ MHz} \\ \hline
-    $\Delta_a$ & $2\pi \cdot 30$ MHz & $2 \pi \cdot 85$ MHz \\ \hline
-    $I$ & $4250$ Wm$^{-2}$ & N/A \\ \hline
-    $\Omega_0$ & 293$\times 10^6$ s$^{-1}$ & 42.5$\times 10^6$ s$^{-1}$ \\ \hline
-    $N_K$ & 10$^5$ & 147 \\ \hline \hline
-    $n_{\Phi}$ & $6 \times 10^{11}$ s$^{-1}$ & $2 \times 10^6$ s$^{-1}$ \\ \hline
+  \begin{tabular}{l c c}
+    \toprule
+    Value & Miyake \emph{et al.} & Weitenberg \emph{et al.} \\ \midrule
+    $\omega_a$ & \multicolumn{2}{ c }{$2 \pi \cdot 384$ THz}\\
+    $\Gamma$ & \multicolumn{2}{ c }{$2 \pi \cdot 6.07$ MHz} \\
+    $\Delta_a$ & $2\pi \cdot 30$ MHz & $2 \pi \cdot 85$ MHz \\
+    $I$ & $4250$ Wm$^{-2}$ & N/A \\ 
+    $\Omega_0$ & 293$\times 10^6$ s$^{-1}$ & 42.5$\times 10^6$ s$^{-1}$ \\
+    $N_K$ & 10$^5$ & 147 \\ \midrule
+    $n_{\Phi}$ & $6 \times 10^{11}$ s$^{-1}$ & $2 \times 10^6$ s$^{-1}$ \\
+    \bottomrule
   \end{tabular}
-  \caption[Photon Scattering Rates]{ Rubidium data taken from
-    Ref. \cite{steck}; Miyake \emph{et al.}: based on
-    Ref. \cite{miyake2011}. The $5^2S_{1/2}$, $F=2 \rightarrow
-    5^2P_{3/2}$, $F^\prime = 3$ transition of $^{87}$Rb is
-    considered. For this transition the Rabi frequency is actually
-    larger than the detuning and and effects of saturation should be
-    taken into account in a more complete analysis. However, it is
-    included for discussion. The detuning is said to be a few natural
-    linewidths. Note that it is much smaller than $\Omega_0$. The Rabi
-    fequency is $\Omega_0 = (d_\mathrm{eff}/\hbar)\sqrt{2 I / c
-      \epsilon_0}$ which is obtained from definition of Rabi
-    frequency, $\Omega = \mathbf{d} \cdot \mathbf{E} / \hbar$,
-    assuming the electric field is parallel to the dipole, and the
-    relation $I = c \epsilon_0 |E|^2 /2$. We used $d_\mathrm{eff} =
-    1.73 \times 10^{-29}$ Cm \cite{steck}; Weitenberg \emph{et al.}:
-    based on Ref. \cite{weitenberg2011, weitenbergThesis}. The
-    $5^2S_{1/2} \rightarrow 5^2P_{3/2}$ transition of $^{87}$Rb is
-    used. Ref. \cite{weitenberg2011} gives the free space detuning to
-    be $\Delta_\mathrm{free} = - 2 \pi \cdot 45$
-    MHz. Ref. \cite{weitenbergThesis} clarifies that the relevant
-    detuning is $\Delta = \Delta_\mathrm{free} + \Delta_\mathrm{lat}$,
-    where $\Delta_\mathrm{lat} = - 2 \pi \cdot 40$
-    MHz. Ref. \cite{weitenbergThesis} uses a saturation parameter
-    $s_\mathrm{tot}$ to quantify the intensity of the beams which is
-    related to the Rabi frequency, $s_\mathrm{tot} = 2 \Omega^2 /
-    \Gamma^2$ \cite{steck,foot}. We can extract $s_\mathrm{tot}$ for
-    the experiment from the total scattering rate by
-    $\Gamma_\mathrm{sc} = (\Gamma/2) (s_\mathrm{tot}) /
-    (1+s_\mathrm{tot}+(2 \Delta / \Gamma)^2)$. A scattering rate of 60
-    kHz per atom \cite{weitenberg2011} gives $s_\mathrm{tot} = 2.5$.}
+  \caption[Photon Scattering Rates]{Experimental parameters used in
+    estimating the photon scattering rates.}
   \label{tab:photons}
 \end{table}
