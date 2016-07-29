@@ -528,7 +528,7 @@ be incident normally at a 1D lattice so that $u_0 (\b{r}) =
 \begin{equation}
   \label{eq:Dmodes}
   \a_1 = C \hat{D} = C \sum_m^K \exp\left[-i k_1 m d \sin \theta_1
-  \right] \hat{n}_j.
+  \right] \hat{n}_m.
 \end{equation}
 From this equation we see that it can be made periodic with a period
 $Z$ when
@@ -536,8 +536,17 @@ $Z$ when
   k_1 d \sin \theta_1 = 2\pi R / Z,
 \end{equation}
 where $R$ is just some integer and $R/Z$ are is a fraction in its
-simplest form. This partitions the 1D lattice in exactly $Z > 1$ modes
-by making every $Z$th lattice site scatter light with exactly the same
-phase. It is interesting to note that these angles correspond to the
-$K-1$ classical diffraction minima.
+simplest form. Therefore, we can rewrite the Eq. \eqref{eq:Dmodes} as
+a sum of the indistinguishable contributions from the $Z$ modes
+\begin{equation}
+  \label{eq:Zmodes}
+  \a_1 = C \hat{D} = C \sum_l^Z \exp\left[-i 2 \pi l R / Z \right] \hat{N}_l,
+\end{equation}
+where $\hat{N}_l = \sum_{m \in l} \n_m$ is the sum of single site atom
+number operators that belong to the same mode. $\hat{N}_K$ and
+$\hat{N}_\mathrm{odd}$ are the simplest examples of these modes. This
+partitions the 1D lattice in exactly $Z > 1$ modes by making every
+$Z$th lattice site scatter light with exactly the same phase. It is
+interesting to note that these angles correspond to the $K-1$
+classical diffraction minima.
 
