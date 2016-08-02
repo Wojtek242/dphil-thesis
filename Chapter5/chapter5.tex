@@ -791,6 +791,287 @@ the $\gamma/U \gg 1$ regime is reached.
 
 \subsection{Emergent Long-Range Correlated Tunnelling}
 
+When $\gamma \rightarrow \infty$ the measurement becomes
+projective. This means that as soon as the probing begins, the system
+collapses into one of the observable's eigenstates. Since this
+measurement is continuous and doesn't stop after the projection the
+system will be frozen in this state. This effect is called the quantum
+Zeno effect from Zeno's classical paradox in which a ``watched arrow
+never moves'' that stated since an arrow in flight is not seen to move
+during any single instant, it cannot possibly be moving at
+all. Classically the paradox was resolved with a better understanding
+of infinity and infintesimal changes, but in the quantum world a
+watched quantum arrow will in fact never move. The system is being
+continuously projected into its initial state before it has any chance
+to evolve away. If degenerate eigenspaces exist then we can observe
+quantum Zeno dynamics where unitary evolution is uninhibited within
+such a degenerate subspace, called the Zeno subspace.
+
+These effects can be easily seen in our model when
+$\gamma \rightarrow \infty$. The system will be projected into one or
+more degenerate eignstates of $\cd \c$, $| \psi_i \rangle$, for which
+we define the projector
+$P_\varphi = \sum_{i \in \varphi} | \psi_i \rangle$ where $\varphi$
+denotes a single degenerate subspace. The Zeno subspace is determined
+randomly as per the Copenhagen postulates and thus it depends on the
+initial state. If the projection is into the subspace
+$\varphi^\prime$, the subsequent evolution is described by the
+projected Hamiltonian
+$P_{\varphi^\prime} \hat{H}_0 P_{\varphi^\prime}$. We have used the
+original Hamiltonian, $\hat{H}_0$, without the non-Hermitian term or
+the quantum jumps as their combined effect is now described by the
+projectors. Physically, in our model of ultracold bosons trapped in a
+lattice this means that tunnelling between different spatial modes is
+completely supressed since this process couples eigenstates belonging
+to different Zeno subspaces. If a small connected part of the lattice
+was illuminated uniformly such that $\hat{D} = \hat{N}_K$ then
+tunnelling would only be prohibited between the illuminated and
+unilluminated areas, but dynamics proceeds normally within each zone
+separately. Therefore, the goemetric patterns we have in which the
+modes are sptailly delocalised in such a way that neighbouring sites
+never belong to the same mode, e.g.  $\hat{D} = \hat{N}_\mathrm{odd}$,
+would lead to a complete suppression of tunnelling across the whole
+lattice as there is no way for an atom to tunnel within this Zeno
+subspace.
+
+This is an interesting example of the quantum Zeno effect and dynamics
+and it can be used to prohibit parts of the dynamics of the
+Bose-Hubbard Hamiltonian in order to engineer desired Hamiltonians for
+quantum simulations or other applications. However, the infinite
+projective limit is uninteresting in the context of a global
+measurement scheme. The same effects and Hamiltonians can be achieved
+using multiple independent measurements which address a few sites
+each. The only advantage of the global scheme is that it might be
+simpler to achieve as it requires a less complicated optical setup. In
+order to take advantage of the nonlocal nature of the measurement it
+turns out that we need to consider a finite limit for $\gamma \gg
+J$. By considering a non-infinite $\gamma$ we observe additional
+dynamics while the usual atomic tunnelling is still heavily
+Zeno-suppressed. These new effects are shown in Fig. \ref{fig:zeno}.
+
+\begin{figure}[hbtp!]
+  \includegraphics[width=\textwidth]{Zeno.pdf}
+  \caption[Emergent Long-Range Correlated Tunnelling]{ Long-range
+    correlated tunneling and entanglement, dynamically induced by
+    strong global measurement in a single quantum
+    trajectory. (a),(b),(c) show different measurement geometries,
+    implying different constraints. Panels (1): schematic
+    representation of the long-range tunneling processes. Panels (2):
+    evolution of on-site densities. Panels (3): entanglement entropy
+    growth between illuminated and non-illuminated regions. Panels
+    (4): correlations between different modes (orange) and within the
+    same mode (green); $N_I$ ($N_{NI}$) is the atom number in the
+    illuminated (non-illuminated) mode.  (a) (a.1) Atom number in the
+    central region is frozen: system is divided into three
+    regions. (a.2) Standard dynamics happens within each region, but
+    not between them. (a.3) Entanglement build up. (a.4) Negative
+    correlations between non-illuminated regions (green) and zero
+    correlations between the $N_I$ and $N_{NI}$ modes
+    (orange). Initial state: $|1,1,1,1,1,1,1 \rangle$, $\gamma/J=100$,
+    $J_{jj}=[0,0,1,1,1,0,0]$.  (b) (b.1) Even sites are illuminated,
+    freezing $N_\text{even}$ and $N_\text{odd}$. Long-range tunneling
+    is represented by any pair of one blue and one red arrow. (b.2)
+    Correlated tunneling occurs between non-neighbouring sites without
+    changing mode populations. (b.3) Entanglement build up. (b.4)
+    Negative correlations between edge sites (green) and zero
+    correlations between the modes defined by $N_\text{even}$ and
+    $N_\text{odd}$ (orange). Initial state: $|0,1,2,1,0 \rangle$,
+    $\gamma/J=100$, $J_{jj}=[0,1,0,1,0]$.  (c) (c.1,2) Atom number
+    difference between two central sites is frozen. (c.3) Entanglement
+    build up. (c.4) In contrast to previous examples, sites in the
+    same zones are positively correlated (green), while atoms in
+    different zones are negatively correlated (orange). Initial state:
+    $|0,2,2,0 \rangle$, $\gamma/J=100$, $J_{jj}=[0,-1,1,0]$. 1D
+    lattice, $U/J=0$.}
+  \label{fig:zeno}
+\end{figure}
+
+There are two crucial features of the resulting dynamics that are of
+note. First, just like in the infinite quantum Zeno limit the
+evolution between nearest neighbours within the same mode is
+unperturbed whilst tunnelling between different modes is heavily
+suppressed by the measurement. Therefore, we see the usual quantum
+Zeno dynamics within a single Zeno subspace and just like before, it
+is also possible to use the global probing scheme to engineer these
+eigenspaces and select which tunnelling processes should be
+uninhibited and which should be suppressed. However, there is a second
+effect that was not present before. In Fig. \ref{fig:zeno} we can
+observe tunnelling that violates the boundaries established by the
+spatial modes. When $\gamma$ is finite, second-order processes can now
+occur, i.e.~two correlated tunnelling events, via an intermediate
+(virtual) state outside of the Zeno subspace as long as the Zeno
+subspace of the final state remains the same. Crucially, these
+tunnelling events are only correlated in time, but not in space. This
+means that the two events do not have to occur for the same atom or
+even at the same site in the lattice. As long as the Zeno subspace is
+preserved, these processes can occur anywhere in the system, that is a
+pair of atoms separated by many sites is able to tunnel in a
+correlated manner. This is only possible due to the possibility of
+creating extensive and spatially nonlocal modes as described in
+section \ref{sec:modes} which in turn is enabled by the global nature
+of the measurement. This would not be possible to achieve with local
+measurements as this would lead to Zeno subspaces described entirely
+by local variables which cannot be preserved by such delocalised
+tunnelling events.
+
+In the subsequent sections we will rigorously derive the following
+Hamiltonian for the non-interacting dynamics within a single Zeno
+subspace, $\varphi = 0$, for a lattice where the measurement defines
+$Z = 2$ distinct modes, e.g. $\hat{D} = \hat{N}_K$ or
+$\hat{D} = \hat{N}_\mathrm{odd}$
+\begin{equation}
+  \label{eq:hz}
+  \hat{H}_\varphi = P_0 \left[ -J \sum_{\langle i, j \rangle}
+    b^\dagger_i b_j - i \frac{J^2} {A \gamma} \sum_{\varphi} 
+    \sum_{\substack{\langle i \in \varphi, j \in \varphi^\prime
+        \rangle \\ \langle k \in \varphi^\prime, l \in \varphi
+        \rangle}} b^\dagger_i b_j b^\dagger_k b_l \right] P_0,
+\end{equation}
+where
+$A = (J_{\varphi,\varphi} - J_{\varphi^\prime,\varphi^\prime})^2$ is a
+constant that depends on the measurement scheme, $\varphi$ denotes a
+set of site belonging to a single mode and $\varphi^\prime$ is the
+set's complement (e.g.~odd and even or illuminated and non-illuminated
+sites). We see that this Hamiltonian consists of two parts. The first
+term corresponds to the standard quantum Zeno first-order dynamics
+that occurs within a Zeno subspace, i.e.~tunnelling between
+neighbouring sites that belong to the same mode. Otherwise,
+$P_0 \bd_i b_j P_0 = 0$. If $\gamma \rightarrow \infty$ we would
+recover the quantum Zeno Hamiltonian where this would be the only
+remaining term. It is the second term that shows the second-order
+corelated tunnelling terms. This is evident from the inner sum which
+requires that pairs of sites ($i$, $j$) and ($k$, $l$) between which
+atoms tunnel must be nearest neighbours, but these pairs can be as far
+apart from each other as possible within the mode structure. This is
+in particular explicitly shown in Figs. \ref{fig:zeno}(a,b). The
+imaginary coefficient means that the tinelling behaves like an
+exponential decay (overdamped oscillations). This also implies that
+the norm will decay, but this does not mean that there are physical
+losses in the system. Instead, the norm itself represents the
+probability of the system remaining in the $\varphi = 0$ Zeno
+subspace. Since $\gamma$ is not infinite there is now a finite
+probability that the stochastic nature of the measurement will lead to
+a discontinous change in the system where the Zeno subspace rapidly
+changes. However, later in this chapter we will see that steady states
+of this Hamiltonian exist which will no longer change Zeno subspaces.
+
+Crucially, what sets this effect apart from usual many-body dynamics
+with short-range interactions is that first order processes are
+selectively suppressed by the global conservation of the measured
+observable and not by the prohibitive energy costs of doubly-occupied
+sites, as is the case in the $t$-$J$ model \cite{auerbach}. This has
+profound consequences as this is the physical origin of the long-range
+correlated tunneling events represented in \eqref{eq:hz} by the fact
+that the pairs ($i$, $j$) and ($k$, $l$) can be very distant. This is
+because the projection $\hat{P}_0$ is not sensitive to individual site
+occupancies, but instead enforces a fixed value of the observable,
+i.e.~a single Zeno subspace.
+
+In Fig.~\ref{fig:zeno}a we consider illuminating only the central
+region of the optical lattice and detecting light in the diffraction
+maximum, thus we freeze the atom number in the $K$ illuminated sites
+$\hat{N}_\text{K}$~\cite{mekhov2009prl,mekhov2009pra}. The measurement
+scheme defines two different spatial modes: the non-illuminated zones
+$1$ and $3$ and the illuminated one $2$. Figure~\ref{fig:zeno}(a.2)
+illustrates the evolution of the mean density at each lattice site:
+typical dynamics occurs within each region but the standard tunnelling
+between different modes is suppressed. Importantly, second-order
+processes that do not change $N_\text{K}$ are still possible since an
+atom from $1$ can tunnel to $2$, if simultaneously one atom tunnels
+from $2$ to $3$. Therfore, effective long-range tunneling between two
+spatially disconnected zones $1$ and $3$ happens due to the two-step
+processes $1 \rightarrow 2 \rightarrow 3$ or
+$3 \rightarrow 2 \rightarrow 1$. These transitions are responsible for
+the negative (anti-)correlations
+$\langle \delta N_1 \delta N_3 \rangle = \langle N_1 N_3 \rangle -
+\langle N_1 \rangle \langle N_3 \rangle$ showing that an atom
+disappearing from zone $1$ appears in zone $3$, while there are no
+number correlations between illuminated and non-illuminated regions,
+$\langle( \delta N_1 + \delta N_3 ) \delta N_2 \rangle = 0$ as shown
+in Fig.~\ref{fig:zeno}(a.4). In contrast to fully-projective
+measurement, the existence of an intermediate (virtual) step in the
+correlated tunnelling process builds long-range entanglement between
+illuminated and non-illuminated regions as shown in
+Fig.~\ref{fig:zeno}(a.3).
+
+To make correlated tunneling visible even in the mean atom number, we
+suppress the standard Bose-Hubbard dynamics by illuminating only the
+even sites of the lattice in Fig.~\ref{fig:zeno}(b). Even though this
+measurement scheme freezes both $N_\text{even}$ and $N_\text{odd}$,
+atoms can slowly tunnel between the odd sites of the lattice, despite
+them being spatially disconnected. This atom exchange spreads
+correlations between non-neighbouring lattice sites on a time scale
+$\sim \gamma/J^2$. The schematic explanation of long-range correlated
+tunneling is presented in Fig.~\ref{fig:zeno}(b.1): the atoms can
+tunnel only in pairs to assure the globally conserved values of
+$N_\text{even}$ and $N_\text{odd}$, such that one correlated tunneling
+event is represented by a pair of one red and one blue
+arrow. Importantly, this scheme is fully applicable for a lattice with
+large atom and site numbers, well beyond the numerical example in
+Fig.~\ref{fig:zeno}(b.1), because as we can see in \eqref{eq:hz}
+it is the geometry of quantum measurement that assures this mode
+structure (in this example, two modes at odd and even sites) and thus
+the underlying pairwise global tunnelling.
+
+This global pair tunneling may play a role of a building block for
+more complicated many-body effects. For example, a pair tunneling
+between the neighbouring sites has been recently shown to play
+important role in the formation of new quantum phases, e.g., pair
+superfluid \cite{sowinski2012} and lead to formulation of extended
+Bose-Hubbard models \cite{omjyoti2015}. The search for novel
+mechanisms providing long-range interactions is crucial in many-body
+physics. One of the standard candidates is the dipole-dipole
+interaction in, e.g., dipolar molecules, where the mentioned pair
+tunneling between even neighboring sites is already considered to be
+long-range \cite{sowinski2012,omjyoti2015}. In this context, our work
+suggests a fundamentally different mechanism originating from quantum
+optics: the backaction of global and spatially structured measurement,
+which as we prove can successfully compete with other short-range
+processes in many-body systems. This opens promising opportunities for
+future research.
+
+The scheme in Fig.~\ref{fig:zeno}(b.1) can help to design a nonlocal
+reservoir for the tunneling (or ``decay'') of atoms from one region to
+another. For example, if the atoms are placed only at odd sites,
+according to \eqref{eq:hz} their tunnelling is suppressed since the
+multi-tunneling event must be successive, i.e.~an atom tunnelling into
+a different mode, $\varphi^\prime$, must then also tunnel back into
+its original mode, $\varphi$. If, however, one adds some atoms to even
+sites (even if they are far from the initial atoms), the correlated
+tunneling events become allowed and their rate can be tuned by the
+number of added atoms. This resembles the repulsively bound pairs
+created by local interactions \cite{winkler2006, folling2007}. In
+contrast, here the atom pairs are nonlocally correlated due to the
+global measurement. Additionally, these long-range correlations are a
+consequence of the dynamics being constrained to a Zeno subspace: the
+virtual processes allowed by the measurement entangle the spatial
+modes nonlocally. Since the measurement only reveals the total number
+of atoms in the illuminated sites, but not their exact distribution,
+these multi-tunelling events cause the build-up of long range
+entanglement. This is in striking contrast to the entanglement caused
+by local processes which can be very confined, especially in 1D where
+it is typically short range. This makes numerical calculations of our
+system for large atom numbers really difficult, since well-known
+methods such as DMRG and MPS \cite{schollwock2005} (which are successful
+for short-range interactions) rely on the limited extent of
+entanglement.
+
+The negative number correlations are typical for systems with
+constraints (superselection rules) such as fixed atom number. The
+effective dynamics due to our global, but spatially structured,
+measurement introduces more general constraints to the evolution of
+the system. For example, in Fig.~\ref{fig:zeno}(c) we show the
+generation of positive number correlations shown in
+Fig.~\ref{fig:zeno}(c.4) by freezing the atom number difference
+between the sites ($N_\text{odd}-N_\text{even}$). Thus, atoms can only
+enter or leave this region in pairs, which again is possible due to
+correlated tunneling as seen in Figs.~\ref{fig:zeno}(c.1,c.2) and
+manifests positive correlations. As in the previous example, two edge
+modes in Fig.~\ref{fig:zeno}(c) can be considered as a nonlocal
+reservoir for two central sites, where a constraint is applied. Note
+that, using more modes, the design of higher-order multi-tunneling
+events is possible.
+
 \subsection{Non-Hermitian Dynamics in the Quantum Zeno Limit}
 
 % Contrast with t-J model here how U localises events, but measurement
