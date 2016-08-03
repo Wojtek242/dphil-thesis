@@ -83,7 +83,9 @@ non-Hermitian Hamiltonian thus extending the notion of quantum Zeno
 dynamics into the realm of non-Hermitian quantum mechanics joining the
 two paradigms.
 
-\section{Large-Scale Dynamics due to Weak Measurement}
+\section{Quantum Measurement Induced Dynamics}
+
+\subsection{Large-Scale Dynamics due to Weak Measurement}
 
 We start by considering the weak measurement limit when photon
 scattering does not occur frequently compared to the tunnelling rate
@@ -542,7 +544,7 @@ described by this model, is that the width does in fact stay roughly
 constant. It is only in the later stages when the oscillations reach
 maximal amplitude that the width becomes visibly reduced.
 
-\section{Three-Way Competition}
+\subsection{Three-Way Competition}
 
 Now it is time to turn on the inter-atomic interactions,
 $U/J^\mathrm{cl} \ne 0$. As a result the atomic dynamics will change
@@ -786,8 +788,6 @@ $(J_{i,i} - J_{i\pm1,i\pm1})^2$. We can see the system transitioning
 into the strong measurement regime in Fig. \ref{fig:squeezing} as the
 $U$-dependence flattens out with increasing measurement strength as
 the $\gamma/U \gg 1$ regime is reached.
-
-\section{Quantum Zeno Dynamics}
 
 \subsection{Emergent Long-Range Correlated Tunnelling}
 
@@ -1085,10 +1085,716 @@ which as we prove can successfully compete with other short-range
 processes in many-body systems. This opens promising opportunities for
 future research.
 
-\subsection{Non-Hermitian Dynamics in the Quantum Zeno Limit}
+\section{Non-Hermitian Dynamics in the Quantum Zeno Limit}
 
+In the previous section we provided a rather high-level analysis of
+the strong measurement limit in our quantum gas model. We showed that
+global measurement in the strong, but not projective, limit leads to
+correlated tunnelling events which can be highly delocalised. Multiple
+examples for different optical geometries and measurement operators
+demonstrated the incredible felixbility and potential in engineering
+dynamics for ultracold gases in an optical lattice. We also claimed
+that the behaviour of the system is described by the Hamiltonian given
+in Eq. \eqref{eq:hz}. Having developed a physical and intuitive
+understanding of the dynamics in the quantum Zeno limit we will now
+provide a more rigorous, low-level and fundamental understanding of
+the process.
 
+\subsection{Suppression of Coherences in the Density Matrix}
 
-\subsection{Steady-State of the Non-Hermitian Hamiltonian}
+At this point we deviate from the quantum trajectory approach and we
+resort to a master equation as introduced in section
+\ref{sec:master}. We do this, because we have seen that the emergent
+long-range correlated tunnelling is a feature of all trajectories and
+mostly depends on the geometry of the measurement. Therefore, a
+general approach starting from an unconditioned state should be able
+to reveal these features. However, we will later make use of the fact
+that we are in possession of a measurement record and obtain a
+conditioned state. Furthermore, we first consider the most general
+case of an open system subject to a quantum measurement and only limit
+ourselves to the quantum gas model later on. This demonstrates that
+the dynamics we observed in the previous section are a feature of
+measurement rather than our specific model.
+
+As introduced in section \ref{sec:master} we consider a state
+described by the density matrix $\hat{\rho}$ whose isolated behaviour
+is described by the Hamiltonian $\H_0$ and when measured the jump
+operator $\c$ is applied to the state at each detection
+\cite{MeasurementControl}. The master equation describing its time
+evolution when we ignore the measurement outcomes is given by
+\begin{equation}
+  \dot{\hat{\rho}} = -i [ \H_0 , \hat{\rho} ] + \c \hat{\rho} \cd - \frac{1}{2}(
+  \cd\c \hat{\rho} + \hat{\rho} \cd\c ).
+\end{equation}
+We also define $\c = \lambda \op$ and $\H_0 = \nu \h$. The exact
+definition of $\lambda$ and $\nu$ is not so important as long as these
+coefficients can be considered to be some measure of the relative size
+of these operators. They would have to be determined on a case-by-case
+basis, because the operators $\c$ and $\H_0$ may be unbounded. If
+these operators are bounded, one can simply define them such that
+$||\op|| \sim O(1)$ and $||\h|| \sim O(1)$. If they are unbounded, one
+possible approach would be to identify the relevant subspace of which
+dynamics we are interested in and scale the operators such that the
+eigenvalues of $\op$ and $\h$ in this subspace are $\sim O(1)$.
+
+We will once again use projectors $P_m$ which have no effect on states
+within a degenerate subspace of $\c$ ($\op$) with eigenvalue $c_m$
+($o_m$), but annihilate everything else. For convenience we will also
+use the following definition $\hat{\rho}_{mn} = P_m \hat{\rho} P_n$.
+Note that these are submatrices of the density matrix, which in
+general are not single matrix elements. Therefore, we can write the
+master equation that describes this open system as a set of equations
+\begin{equation}
+\label{eq:master}
+  \dot{\hat{\rho}}_{mn} =  -i K P_m \left[ \h \sum_r \hat{\rho}_{rn}
+    - \sum_r \hat{\rho}_{mr} \h \right] P_n + \lambda^2 \left[ o_m
+    o_n^*  - \frac{1}{2} \left( |o_m|^2 + |o_n|^2 \right) \right] \hat{\rho}_{mn},
+\end{equation}
+where the first term describes coherent evolution whereas the second
+term causes dissipation. 
+
+First, note that for the density submatrices for which $m = n$,
+$\hat{\rho}_{mm}$, the dissipative term vanishes. This means that
+these submatrices are subject to coherent evolution only and do not
+experience losses and they are thus decoherence free subspaces. It is
+crucial to note that these submatrices are simply the density matrices
+of the individual degenerate Zeno subspaces. Interestingly, any state
+that consists only of these decoherence free subspaces, i.e.~
+$\hat{\rho} = \sum_m \hat{\rho}_{mm}$, and that commutes with the
+Hamiltonian, $[\hat{\rho}, \hat{H}_0] = 0$, will be a steady state.
+This can be seen by substituting this ansatz into
+Eq. \eqref{eq:master} which yields $\dot{\hat{\rho}}_{mn} = 0$ for all
+$m$ and $n$. These states can be prepared dissipatively using known
+techniques \cite{diehl2008}, but it is not required that the state be
+a dark state of the dissipative operator as is usually the case.
+
+Second, we consider a large detection rate, $\lambda^2 \gg \nu$, for
+which the coherences, i.e.~ the density submatrices $\hat{\rho}_{mn}$
+for which $m \ne n$, will be heavily suppressed by dissipation. We can
+adiabatically eliminate these cross-terms by setting
+$\dot{\hat{\rho}}_{mn} = 0$, to get
+\begin{equation}
+\label{eq:intermediate}
+\hat{\rho}_{mn} = \frac{\nu}{\lambda^2} \frac{i P_m \left[ \h \sum_r \hat{\rho}_{rn} - \sum_r \hat{\rho}_{mr} \h \right] P_n } {o_m o_n^* - \frac{1}{2} \left( |o_m|^2 + |o_n|^2 \right)}
+\end{equation}
+which tells us that they are of order $\nu/\lambda^2 \ll
+1$. Therefore, the resulting density matrix will be given by
+$\hat{\rho} \approx \sum_m \hat{\rho}_{mm}$ which consists solely of
+the individual Zeno subspace density matrices. One can easily recover
+the projective Zeno limit by considering $\lambda \rightarrow \infty$
+when all the subspaces completely decouple. This is exactly the
+$\gamma \rightarrow \infty$ limit discussed in the previous
+section. However, we have seen that it is crucial we only consider,
+$\lambda^2 \gg \nu$, but not infinite. If the subspaces do not
+decouple completely, then transitions within a single subspace can
+occur via other subspaces in a manner similar to Raman transitions. In
+Raman transitions population is transferred between two states via a
+third, virtual, state that remains empty throughout the process. By
+avoiding the infinitely projective Zeno limit we open the option for
+such processes to happen in our system where transitions within a
+single Zeno subspace occur via a second, different, Zeno subspace even
+though the occupation of the intermediate states will remian
+negligible at all times.
+
+A single quantum trajectory results in a pure state as opposed to the
+density matrix and in general, there are many density matrices that
+have non-zero and non-negligible $m = n$ submatrices,
+$\hat{\rho}_{mm}$, even when the coherences are small. They correspond
+to a mixed states containing many Zeno subspaces and it is not clear
+what the pure states that make up these density matrices are. However,
+we note that for a single pure state the density matrix can consist of
+only a single diagonal submatrix $\hat{\rho}_{mm}$. To understand
+this, consider the state $| \Phi \rangle$ and take it to span exactly
+two distinct subspaces $P_a$ and $P_b$ ($a \ne b$). This wavefunction
+can thus be written as
+$| \Phi \rangle = P_a | \Phi \rangle + P_b | \Phi \rangle$. The
+corresponding density matrix is given by
+\begin{equation}
+  \hat{\rho}_\Psi = P_a | \Phi \rangle \langle \Phi | P_a + P_a | \Phi
+  \rangle \langle \Phi | P_b + P_b | \Phi \rangle \langle \Phi | P_a +
+  P_b | \Phi \rangle \langle \Phi | P_b.
+\end{equation}
+If the wavefunction has significant components in both subspaces then
+in general the density matrix will not have negligible coherences,
+$\hat{\rho}_{ab} = P_a | \Phi \rangle \langle \Phi | P_b$. A density
+matrix with just diagonal components must be in either subspace $a$,
+$| \Phi \rangle = P_a | \Phi \rangle$, or in subspace $b$,
+$| \Phi \rangle = P_b | \Phi \rangle$. Therefore, a density matrix of
+the form $\hat{\rho} = \sum_m \hat{\rho}_{mm}$ without any cross-terms
+between different Zeno subspaces can only be composed of pure states
+that each lie predominantly within a single subspace. However, because
+we will not be dealing with the projective limit, the wavefunction
+will in general not be entirely confined to a single Zeno subspace. We
+have seen that the coherences are of order $\nu/\lambda^2$. This would
+require the wavefunction components to satisfy
+$P_a | \Phi \rangle \approx O(1)$ and
+$P_b | \Phi \rangle \approx O(\nu/\lambda^2)$ (or vice-versa). This in
+turn implies that the population of the states outside of the dominant
+subspace (and thus the submatrix $\hat{\rho}_{bb}$) will be of order
+$\langle \Phi | P_b^2 | \Phi \rangle \approx
+O(\nu^2/\lambda^4)$. Therefore, these pure states, even though they
+span multiple Zeno subspaces, cannot exist in a meaningful coherent
+superposition in this limit. This means that a density matrix that
+spans multiple Zeno subspaces has only classical uncertainty about
+which subspace is currently occupied as opposed to the uncertainty due
+to a quantum superposition. This is anlogous to the simple qubit
+example we considered in section \ref{sec:master}.
+ 
+\subsection{Quantum Measurement vs. Dissipation}
+
+This is where quantum measurement deviates from dissipation. If we
+have access to a measurement record we can infer which Zeno subspace
+is occupied, because we know that only one of them can be occupied at
+any time. We have seen that since the density matrix cross-terms are
+small we know \emph{a priori} that the individual wavefunctions
+comprising the density matrix mixture will not be coherent
+superpositions of different Zeno subspaces and thus we only have
+classical uncertainty which means we can resort to clasical
+probability methods. Each individual experiment will at any time be
+predominantly in a single Zeno subspace with small cross-terms and
+negligible occupations in the other subspaces. With no measurement
+record our density matrix would be a mixture of all these
+possibilities. We can try and determine the Zeno subspace around which
+the state evolves in a single experiment from the number of
+detections, $m$, in time $t$.
+
+The detection distribution on time-scales shorter than dissipation (so
+we can approximate as if we were in a fully Zeno regime) can be
+obtained by integrating over the detection times \cite{mekhov2009pra}
+to get
+\begin{equation}
+  P(m,t) = \sum_n \frac{[|c_n|^2 t]^m} {m!} e^{-|c_n|^2 t} \mathrm{Tr} (\rho_{nn}).
+\end{equation}
+For a state that is predominantly in one Zeno subspace, the
+distribution will be approximately Poissonian (up to
+$O(\nu^2 / \lambda^4)$, the population of the other
+subspaces). Therefore, in a single experiment we will measure
+$m = |c_0|^2t \pm \sqrt{|c_0|^2t}$ detections (note, we have assumed
+$|c_0|^2 t$ is large enough to approximate the distribution as
+normal. This is not necessary, we simply use it here to not have to
+worry about the asymmetry in the deviation around the mean value). The
+uncertainty does not come from the fact that $\lambda$ is not
+infinite. The jumps are random events with a Poisson
+distribution. Therefore, even in the full projective limit we will not
+observe the same detection trajectory in each experiment even though
+the system evolves in exactly the same way and remains in a perfectly
+pure state.
+
+If the basis of $\c$ is continuous (e.g. free particle position or
+momentum) then the deviation around the mean will be our upper bound
+on the deviation of the system from a pure state evolving around a
+single Zeno subspace. However, continuous systems are beyond the scope
+of this work and we will confine ourselves to discrete systems. Though
+it is important to remember that continuous systems can be treated
+this way, but the error estimate (and thus the mixedness of the state)
+will be different.
+
+For a discrete system it is easier to exclude all possibilities except
+for one. The error in our estimate of $|c_0|^2$ in a single experiment
+decreases as $1/\sqrt{t}$ and thus it can take a long time to
+confidently determine $|c_0|^2$ to a sufficient precision this
+way. However, since we know that it can only take one of the possible
+values from the set $\{|c_n|^2 \}$ it is much easier to instead
+exclude all the other values.
+
+In an experiment we can use Bayes' theorem to infer the state of our
+system as follows
+\begin{equation}
+	p(c_n = c_0 | m) = \frac{ p(m | c_n = c_0) p(c_n = c_0) }{ p(m) },
+\end{equation}
+where $p(x)$ denotes the probability of the discrete event $x$ and
+$p(x|y)$ the conditional probability of $x$ given $y$. We know that
+$p(m | c_n = c_0)$ is simply given by a Poisson distribution with mean
+$|c_0|^2 t$. $p(m)$ is just a normalising factor and $p(c_n = c_0)$ is
+our \emph{a priori} knowledge of the state. Therefore, one can get the
+probability of being in the right Zeno subspace from
+\begin{align}
+  p(c_n & = c_0 | m) = \frac{ p_0(c_n = c_0) \frac{ \left( |c_0|^2 t
+          \right)^{2m} } {m!} e^{-|c_0|^2 t}} {\sum_n p_0(c_n) \frac{
+          \left( |c_n|^2 t \right)^{2m} } {m!} e^{-|c_n|^2 t}} \nonumber \\
+	& = p_0(c_n = c_0) \left[ \sum_n p_0(c_n) \left( \frac{
+          |c_n|^2 } { |c_0|^2 } \right)^{2m} e^{\left( |c_0|^2 -
+          |c_n|^2 \right) t} \right]^{-1},
+\end{align}
+where $p_0$ denotes probabilities at $t = 0$. In a real experiment one
+could prepare the initial state to be close to the Zeno subspace of
+interest and thus it would be easier to deduce the state. Furthermore,
+in the middle of an experiment if we have already established the Zeno
+subspace this will be reflected in these \emph{a priori} probabilities
+again making it easier to infer the correct subspace. However, we will
+consider the worst case scenario which might be useful if we don't
+know the initial state or if the Zeno subspace changes during the
+experiment, a uniform $p_0(c_n)$.
+
+This probability is a rather complicated function as $m$ is a
+stochastic quantity that also increases with $t$. We want it to be as
+close to $1$ as possible. In order to devise an appropriate condition
+for this we note that in the first line all terms in the denominator
+are Poisson distributions of $m$. Therefore, if the mean values
+$|c_n|^2 t$ are sufficiently spaced out, only one of the terms in the
+sum will be significant for a given $m$ and if this happens to be the
+one that corresponds to $c_0$ we get a probability close to
+unity. Therefore, we set the condition such that it is highly unlikely
+that our measured $m$ could be produced by two different distributions
+\begin{align}
+  \sqrt{|c_0|^2 t} \ll ||c_0|^2 - |c_n|^2| t, \forall n \ne 0 \\
+  \sqrt{|c_n|^2 t} \ll ||c_0|^2 - |c_n|^2| t, \forall n \ne 0
+\end{align}
+The left-hand side is the standard deviation of $m$ if the system was
+in subspace $P_0$ or $P_n$. The right-hand side is the difference in
+the mean detections between the subspace $n$ and the one we are
+interested in. The condition becomes more strict if the subspaces
+become less distinguishable as it becomes harder to confidently
+determine the correct state. Once again, using $\c = \lambda \hat{o}$
+where $\hat{o} \sim O(1)$ we get
+\begin{equation}
+  t \gg \frac{1}{\lambda^2} \frac{|o_{0,n}|^2} {(|o_0|^2 - |o_n|^2|)^2}.
+\end{equation}
+Since detections happen on average at an average rate of order
+$\lambda^2$ we only need to wait for a few detections to satisfy this
+condition. Therefore, we see that even in the worst case scenario of
+complete ignorance of the state of the system we can very easily
+determine the correct subspace. Once it is established for the first
+time, the \emph{a priori} information can be updated and it will
+become even easier to monitor the system.
+
+However, it is important to note that physically once the quantum
+jumps deviate too much from the mean value the system is more likely
+to change the Zeno subspace (due to measurement backaction) and the
+detection rate will visibly change. Therefore, if we observe a
+consistent detection rate it is extremely unlikely that it can be
+produced by two different Zeno subspaces so in fact it is even easier
+to determine the correct state, but the above estimate serves as a
+good lower bound on the necessary detection time.
+
+Having derived the necessary conditions to confidently determine which
+Zeno subspace is being observed in the experiment we can make another
+approximation thanks to measurement which would be impossible in a
+purely dissipative open system. If we observe a number of detections
+consistent with the subspace $P_m = P_0$ we can set
+$\hat{\rho}_{mn} \approx 0$ for all cases when both $m \ne 0$ and
+$n \ne 0$ leaving our density matrix in the form
+\begin{equation}
+  \label{eq:approxrho}
+  \hat{\rho} = \hat{\rho}_{00} + \sum_{r\ne0} (\hat{\rho}_{0r} +
+  \hat{\rho}_{r0}).
+\end{equation}
+We can do this, because the other states are inconsistent with the
+measurement record. We know from the previous section that the system
+must lie predominantly in only one of the Zeno subspaces and when that
+is the case, $\hat{\rho}_{0r} \approx O(\nu/\lambda^2)$ and for
+$m \ne 0$ and $n \ne 0$ we have
+$\hat{\rho}_{mn} \approx O(\nu^2/\lambda^4)$. Therefore, this amounts
+to keeping first order terms in $\nu/\lambda^2$ in our approximation.
+
+This is a crucial step as all $\hat{\rho}_{mm}$ matrices are
+decoherence free subspaces and thus they can all coexist in a mixed
+state decreasing the purity of the system without
+measurement. Physically, this means we exclude trajectories in which
+the Zeno subspace has changed (measurement isn't fully projective). By
+substituting Eq. \eqref{eq:intermediate} into Eq. \eqref{eq:master} we
+see that this happens at a rate of $\nu^2 / \lambda^2$. However, since
+the two measurement outcomes cannot coexist any transition between
+them happens in discrete transitions (which we know about from the
+change in the detection rate as each Zeno subspace will correspond to
+a different rate) and not as continuous coherent evolution. Therefore,
+we can postselect in a manner similar to Refs. \cite{otterbach2014,
+  lee2014prx, lee2014prl}, but our requirements are significantly more
+relaxed - we do not require a specific single trajectory, only that it
+remains within a Zeno subspace. Furthermore, upon reaching a steady
+state, these transitions become impossible as the coherences
+vanish. This approximation is analogous to optical Raman transitions
+where the population of the excited state is neglected. Here, we can
+make a similar approximation and neglect all but one Zeno subspace
+thanks to the additional knowledge we gain from knowing the
+measurement outcomes.
+
+\subsection{The Non-Hermitian Hamiltonian}
+
+Rewriting the master equation using $\c = c_0 + \delta \c$, where
+$c_0$ is the eigenvalue corresponding to the eigenspace defined by the
+projector $P_0$ which we used to obtain the density matrix in
+Eq. \eqref{eq:approxrho}, we get
+\begin{equation}
+  \label{eq:finalrho}
+  \dot{\hat{\rho}} = -i \left( \H_\mathrm{eff} \hat{\rho} - \hat{\rho}
+  \H_\mathrm{eff}^\dagger \right) + \delta \c \hat{\rho} \delta \cd,
+\end{equation}
+\begin{equation}
+  \label{eq:Ham}
+  \H_\mathrm{eff} = \H_0 + i \left( c_0^*\c - \frac{|c_0|^2}{2} - \frac{\cd\c}{2} \right).
+\end{equation}
+The first term in Eq. \eqref{eq:finalrho} describes coherent evolution
+due to the non-Hermitian Hamiltonian $\H_\mathrm{eff}$ and the second
+term is decoherence due to our ignorance of measurement outcomes. When
+we substitute our approximation of the density matrix
+$\hat{\rho} = \hat{\rho}_{00} + \sum_{r\ne0} (\hat{\rho}_{0r} +
+\hat{\rho}_{r0})$ into Eq. \eqref{eq:finalrho}, the last term
+vanishes, $\delta \c \hat{\rho} \delta \cd = 0$. This happens, because
+$\delta \c P_0 \hat{\rho} = \hat{\rho} P_0 \delta \c^\dagger = 0$. The
+projector annihilates all states except for those with eigenvalue
+$c_0$ and so the operator $\delta \c = \c - c_0$ will always evaluate
+to $c_0 - c_0 = 0$. Recall that we defined
+$\hat{\rho}_{mn} = P_m \hat{\rho} P_n$ which means that every term in
+our approximate density matrix contains the projector $P_0$. However,
+it is important to note that this argument does not apply to other
+second order terms in the master equation, because some terms only
+have the projector $P_0$ applied from one side,
+e.g.~$\hat{\rho}_{0m}$. The term $\delta \c \hat{\rho} \delta \cd$
+applies the fluctuation operator from both sides so it does not matter
+in this case, but it becomes relevant for terms such as
+$\delta \cd \delta \c \hat{\rho}$. It is important to note that this
+term does not automatically vanish, but when the explicit form of our
+approximate density matrix is inserted, it is in fact zero. Therefore,
+we can omit this term using the information we gained from
+measurement, but keep other second order terms, such as
+$\delta \cd \delta \c \rho$ in the Hamiltonian which are the origin of
+other second-order dynamics. This could not be the case in a
+dissipative system.
+
+Ultimately we find that a system under continuous measurement for
+which $\lambda^2 \gg \nu$ in the Zeno subspace $P_0$ is described by
+the deterministic non-Hermitian Hamiltonian $\H_\mathrm{eff}$ in
+Eq. \eqref{eq:Ham} and thus obeys the following Schr\"{o}dinger
+equation
+\begin{equation}
+ i \frac{\mathrm{d} | \Psi \rangle}{\mathrm{d}t} = \left[\H_0 + i \left(
+      c_0^*\c - \frac{|c_0|^2}{2} - \frac{\cd\c}{2} \right) \right] |
+  \Psi \rangle.
+\end{equation}
+Of the three terms in the parentheses the first two represent the
+effects of quantum jumps due to detections (which one can think of as
+`reference frame' shifts between different degenerate eigenspaces) and
+the last term is the non-Hermitian decay due to information gain from
+no detections. It is important to emphasize that even though we
+obtained a deterministic equation, we have not neglected the
+stochastic nature of the detection events. The detection trajectory
+seen in an experiment will have fluctuations around the mean
+determined by the Zeno subspace, but there simply are many possible
+measurement records with the same outcome. This is just like the fully
+projective Zeno limit where the system remains perfectly pure in one
+of the possible projections, but the detections remain randomly
+distributed in time.
+
+One might then be concerned that purity is preserved even though we
+might be averaging over many trajectories within this Zeno
+subspace. We have neglected the small terms $\hat{\rho}_{m,n}$
+($m,n \ne 0$) which are $O(\nu^2/\lambda^4)$ and thus they are not
+correctly accounted for by our approximation. This means that we have
+an $O(\nu^2/\lambda^4)$ error in our density matrix. The purity
+given by
+\begin{equation}
+  \mathrm{Tr}(\hat{\rho}^2) = \mathrm{Tr}(\hat{\rho}^2_{00} + \sum_{m \ne
+    0} \hat{\rho}_{0m}\hat{\rho}_{m0}) + \mathrm{Tr}(\sum_{m,n\ne0}
+  \hat{\rho}_{mn} \hat{\rho}_{nm})
+\end{equation}
+where the second term contains the terms not accounted for by our
+approximation thus introduces an $O(\nu^4/\lambda^8)$
+error. Therefore, this discrepancy is negligible in our
+approximation. The pure state predicted by $\H_\mathrm{eff}$ is only
+an approximation, albeit a good one, and the real state will be mixed
+to a small extent. Whilst perfect purity within the Zeno subspace
+$\hat{\rho}_{00}$ is expected due to the measurement's strong
+decoupling effect, the nearly perfect purity when transitions outside
+the Zeno subspace are included is a nontrivial result. Similarly, in
+Raman transitions the population of the neglected excited state is
+also non-zero, but negligible. Furthermore, this equation does not
+actually require the adiabatic elimination used in
+Eq. \eqref{eq:intermediate} (we only used it to convince ourselves
+that the coherences are small) and such situations may be considered
+provided all approximations remain valid. In a similar way the limit
+of linear optics is derived from the physics of a two-level nonlinear
+medium, when the population of the upper state is neglected and the
+adiabatic elimination of coherences is not required.
+
+\subsection{Non-Hermitian Dynamics in Ultracold Gases}
+
+We finally return to our quantum gas model inside of a cavity. We
+start by considering the simplest case of a global multi-site
+measurement of the form $\hat{D} = \hat{N}_K = \sum_i^K \n_i$, where
+the sum is over $K$ illuminated sites. The effective Hamiltonian
+becomes
+\begin{equation}
+  \label{eq:nHH2}
+  \hat{H}_\mathrm{eff} = \hat{H}_0 - i \gamma \left(  \delta \hat{N}_K \right)^2,
+\end{equation}
+where $ \delta \hat{N}_K = \hat{N}_K - N^0_K$ and $N^0_K$ is the Zeno
+subspace eigenvalue. It is now obvious that continuous measurement
+squeezes the fluctuations in the measured quantity, as expected, and
+that the only competing process is the system's own dynamics.
+
+In this case, if we adiabatically eliminate the density matrix
+cross-terms and substitute Eq. \eqref{eq:intermediate} into
+Eq. \eqref{eq:master} for this system we obtain an effective
+Hamiltonian within the Zeno subspace defined by $N_K$
+\begin{equation}
+  \H_\varphi = P_0 \left[ \H_0 - i \frac{J^2}{\gamma}
+    \sum_\varphi \sum_{\substack{\langle i \in \varphi, j \in \varphi^\prime
+        \rangle \\ \langle k \in \varphi^\prime, l \in \varphi
+        \rangle}} b^\dagger_i b_j b^\dagger_k b_l \right] P_0,
+\end{equation}
+where $\varphi$ denotes a set of sites belonging to a single mode and
+$\varphi^\prime$ is the set's complement (e.g. odd and even or
+illuminated and non-illuminated sites) and $P_0$ is the projector onto
+the eigenspace with $N_K^0$ atoms in the illuminated area. We focus on
+the case when the second term is not only significant, but also leads
+to dynamics within a Zeno subspace that are not allowed by
+conventional quantum Zeno dynamics accounted for by the first
+term. The second term represents second-order transitions via other
+subspaces which act as intermediate states much like virtual states in
+optical Raman transitions. This is in contrast to the conventional
+understanding of the Zeno dynamics for infinitely frequent projective
+measurements (corresponding to $\gamma \rightarrow \infty$) where such
+processes are forbidden \cite{facchi2008}. Thus, it is the weak
+quantum measurement that effectively couples the states. Note that
+this is a special case of the equation in Eq. \eqref{eq:hz} which can
+be obtained by considering a more general two mode setup.
+
+\subsection{Small System Example}
+
+To get clear physical insight, we initially consider three atoms in
+three sites and choose our measurement operator such that
+$\hat{D} = \n_2$, i.e.~only the middle site is subject to measurement,
+and the Zeno subspace defined by $n_2 = 1$. Such an illumination
+pattern can be achieved with global addressing by crossing two beams
+and placing the nodes at the odd sites and the antinodes at even
+sites. This means that $P_0 \H_0 P_0 = 0$. However, the
+first and third sites are connected via the second term. Diagonalising
+the Hamiltonian reveals that out of its ten eigenvalues all but three
+have a significant negative imaginary component of the order $\gamma$
+which means that the corresponding eigenstates decay on a time scale
+of a single quantum jump and thus quickly become negligible. The three
+remaining eigenvectors are dominated by the linear superpositions of
+the three Fock states $|2,1,0 \rangle$, $|1, 1, 1 \rangle$, and
+$|0,1,2 \rangle$. Whilst it is not surprising that these components
+are the only ones that remain as they are the only ones that actually
+lie in the Zeno subspace $n_2 = 1$, it is impossible to solve the full
+dynamics by just considering these Fock states alone as they are not
+coupled to each other in $\hat{H}_0$. The components lying outside of
+the Zeno subspace have to be included to allow intermediate steps to
+occur via states that do not belong in this subspace, much like
+virtual states in optical Raman transitions.
+
+An approximate solution for $U=0$ can be written for the
+$\{|2,1,0 \rangle, |1,1,1 \rangle, |0,1,2 \rangle\}$ subspace by
+multiplying each eigenvector with its corresponding time evolution
+\begin{equation}
+  | \Psi(t) \rangle \propto \left( \begin{array}{c} 
+  z_1 + \sqrt{2} z_2 e^{-6 J^2 t / \gamma} + z_3 e^{-12 J^2 t / \gamma} \\
+  -\sqrt{2} \left(z_1 - z_3 e^{-12 J^2 t / \gamma} \right) \\ 
+  z_1 - \sqrt{2} z_2 e^{-6 J^2 t / \gamma} + z_3 e^{-12 J^2 t /
+                                     \gamma} \\ 
+                                   \end{array} 
+                                 \right), \nonumber
+\end{equation}
+where $z_i$ denote the overlap between the eigenvectors and the
+initial state, $z_i = \langle v_i | \Psi (0) \rangle$, with
+$| v_1 \rangle = (1, -\sqrt{2}, 1)/2$,
+$| v_2 \rangle = (1, 0, -1)/\sqrt{2}$, and
+$| v_3 \rangle = (1, \sqrt{2}, 1)/2$. The steady state as
+$t \rightarrow \infty$ is given by
+$| v_1 \rangle = (1, -\sqrt{2}, 1)/2$. This solution is illustrated in
+Fig. \ref{fig:comp} which clearly demonstrates dynamics beyond the
+canonical understanding of quantum Zeno dynamics as tunnelling occurs
+between states coupled via a different Zeno subspace.
+
+\begin{figure}[hbtp!]
+	\includegraphics[width=\linewidth]{comp}
+	\caption[Fock State Populations in a Zeno
+        Subspace]{Populations of the Fock states in the Zeno subspace
+          for $\gamma/J = 100$ and initial state $| 2,1,0 \rangle$. It
+          is clear that quantum Zeno dynamics occurs via Raman-like
+          processes even though none of these states are connected in
+          $\hat{H}_0$. The dynamics occurs via virtual intermediate
+          states outside the Zeno subspace. The system also tends to a
+          steady state which minimises tunnelling effectively
+          suppressing fluctuations. The lines are solutions to the
+          non-Hermitian Hamiltonian, and the dots are points from a
+          stochastic trajectory calculation.\label{fig:comp}}
+\end{figure}
+
+\subsection{Steady State of non-Hermitian Dynamics}
+
+A distinctive difference between Bose-Hubbard model ground states and
+the final steady state,
+$| \Psi \rangle = [|2,1,0 \rangle - \sqrt{2} |1,1,1\rangle +
+|0,1,2\rangle]/2$, is that its components are not in phase. Squeezing
+due to measurement naturally competes with inter-site tunnelling which
+tends to spread the atoms. However, from Eq. \eqref{eq:nHH2} we see
+the final state will always be the eigenvector with the smallest
+fluctuations as it will have an eigenvalue with the largest imaginary
+component. This naturally corresponds to the state where tunnelling
+between Zeno subspaces (here between every site) is minimised by
+destructive matter-wave interference, i.e.~the tunnelling dark state
+defined by $\hat{T} |\Psi \rangle = 0$, where
+$\hat{T} = \sum_{\langle i, j \rangle} \bd_i b_j$. This is simply the
+physical interpretation of the steady states we predicted for
+Eq. \eqref{eq:master}. Crucially, this state can only be reached if
+the dynamics aren't fully suppressed by measurement and thus,
+counter-intuitively, the atomic dynamics cooperate with measurement to
+suppress itself by destructive interference. Therefore, this effect is
+beyond the scope of traditional quantum Zeno dynamics and presents a
+new perspective on the competition between a system's short-range
+dynamics and global measurement backaction.
+
+We now consider a one-dimensional lattice with $M$ sites so we extend
+the measurement to $\hat{D} = \N_\text{even}$ where every even site is
+illuminated.  The wavefunction in a Zeno subspace must be an
+eigenstate of $\c$ and we combine this with the requirement for it to
+be in the dark state of the tunnelling operator (eigenstate of $\H_0$
+for $U = 0$) to derive the steady state. These two conditions in
+momentum space are
+\begin{equation}
+  \hat{T} | \Psi \rangle = \sum_{\text{RBZ}} \left[ \bd_k b_k -
+    \bd_{q} b_{q} \right] \cos(ka) |\Psi \rangle = 0, \nonumber
+\end{equation}
+\begin{equation}
+  \Delta \N |\Psi \rangle = \sum_{\text{RBZ}} \left[ \bd_k b_{-q} +
+    \bd_{-q} b_k \right] | \Psi \rangle= \Delta N |\Psi \rangle, \nonumber
+\end{equation}
+where $b_k = \frac{1}{\sqrt{M}} \sum_j e^{i k j a} b_j$,
+$\Delta \hat{N} = \hat{D} - N/2$, $q = \pi/a - k$, $a$ is the lattice
+spacing, $N$ the total atom number, and we perform summations over the
+reduced Brillouin zone (RBZ), $-\pi/2a < k \le \pi/2a$, as the
+symmetries of the system are clearer this way. Now we define
+\begin{equation}
+\hat{\alpha}_k^\dagger = \bd_k \bd_q - \bd_{-k} \bd_{-q},
+\end{equation}
+\begin{equation}
+\hat{\beta}_\varphi^\dagger = \bd_{\pi/2a} + \varphi \bd_{-\pi/2a},
+\end{equation}
+where $\varphi = \Delta N / | \Delta N |$, which create the smallest
+possible states that satisfy the two equations for $\Delta N = 0$ and
+$\Delta N \ne 0$ respectively. Therefore, by noting that
+\begin{align}
+  \left[ \hat{T}, \hat{\alpha}_k^\dagger \right] & = 0, \\
+  \left[ \hat{T}, \hat{\beta}_\varphi^\dagger \right] & = 0, \\
+  \left[ \Delta \N, \hat{\alpha}_k^\dagger \right] & = 0, \\
+  \left[ \Delta \N, \hat{\beta}_\varphi^\dagger \right] & = \varphi
+  \hat{\beta}_\varphi^\dagger,
+\end{align}
+we can now write the equation for the $N$-particle steady state
+\begin{equation}
+  \label{eq:ss}
+  | \Psi \rangle \propto \left[ \prod_{i=1}^{(N - |\Delta N|)/2}
+    \left( \sum_{k = 0}^{\pi/2a} \phi_{i,k} \hat{\alpha}_k^\dagger
+    \right) \right] \left( \hat{\beta}_\varphi^\dagger \right)^{|
+    \Delta N |} | 0 \rangle, \nonumber
+\end{equation}
+where $\phi_{i,k}$ are coefficients that depend on the trajectory
+taken to reach this state and $|0 \rangle$ is the vacuum state defined
+by $b_k |0 \rangle = 0$. Since this a dark state (an eigenstate of
+$\H_0$) of the atomic dynamics, this state will remain stationary even
+with measurement switched-off. Interestingly, this state is very
+different from the ground states of the Bose-Hubbard Hamiltonian, it
+is even orthogonal to the superfluid state, and thus it cannot be
+obtained by cooling or projecting from an initial ground state. The
+combination of tunnelling with measurement is necessary.
+
+\begin{figure}[hbtp!]
+	\includegraphics[width=\linewidth]{figure3}
+	\caption[Non-Hermitian Steady State]{A trajectory simulation
+          for eight atoms in eight sites, initially in
+          $|1,1,1,1,1,1,1,1 \rangle$, with periodic boundary
+          conditions and $\gamma/J = 100$. (a), The fluctuations in
+          $\c$ where the stochastic nature of the process is clearly
+          visible on a single trajectory level. However, the general
+          trend is captured by the non-Hermitian Hamiltonian. (b), The
+          local density variance. Whilst the fluctuations in the
+          global measurement operator decrease, the fluctuations in
+          local density increase due to tunnelling via states outside
+          the Zeno subspace. (c), The momentum distribution. The
+          initial Fock state has a flat distribution which with time
+          approaches the steady state distribution of two identical
+          and symmetric distributions centred at $k = \pi/2a$ and
+          $k = -\pi/2a$.\label{fig:steady}}
+\end{figure}
+
+In order to prepare the steady state one has to run the experiment and
+wait until the photocount rate remains constant for a sufficiently
+long time. Such a trajectory is illustrated in Fig. \ref{fig:steady}
+and compared to a deterministic trajectory calculated using the
+non-Hermitian Hamiltonian. It is easy to see from
+Fig. \ref{fig:steady}(a) how the stochastic fluctuations around the
+mean value of the observable have no effect on the general behaviour
+of the system in the strong measurement regime. By discarding these
+fluctuations we no longer describe a pure state, but we showed how
+this only leads to a negligible error. Fig. \ref{fig:steady}(b) shows
+the local density variance in the lattice. Not only does it grow
+showing evidence of tunnelling between illuminated and non-illuminated
+sites, but it grows to significant values. This is in contrast to
+conventional quantum Zeno dynamics where no tunnelling would be
+allowed at all. Finally, Fig. \ref{fig:steady}(c) shows the momentum
+distribution of the trajectory. We can clearly see that it deviates
+significantly from the initial flat distribution of the Fock
+state. Furthermore, the steady state does not have any atoms in the
+$k=0$ state and thus is orthogonal to the superfluid state as
+discussed.
+
+To obtain a state with a specific value of $\Delta N$ postselection
+may be necessary, but otherwise it is not needed.  The process can be
+optimised by feedback control since the state is monitored at all
+times \cite{ivanov2014}. Furthermore, the form of the measurement
+operator is very flexible and it can easily be engineered by the
+geometry of the optical setup \cite{elliott2015, mazzucchi2016} which
+can be used to design a state with desired properties.
 
 \section{Conclusions}
+
+In this chapter we have demonstrated that global quantum measurement
+backaction can efficiently compete with standard local processes in
+many-body systems. This introduces a completely new energy and time
+scale into quantum many-body research. This is made possbile by the
+ability to structure the spatial profile of the measurement on a
+microscopic scale comparable to the lattice period without the need
+for single site addressing. The extreme flexibility of the setup
+considered allowed us to effectively tailor long-range entanglement
+and correlations present in the system. We showed that the competition
+between the global backaction and usual atomic dynamics leads to the
+production of spatially multimode macroscopic superpositions which
+exhibit large-scale oscillatory dynamics which could be used for
+quantum information and metrology. We subsequently demonstrated that
+when on-site atomic interactions are introduced the dynamics become
+much more complicated with different regimes of behaviour where
+measurement and interactions can either compete or cooperate. In the
+strong measurement regime we showed that conventional quantum Zeno
+dynamics can be realised, but more interestingly, by considering a
+strong, but not projective, limit of measurement we observe a new type
+of nonlocal dynamics. It turns out that a global measurement scheme
+leads to correlations between spatially separated tunnelling events
+which conserve the Zeno subspace via Raman-like processes which would
+be forbidden in the canonical fully projective limit. We subsequently
+presented a rigorous analysis of the underlying process of this new
+type of quantum Zeno dynamics in which we showed that in this limit
+quantum trajectories can be described by a deterministic non-Hermitian
+Hamiltonian. In contrast to previous works, it is independent of the
+underlying system and there is no need to postselect a particular
+exotic trajectory \cite{lee2014prx, lee2014prl}. Finally, we have
+shown that the system will always tend towards the eigenstate of the
+Hamiltonian with the best squeezing of the observable and the atomic
+dynamics, which normally tend to spread the distribution, cooperates
+with measurement to produce a state in which tunnelling is suppressed
+by destructive matter-wave interference. A dark state of the
+tunnelling operator will have zero fluctuations and we provided an
+expression for the steady state which is significantly different from
+the ground state of the Hamiltonian. This is in contrast to previous
+works on dissipative state preparation where the steady state had to
+be a dark state of the measurement operator \cite{diehl2008}.
+
+Such globally paired tunnelling due to a fundamentally new phenomenon,
+global quantum measurement backaction, can enrich the physics of
+long-range correlated systems beyond relatively short-range
+interactions expected from standard dipole-dipole interactions
+\cite{sowinski2012, omjyoti2015}. These nonlocal high-order processes
+entangle regions of the optical lattice that are disconnected by the
+measurement. Using different detection schemes, we showed how to
+tailor density-density correlations between distant lattice
+sites. Quantum optical engineering of nonlocal coupling to
+environment, combined with quantum measurement, can allow the design
+of nontrivial system-bath interactions, enabling new links to quantum
+simulations~\cite{stannigel2013} and thermodynamics~\cite{erez2008}
+and extend these directions to the field of non-Hermitian quantum
+mechanics, where quantum optical setups are particularly
+promising~\cite{lee2014prl}. Importantly, both systems and baths,
+designed by our method, can be strongly correlated systems with
+internal long-range entanglement.
