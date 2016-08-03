@@ -793,19 +793,21 @@ the $\gamma/U \gg 1$ regime is reached.
 
 When $\gamma \rightarrow \infty$ the measurement becomes
 projective. This means that as soon as the probing begins, the system
-collapses into one of the observable's eigenstates. Since this
-measurement is continuous and doesn't stop after the projection the
-system will be frozen in this state. This effect is called the quantum
-Zeno effect from Zeno's classical paradox in which a ``watched arrow
-never moves'' that stated since an arrow in flight is not seen to move
-during any single instant, it cannot possibly be moving at
-all. Classically the paradox was resolved with a better understanding
-of infinity and infintesimal changes, but in the quantum world a
-watched quantum arrow will in fact never move. The system is being
-continuously projected into its initial state before it has any chance
-to evolve away. If degenerate eigenspaces exist then we can observe
-quantum Zeno dynamics where unitary evolution is uninhibited within
-such a degenerate subspace, called the Zeno subspace.
+collapses into one of the observable's eigenstates. Furthermore, since
+this measurement is continuous and doesn't stop after the projection
+the system will be frozen in this state. This effect is called the
+quantum Zeno effect \cite{misra1977, facchi2008} from Zeno's classical
+paradox in which a ``watched arrow never moves'' that stated that
+since an arrow in flight is not seen to move during any single
+instant, it cannot possibly be moving at all. Classically the paradox
+was resolved with a better understanding of infinity and infintesimal
+changes, but in the quantum world a watched quantum arrow will in fact
+never move. The system is being continuously projected into its
+initial state before it has any chance to evolve. If degenerate
+eigenspaces exist then we can observe quantum Zeno dynamics where
+unitary evolution is uninhibited within such a degenerate subspace,
+called the Zeno subspace \cite{facchi2008, raimond2010, raimond2012,
+  signoles2014}.
 
 These effects can be easily seen in our model when
 $\gamma \rightarrow \infty$. The system will be projected into one or
@@ -814,12 +816,11 @@ we define the projector
 $P_\varphi = \sum_{i \in \varphi} | \psi_i \rangle$ where $\varphi$
 denotes a single degenerate subspace. The Zeno subspace is determined
 randomly as per the Copenhagen postulates and thus it depends on the
-initial state. If the projection is into the subspace
-$\varphi^\prime$, the subsequent evolution is described by the
-projected Hamiltonian
-$P_{\varphi^\prime} \hat{H}_0 P_{\varphi^\prime}$. We have used the
-original Hamiltonian, $\hat{H}_0$, without the non-Hermitian term or
-the quantum jumps as their combined effect is now described by the
+initial state. If the projection is into the subspace $\varphi$, the
+subsequent evolution is described by the projected Hamiltonian
+$P_{\varphi} \hat{H}_0 P_{\varphi}$. We have used the original
+Hamiltonian, $\hat{H}_0$, without the non-Hermitian term or the
+quantum jumps as their combined effect is now described by the
 projectors. Physically, in our model of ultracold bosons trapped in a
 lattice this means that tunnelling between different spatial modes is
 completely supressed since this process couples eigenstates belonging
@@ -827,26 +828,24 @@ to different Zeno subspaces. If a small connected part of the lattice
 was illuminated uniformly such that $\hat{D} = \hat{N}_K$ then
 tunnelling would only be prohibited between the illuminated and
 unilluminated areas, but dynamics proceeds normally within each zone
-separately. Therefore, the goemetric patterns we have in which the
-modes are sptailly delocalised in such a way that neighbouring sites
-never belong to the same mode, e.g.  $\hat{D} = \hat{N}_\mathrm{odd}$,
-would lead to a complete suppression of tunnelling across the whole
-lattice as there is no way for an atom to tunnel within this Zeno
-subspace.
+separately. However, the goemetric patterns we have in which the modes
+are spatially delocalised in such a way that neighbouring sites never
+belong to the same mode, e.g.  $\hat{D} = \hat{N}_\mathrm{odd}$, would
+lead to a complete suppression of tunnelling across the whole lattice
+as there is no way for an atom to tunnel within this Zeno subspace
+without first having to leave it.
 
 This is an interesting example of the quantum Zeno effect and dynamics
 and it can be used to prohibit parts of the dynamics of the
-Bose-Hubbard Hamiltonian in order to engineer desired Hamiltonians for
+Bose-Hubbard Model in order to engineer desired Hamiltonians for
 quantum simulations or other applications. However, the infinite
 projective limit is uninteresting in the context of a global
 measurement scheme. The same effects and Hamiltonians can be achieved
 using multiple independent measurements which address a few sites
-each. The only advantage of the global scheme is that it might be
-simpler to achieve as it requires a less complicated optical setup. In
-order to take advantage of the nonlocal nature of the measurement it
-turns out that we need to consider a finite limit for $\gamma \gg
-J$. By considering a non-infinite $\gamma$ we observe additional
-dynamics while the usual atomic tunnelling is still heavily
+each. In order to take advantage of the nonlocal nature of the
+measurement it turns out that we need to consider a finite limit for
+$\gamma \gg J$. By considering a non-infinite $\gamma$ we observe
+additional dynamics while the usual atomic tunnelling is still heavily
 Zeno-suppressed. These new effects are shown in Fig. \ref{fig:zeno}.
 
 \begin{figure}[hbtp!]
@@ -897,22 +896,22 @@ eigenspaces and select which tunnelling processes should be
 uninhibited and which should be suppressed. However, there is a second
 effect that was not present before. In Fig. \ref{fig:zeno} we can
 observe tunnelling that violates the boundaries established by the
-spatial modes. When $\gamma$ is finite, second-order processes can now
-occur, i.e.~two correlated tunnelling events, via an intermediate
-(virtual) state outside of the Zeno subspace as long as the Zeno
-subspace of the final state remains the same. Crucially, these
-tunnelling events are only correlated in time, but not in space. This
-means that the two events do not have to occur for the same atom or
-even at the same site in the lattice. As long as the Zeno subspace is
-preserved, these processes can occur anywhere in the system, that is a
-pair of atoms separated by many sites is able to tunnel in a
-correlated manner. This is only possible due to the possibility of
-creating extensive and spatially nonlocal modes as described in
-section \ref{sec:modes} which in turn is enabled by the global nature
-of the measurement. This would not be possible to achieve with local
-measurements as this would lead to Zeno subspaces described entirely
-by local variables which cannot be preserved by such delocalised
-tunnelling events.
+spatial modes. When $\gamma$ is finite, second-order processes,
+i.e.~two correlated tunnelling events, can now occur via an
+intermediate (virtual) state outside of the Zeno subspace as long as
+the Zeno subspace of the final state remains the same. Crucially,
+these tunnelling events are only correlated in time, but not in
+space. This means that the two events do not have to occur for the
+same atom or even at the same site in the lattice. As long as the Zeno
+subspace is preserved, these processes can occur anywhere in the
+system. That is, a pair of atoms separated by many sites is able to
+tunnel in a correlated manner. This is only possible due to the
+ability of creating extensive and spatially nonlocal modes as
+described in section \ref{sec:modes} which in turn is enabled by the
+global nature of the measurement. This would not be possible to
+achieve with local measurements as the Zeno subspaces would be
+described entirely by local variables which cannot be preserved by
+such delocalised tunnelling events.
 
 In the subsequent sections we will rigorously derive the following
 Hamiltonian for the non-interacting dynamics within a single Zeno
@@ -930,30 +929,32 @@ $\hat{D} = \hat{N}_\mathrm{odd}$
 where
 $A = (J_{\varphi,\varphi} - J_{\varphi^\prime,\varphi^\prime})^2$ is a
 constant that depends on the measurement scheme, $\varphi$ denotes a
-set of site belonging to a single mode and $\varphi^\prime$ is the
+set of sites belonging to a single mode and $\varphi^\prime$ is the
 set's complement (e.g.~odd and even or illuminated and non-illuminated
 sites). We see that this Hamiltonian consists of two parts. The first
 term corresponds to the standard quantum Zeno first-order dynamics
 that occurs within a Zeno subspace, i.e.~tunnelling between
-neighbouring sites that belong to the same mode. Otherwise,
-$P_0 \bd_i b_j P_0 = 0$. If $\gamma \rightarrow \infty$ we would
-recover the quantum Zeno Hamiltonian where this would be the only
-remaining term. It is the second term that shows the second-order
-corelated tunnelling terms. This is evident from the inner sum which
-requires that pairs of sites ($i$, $j$) and ($k$, $l$) between which
-atoms tunnel must be nearest neighbours, but these pairs can be as far
-apart from each other as possible within the mode structure. This is
-in particular explicitly shown in Figs. \ref{fig:zeno}(a,b). The
-imaginary coefficient means that the tinelling behaves like an
-exponential decay (overdamped oscillations). This also implies that
-the norm will decay, but this does not mean that there are physical
-losses in the system. Instead, the norm itself represents the
-probability of the system remaining in the $\varphi = 0$ Zeno
-subspace. Since $\gamma$ is not infinite there is now a finite
-probability that the stochastic nature of the measurement will lead to
-a discontinous change in the system where the Zeno subspace rapidly
-changes. However, later in this chapter we will see that steady states
-of this Hamiltonian exist which will no longer change Zeno subspaces.
+neighbouring sites that belong to the same mode. Otherwise, if $i$ and
+$j$ belong to different modes $P_0 \bd_i b_j P_0 = 0$. When
+$\gamma \rightarrow \infty$ we recover the quantum Zeno Hamiltonian
+where this would be the only remaining term. It is the second term
+that shows the second-order corelated tunnelling terms. This is
+evident from the inner sum which requires that pairs of sites ($i$,
+$j$) and ($k$, $l$) between which atoms tunnel must be nearest
+neighbours, but these pairs can be anywhere on the lattice within the
+constraints of the mode structure. This is in particular explicitly
+shown in Figs. \ref{fig:zeno}(a,b). The imaginary coefficient means
+that the tinelling behaves like an exponential decay (overdamped
+oscillations). This also implies that the norm will decay, but this
+does not mean that there are physical losses in the system. Instead,
+the norm itself represents the probability of the system remaining in
+the $\varphi = 0$ Zeno subspace. Since $\gamma$ is not infinite there
+is now a finite probability that the stochastic nature of the
+measurement will lead to a discontinous change in the system where the
+Zeno subspace rapidly changes which can be seen in
+Fig. \ref{fig:zeno}(a). However, later in this chapter we will see
+that steady states of this Hamiltonian exist which will no longer
+change Zeno subspaces.
 
 Crucially, what sets this effect apart from usual many-body dynamics
 with short-range interactions is that first order processes are
@@ -961,11 +962,23 @@ selectively suppressed by the global conservation of the measured
 observable and not by the prohibitive energy costs of doubly-occupied
 sites, as is the case in the $t$-$J$ model \cite{auerbach}. This has
 profound consequences as this is the physical origin of the long-range
-correlated tunneling events represented in \eqref{eq:hz} by the fact
-that the pairs ($i$, $j$) and ($k$, $l$) can be very distant. This is
-because the projection $\hat{P}_0$ is not sensitive to individual site
+correlated tunneling events represented in Eq. \eqref{eq:hz} by the
+fact that the pairs ($i$, $j$) and ($k$, $l$) can be very distant. The
+projection $\hat{P}_0$ is not sensitive to individual site
 occupancies, but instead enforces a fixed value of the observable,
-i.e.~a single Zeno subspace.
+i.e.~a single Zeno subspace. This is a striking difference with the
+$t$-$J$ and other strongly interacting models. The strong interaction
+also leads to correlated events in which atoms can tunnel over each
+other by creating an unstable doubly occupied site during the
+intermediate step. However, these correlated events are by their
+nature localised. Due to interactions the doubly-occupied site cannot
+be present in the final state which means that any tunnelling event
+that created this unstable configuration must be followed by another
+tunnelling event which takes an atom away. In the case of global
+measurement this process is delocalised, because since the modes
+consist of many sites the stable configuration can be restored by a
+tunnelling event from a completely different lattice site that belongs
+to the same mode.
 
 In Fig.~\ref{fig:zeno}a we consider illuminating only the central
 region of the optical lattice and detecting light in the diffraction
@@ -978,7 +991,7 @@ typical dynamics occurs within each region but the standard tunnelling
 between different modes is suppressed. Importantly, second-order
 processes that do not change $N_\text{K}$ are still possible since an
 atom from $1$ can tunnel to $2$, if simultaneously one atom tunnels
-from $2$ to $3$. Therfore, effective long-range tunneling between two
+from $2$ to $3$. Therefore, effective long-range tunneling between two
 spatially disconnected zones $1$ and $3$ happens due to the two-step
 processes $1 \rightarrow 2 \rightarrow 3$ or
 $3 \rightarrow 2 \rightarrow 1$. These transitions are responsible for
@@ -1001,39 +1014,22 @@ measurement scheme freezes both $N_\text{even}$ and $N_\text{odd}$,
 atoms can slowly tunnel between the odd sites of the lattice, despite
 them being spatially disconnected. This atom exchange spreads
 correlations between non-neighbouring lattice sites on a time scale
-$\sim \gamma/J^2$. The schematic explanation of long-range correlated
-tunneling is presented in Fig.~\ref{fig:zeno}(b.1): the atoms can
-tunnel only in pairs to assure the globally conserved values of
-$N_\text{even}$ and $N_\text{odd}$, such that one correlated tunneling
-event is represented by a pair of one red and one blue
-arrow. Importantly, this scheme is fully applicable for a lattice with
-large atom and site numbers, well beyond the numerical example in
-Fig.~\ref{fig:zeno}(b.1), because as we can see in \eqref{eq:hz}
-it is the geometry of quantum measurement that assures this mode
-structure (in this example, two modes at odd and even sites) and thus
-the underlying pairwise global tunnelling.
+$\sim \gamma/J^2$ as seen in Eq. \eqref{eq:hz}. The schematic
+explanation of long-range correlated tunneling is presented in
+Fig.~\ref{fig:zeno}(b.1): the atoms can tunnel only in pairs to assure
+the globally conserved values of $N_\text{even}$ and $N_\text{odd}$,
+such that one correlated tunneling event is represented by a pair of
+one red and one blue arrow. Importantly, this scheme is fully
+applicable for a lattice with large atom and site numbers, well beyond
+the numerical example in Fig.~\ref{fig:zeno}(b.1), because as we can
+see in Eq. \eqref{eq:hz} it is the geometry of quantum measurement that
+assures this mode structure (in this example, two modes at odd and
+even sites) and thus the underlying pairwise global tunnelling.
 
-This global pair tunneling may play a role of a building block for
-more complicated many-body effects. For example, a pair tunneling
-between the neighbouring sites has been recently shown to play
-important role in the formation of new quantum phases, e.g., pair
-superfluid \cite{sowinski2012} and lead to formulation of extended
-Bose-Hubbard models \cite{omjyoti2015}. The search for novel
-mechanisms providing long-range interactions is crucial in many-body
-physics. One of the standard candidates is the dipole-dipole
-interaction in, e.g., dipolar molecules, where the mentioned pair
-tunneling between even neighboring sites is already considered to be
-long-range \cite{sowinski2012,omjyoti2015}. In this context, our work
-suggests a fundamentally different mechanism originating from quantum
-optics: the backaction of global and spatially structured measurement,
-which as we prove can successfully compete with other short-range
-processes in many-body systems. This opens promising opportunities for
-future research.
-
-The scheme in Fig.~\ref{fig:zeno}(b.1) can help to design a nonlocal
+The scheme in Fig.~\ref{fig:zeno}(b.1) can help design a nonlocal
 reservoir for the tunneling (or ``decay'') of atoms from one region to
 another. For example, if the atoms are placed only at odd sites,
-according to \eqref{eq:hz} their tunnelling is suppressed since the
+according to Eq. \eqref{eq:hz} their tunnelling is suppressed since the
 multi-tunneling event must be successive, i.e.~an atom tunnelling into
 a different mode, $\varphi^\prime$, must then also tunnel back into
 its original mode, $\varphi$. If, however, one adds some atoms to even
@@ -1052,8 +1048,8 @@ entanglement. This is in striking contrast to the entanglement caused
 by local processes which can be very confined, especially in 1D where
 it is typically short range. This makes numerical calculations of our
 system for large atom numbers really difficult, since well-known
-methods such as DMRG and MPS \cite{schollwock2005} (which are successful
-for short-range interactions) rely on the limited extent of
+methods such as DMRG and MPS \cite{schollwock2005} (which are
+successful for short-range interactions) rely on the limited extent of
 entanglement.
 
 The negative number correlations are typical for systems with
@@ -1072,10 +1068,26 @@ reservoir for two central sites, where a constraint is applied. Note
 that, using more modes, the design of higher-order multi-tunneling
 events is possible.
 
+This global pair tunneling may play a role of a building block for
+more complicated many-body effects. For example, a pair tunneling
+between the neighbouring sites has been recently shown to play
+important role in the formation of new quantum phases, e.g., pair
+superfluid \cite{sowinski2012} and lead to formulation of extended
+Bose-Hubbard models \cite{omjyoti2015}. The search for novel
+mechanisms providing long-range interactions is crucial in many-body
+physics. One of the standard candidates is the dipole-dipole
+interaction in, e.g., dipolar molecules, where the mentioned pair
+tunneling between even neighboring sites is already considered to be
+long-range \cite{sowinski2012,omjyoti2015}. In this context, our work
+suggests a fundamentally different mechanism originating from quantum
+optics: the backaction of global and spatially structured measurement,
+which as we prove can successfully compete with other short-range
+processes in many-body systems. This opens promising opportunities for
+future research.
+
 \subsection{Non-Hermitian Dynamics in the Quantum Zeno Limit}
 
-% Contrast with t-J model here how U localises events, but measurement
-% does the opposite
+
 
 \subsection{Steady-State of the Non-Hermitian Hamiltonian}
 
