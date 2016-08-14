@@ -3,6 +3,7 @@
 %*******************************************************************************
 
 \chapter{Quantum Measurement Backaction}  
+\label{chap:backaction}
 % Title of the Fourth Chapter
 
 \ifpdf
@@ -244,6 +245,7 @@ between fields. Therefore, the final form of the Hamiltonian
 Eq. \eqref{eq:fullH} that we will be using in the following chapters
 is
 \begin{equation}
+  \label{eq:backaction}
   \hat{H} = \hat{H}_0 - i \gamma \hat{F}^\dagger \hat{F}
 \end{equation}
 \begin{equation}
@@ -277,7 +279,26 @@ nonlocal way and most importantly not only will it not degrade
 long-range coherence, it will in fact lead to such long-range
 correlations itself.
 
-\mynote{introduce citations from PRX/PRA above}
+In Chapter \ref{chap:qnd} we used highly efficient DMRG methods
+\cite{tnt} to calculate the ground state of the Bose-Hubbard
+Hamiltonian. Related techniques such as Time-Evolving Block Decimation
+(TEBD) or t-DMRG are often used for numerical calculations of time
+evolution. However, despite the fact our Hamiltonian in
+Eq. \eqref{eq:backaction} is simply the Bose-Hubbard model with a
+non-Hermitian term added due to measurement it is actually difficult
+to apply these methods to our system. The problem lies in the fact
+that Matrix Product methods we mentioned are only efficient for
+one-dimensional systems that obey the area law for entanglement
+entropy, i.e.~systems with only short-range quantum
+correlations. Unfortunately, the global nature of the measurement we
+consider violates the assumptions made in deriving the area law and,
+as we shall see in the following chapters, leads to long-range
+correlations regardless of coupling strength. Therefore, we resort to
+using exact methods such as exact diagonalisation which we solve with
+well-known ordinary differential equation solvers. This means that we
+can at most simulate a few atoms, but as we shall see it is the
+geometry of the measurement that matters the most and these effects
+are already visible in smaller systems.
 
 \section{The Master Equation}
 \label{sec:master}

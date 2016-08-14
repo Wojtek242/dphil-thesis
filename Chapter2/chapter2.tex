@@ -380,6 +380,265 @@ beyond previous treatments.
 
 \section{The Bose-Hubbard Hamiltonian}
 
+\subsection{The Model}
+
+The original Hubbard model was developed as a model for the motion of
+electrons within transition metals \cite{hubbard1963}. The key
+elements were the confinement of the motion to a lattice and the
+approximation of the Coulomb screening interaction as a simple on-site
+interaction. Despite these enormous simplifications the model was very
+succesful \cite{leggett}. The Bose-Hubbard model is an even simpler
+variation where instead of fermions we consider spinless bosons. It
+was originally devised as a toy model, but in 1998 it was shown by
+Jaksch \emph{et.~al.} that it can be realised with ultracold atoms in
+an optical lattice \cite{jaksch1998}. Shortly afterwards it was
+obtained in a ground-breaking experiment \cite{greiner2002}. The model
+has been the subject of intense research since then, because despite
+its simplicity it possesses highly nontrivial properties such as the
+superfluid to Mott insulator quantum phase transition. Furthermore, it
+is one of the most controllable quantum many-body systems thus
+providing a solid basis for new experiments and technologies.
+
+The model we have derived is essentially an extension of the
+well-known Bose-Hubbard model that also includes interactions with
+quantised light. Therefore, it should come as no surprise that if we
+eliminate all the quantized fields from the Hamiltonian we obtain
+exactly the Bose-Hubbard model
+\begin{equation}
+  \H_a = -J \sum_{\langle i,j \rangle}^M \bd_i b_j + 
+  \frac{U}{2} \sum_{i}^M \hat{n}_i (\hat{n}_i - 1).
+\end{equation}
+The first term is the kinetic energy term and denotes the hopping of
+atoms between neighbouring sites at a hopping rate given by $J$. The
+second term describes the on-site repulsion which acts mainly to
+suppress multiple occupancies of any site, but at the same time it
+lies at the heart of strongly correlated phenomena in the Bose-Hubbard
+model. Unfortunately, despite its simplicity, this system is not
+solvable for any finite value $U/J$ using known techniques in finite
+dimensions \cite{krauth1991, kolovsky2004, calzetta2006}. However,
+exact solutions exist for the ground state in the two limits of
+$U = 0$ and $J = 0$ which already provide some insight as they
+correspond to the two different phases of the quantum phase transition
+that is present in the model. In higher dimensions (e.g.~two or three)
+the system is reasonably well described by a mean-field approximation
+which provides us with a good understanding of the full quantum phase
+diagram.
+
+\subsection{The Superfluid and Mott Insulator Ground States}
+
+Before trying to understand the quantum phase transition itself we
+will look at the ground states of the two extremal cases first and for
+simplicity we will consider only homogenous systems with periodic
+boundary conditions here. We will begin with the $U = 0$ limit where
+the Hamiltonian's kinetic term can be diagonalised by transforming to
+momentum space defined by the annihilation operator
+\begin{equation}
+  b_\b{k} = \frac{1} {\sqrt{M}} \sum_m b_m e^{i \b{k} \cdot \b{r}_m},
+\end{equation}
+where $\b{k}$ denotes the wavevector running over the first Brillouin
+zone. The Hamiltonian then is given by
+\begin{equation}
+  \H_a = \sum_\b{k} \epsilon_\b{k} \bd_\b{k} b_\b{k},
+\end{equation}
+where the free particle dispersion is
+\begin{equation}
+  \epsilon_\b{k} = -2 J \sum_{d = 1}^D \cos(k_d a),
+\end{equation}
+and $d$ denotes the dimension out of a total of $D$ dimensions. It
+should now be obvious that the ground state is simply the state with
+all the atoms in the $\b{k} = 0$ state and thus it is given by
+\begin{equation}
+  \label{eq:GSSF}
+  | \Psi_\mathrm{SF} \rangle = \frac{ ( \bd_{\b{k} = 0} )^N } {\sqrt{N!}} | 0
+  \rangle = \frac{1} {\sqrt{N!}} \left( \frac{1} {\sqrt{M}} \sum_m^M
+    \bd_m \right)^N | 0 \rangle,
+\end{equation}
+where $| 0 \rangle$ denotes the vacuum state. This state is called a
+superfluid (SF) due to its viscous-free flow properties
+\cite{leggett1999}. The macroscopic occupancy of the single-particle
+ground state is the signature and defining property of a
+Bose-Einstein condensate. Note that the zero momentum states consist of a
+superposition of an atom at all the sites of the optical lattice
+highlighting the fact that kinetic energy is minimised by delocalising
+the particles. This in turn implies that a superfluid state will have
+infinite range correlations. It is also important to note that in the
+thermodynamic limit the superfluid state is gapless, i.e.~it takes
+zero energy to excite the system.
+
+At the other end of the spectrum, i.e.~$J = 0$, the kinetic term
+vanishes and the system is dominated by the on-site interactions. This
+has the effect of decoupling the Hamiltonian into a sum of identical
+single-site Hamiltonians which are already diagonal in the atom number
+basis. Therefore, the ground state for $N = gM$, where $g$ is an
+integer, is given by
+\begin{equation}
+  \label{eq:GSMI}
+  | \Psi_\mathrm{MI} \rangle = \prod_m^M \frac{1} {\sqrt{g!}}
+  (\bd_m)^g | 0 \rangle.
+\end{equation}
+This state has precisely the same number of bosons, $g$, at each site
+and is commonly known as the Mott insulator (MI). Unlike in the
+superfluid state, the atoms are all localised to a specific lattice
+site and thus not only are there no long-range correlations, there are
+actually no two-site correlations in this state at all. Additionally,
+this state is gapped, i.e.~it costs a finite amount of energy to
+excite the system into its lowest excited state even in the
+thermodynamic limit. In fact, the existance of the gap is the defining
+property that distinguishes the Mott insulator from the superfluid in
+the Bose-Hubbard model. Note that we have only considered a
+commensurate case (number of atoms an integer multiple of the number
+of sites). If we were to insert another atom on top of the Mott
+insulator, the energy of the system would not depend on the lattice
+site in which it is inserted. This implies that as soon as $J$ becomes
+finite, the ground state would prefer this atom be delocalised and
+effectively becomes gapless which means the system is a superfluid and
+it will not exhibit a quantum phase transition.
+
+\subsection{Mean-Field Theory}
+
+Now that we have a basic understanding of the two limiting cases we
+can now consider the model in between these two extremes. We have
+already mentioned that an exact solution is not known, but fotunately
+a very good mean-field approximation exists \cite{fisher1989}. In this
+approach the interaction term is treated exactly, but the kinetic
+energy term is decoupled as
+\begin{equation}
+  \bd_m b_n = \langle \bd_m \rangle b_n + \bd_m \langle b_n \rangle -
+  \langle \bd_m \rangle \langle b_n \rangle = \Phi^* b_n + \Phi \bd_m
+  - | \Phi |^2,
+\end{equation}
+where the expectation values are for the $T = 0$ ground state. Note
+that we have assumed that $\Phi = \langle b_m \rangle $ is non-zero
+and homogenous. $\Phi$ describes the influence of hopping between
+neighbouring sites and is the mean -field order parameter. This
+decoupling effect means that we can write the Hamiltonian as $\hat{H}_a
+= \sum_m^M \hat{h}_a$, where
+\begin{equation}
+  \hat{h}_a = -z J ( \Phi \bd \Phi^* b) + z J | \Phi |^2 + \frac{U}{2}
+  \n (\n - 1) - \mu \n,
+\end{equation}
+and $z$ is the coordination number, i.e. the number of nearest
+neighbours of a single site. We have also introduced the chemical
+potential $\mu$ since we now consider the grand canonical ensemble as
+the Hamiltonian no longer conserves the total atom number. The ground
+state of the $| \Psi_0 \rangle$ of the overall system will be a
+site-wise product of the individual ground states of
+$\hat{h}_a$. These can be found very easily using standard
+diagonalisation techniques. $\Phi$ is then self-consistently
+determined by minimising the energy of the ground state with respect
+to $\Phi$.
+
+The main advantage of the mean-field treatment is that it lets us
+study the quantum phase transition between the sueprfluid and Mott
+insulator phases discussed in the previous sections. The phase
+boundaries can be obtained from second-order perturbation theory as 
+\begin{equation}
+  \left( \frac{\mu} {U} \right)_\pm = \frac{1}{2} \left[ 2g - 1 -
+    \left( \frac{zJ}{U} \right) \pm \sqrt{ 1 - 2 (2g + 1) \left( \frac{zJ}{U}
+        \right) + \left( \frac{zJ}{U} \right)^2} \right].
+\end{equation}
+This yields a phase diagram with multiple Mott insulating lobes as
+seen in Fig. \ref{fig:BHPhase} where each lobe represents a Mott insualtor with a
+different number of atoms per site. The tip of the lobe which
+corresponds to the quantum phase transition along a line of fixed
+density is obtained by equating the two branches of the above equation
+to get
+\begin{equation}
+  \left( \frac{J} {U} \right) = \frac{1} {z (2g + 1 + \sqrt{4g^2 + 4g} )}.
+\end{equation}
+It is important to note that the fact that this formalism predicts a
+phase transition is in contrast to other mean-field theories such as
+the Bogoliubov approximation \cite{PitaevskiiStringari}. This
+highlights the fact that the interactions, which are treated exactly
+here, are the dominant driver leading to this phase transition and
+other strongly correlated effects in the Bose-Hubbard model.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{BHPhase}
+  \caption[Mean-Field Bose-Hubbard Phase Diagram]{Mean-field phase
+    diagram of the Bose-Hubbard model in 1D, i.e.~ $z = 2$, from
+    Ref. \cite{StephenThesis}. The shaded regions are the Mott
+    insulator lobes and each lobe corresponds to a different on-site
+    filling labeled by $n$. The rest of the space corresponds to the
+    superfluid phase. The dashed lines are the phase boundaries
+    obtained from first-order perturbation theory. The solid lines are
+    are lines of constant density in the superfluid
+    phase. \label{fig:BHPhase}}
+\end{figure}
+
+\subsection{The Bose-Hubbard Model in One Dimension}
+
+The mean-field theory in the previous section is very useful tool for
+studying the quantum phase transition in the Bose-Hubbard
+model. However, it is effectively an infinite-dimensional theory and
+in practice it only works in two dimensions or more. The phase
+transition in 1D is poorly described, because it actually belongs to a
+different universality class. This is clearly seen from the one
+dimensional phase diagram shown in Fig. \ref{fig:1DPhase}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{1DPhase}
+  \caption[Exact 1D Bose-Hubbard Phase Diagram]{Exact phase diagram
+    of the Bose-Hubbard model in 1D, i.e.~ $z = 2$, from
+    Ref. \cite{StephenThesis}. The shaded region corresponds to the
+    $n = 1$ Mott insulator lobe. The sharp tip distinguishes it from
+    the mean-field phase diagram. The red dotted line denotes the
+    reentrance phase transition which occurs for a fixed $\mu$.The
+    critical point for the fixed density $n = 1$ transition is denoted
+    by an 'x'. \label{fig:1DPhase}}
+\end{figure}
+
+Some general conclusions can be obtained by looking at Haldane's
+prescription for Luttinger liquids \cite{haldane1981,
+  giamarchi}. Without a periodic potential the low-energy physics of
+the system is described by the Hamiltonian
+\begin{equation}
+  \hat{H}_a = \frac{1}{2 \pi} \int \mathrm{d} x \left\{ v K [ \hat{\Pi}(x)
+    ]^2 + \frac{v} {K} [\partial_x \hat{\Phi}(x) ]^2 \right\},
+\end{equation}
+where we have expressed the bosonic field operators in terms of a
+density operator $\hat{\rho}(x)$ and a phase operator $\hat{\Phi}(x)$
+as $\hat{\Psi}(x) = \sqrt{\hat{\rho}(x)} e^{i \hat{\hat{\Phi}(x)}}$
+and $\hat{\Pi}(x)$ is the density fluctuation operator. Provided the
+parameters $v$ and $K$ can be correctly determined this Hamiltonian
+gives the correct description of the gapless superfluid phase of the
+Bose-Hubbard model. Most importantly it gives an expression for the
+spatial correlation functions such as
+\begin{equation}
+  \langle \bd_m b_n \rangle = A \left( \frac{\alpha} {|m - n|} \right)^{K/2},
+\end{equation}
+where $A$ is some amplitude and $\alpha$ is a necessary cutoff to
+regularise the theory at short distances. Unlike the superfluid ground
+state in Eq. \eqref{eq:GSSF} this state does not have infinite range
+correlations. They decay according to a power law. However, for
+non-interacting systems $K = 0$ and long-range order is re-established
+as before though it is important to note that in higher dimensions
+this long-range order persists in the whole superfluid phase even with
+interactions present. In order to describe the phase transition and
+the Mott insulating phase it is necessary to introduce a periodic
+lattice potential. It can be shown that this system exhibits at
+$T = 0$ a Berezinskii-Kosterlitz-Thouless phase transition as the
+parameter $K$ is varied with a critical point at $K = \frac{1}{2}$
+where $K < \frac{1}{2}$ is a superfluid. Above $K = \frac{1}{2}$ the
+value of $K$ jumps discontinuously to $K \rightarrow \infty$ producing
+the Mott insulator phase. Unlike the gapless superfluid phase the
+spatial correlations decay exponentially as
+\begin{equation}
+  \langle \bd_m b_n \rangle = B e^{ - |m - n|/\xi},
+\end{equation}
+where $B$ is some constant  and the correlation length is given by
+$\xi = v / \Delta$ where $\Delta$ is the energy gap.
+
+Using advanced numerical methods such as density matrix
+renormalisation group (DMRG) calculations it is possible to identify
+the critical point by fitting the power-law decay correlations in
+order to obtain $K$. The resulting phase transition is shown in
+Fig. \ref{fig:1DPhase} and the critical point was shown to be $(U/zJ) = 1.68$. Note
+that unusually the phase diagram exhibits a reentrance phase
+transition for a fixed $\mu$.
+
 \section{Scattered light behaviour}
 \label{sec:a}
 
@@ -832,6 +1091,7 @@ Therefore, we can now express the quantity $n_{\Phi}$ as
 \begin{equation}
   n_{\Phi} = \frac{1}{8} \left(\frac{\Omega_0}{\Delta_a}\right)^2 \frac{\Gamma}{2} N_K.
 \end{equation}
+
 Estimates of the scattering rate using real experimental parameters
 are given in Table \ref{tab:photons}. Rubidium atom data has been
 taken from Ref. \cite{steck}. Miyake \emph{et al.} experimental
@@ -866,7 +1126,7 @@ $\Gamma_\mathrm{sc} = (\Gamma/2) (s_\mathrm{tot}) /
 (1+s_\mathrm{tot}+(2 \Delta / \Gamma)^2)$. A scattering rate of 60 kHz
 per atom \cite{weitenberg2011} gives $s_\mathrm{tot} = 2.5$.
 
-\begin{table}[!htbp]
+\begin{table}
   \centering
   \begin{tabular}{l c c}
     \toprule
