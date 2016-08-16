@@ -12,46 +12,206 @@
 
 
 The field of ultracold gases has been a rapidly growing field ever
-since the first Bose-Einstein condensate was obtained in 1995. This
-new quantum state of matter is characterised by a macroscopic
-occupancy of the single particle ground state at which point the whole
-system behaves like a single quantum object. This was revolutionary as
-it enabled the study of coherent properties of macroscopic systems
-rather than single atoms or photons. Furthermore, the advanced state
-of laser cooling and manipulation technologies meant that the degree
-of control and isolation from the environment was far greater than was
-possible in condensed matter systems. Initially, the main focus of the
+since the first Bose-Einstein condensate (BEC) was obtained in 1995
+\cite{anderson1995, bradley1995, davis1995}. This new quantum state of
+matter is characterised by a macroscopic occupancy of the single
+particle ground state at which point the whole system behaves like a
+single many-body quantum object \cite{PitaevskiiStringari}. This was
+revolutionary as it enabled the study of coherent properties of
+macroscopic systems rather than single atoms or photons. Furthermore,
+the advanced state of laser cooling and manipulation technologies
+meant that the degree of control and isolation from the environment
+was far greater than was possible in condensed matter systems
+\cite{lewenstein2007, bloch2008}. Initially, the main focus of the
 research was on the properties of coherent matter waves, such as
-interference properties, long range phase coherence, or quantised
-vortices. Fermi degeneracy in ultracold gases was obtained shortly
-afterwards opening a similar field for fermions.
+interference properties \cite{andrews1997}, long range phase coherence
+\cite{bloch2000}, or quantised vortices \cite{matthews1999,
+  madison2000, abo2001}. Fermi degeneracy in ultracold gases was
+obtained shortly afterwards opening a similar field for fermions
+\cite{demarco1999, schreck2001, truscott2001}.
 
 In 1998 it was shown that a degenerate ultracold gas trapped in an
 optical lattice is a near-perfect realisation of the Bose-Hubbard
-model and in 2002 it was already demonstrated in a ground-breaking
-experiment. The Bose-Hubbard Hamiltonian was already known in the
-field of condensed matter where it was considered a simple toy
-model. Despite its simplicity the model exhibits a variety of
-different interesting phenomena such as the quantum phase transition
-from a delocalised superfluid state to a Mott insulator as the on-site
-interaction is increased above a critical point. In contrast to a
-thermodynamic phase transition, a quantum phase transition is driven
-by quantum fluctuations and can occur at zero temperature. The ability 
-
-
-
+model \cite{jaksch1998} and in 2002 it was already demonstrated in a
+ground-breaking experiment \cite{greiner2002}. The Bose-Hubbard
+Hamiltonian was previously known in the field of condensed matter
+where it was considered a simple toy model. Despite its simplicity the
+model exhibits a variety of different interesting phenomena such as
+the quantum phase transition from a delocalised superfluid state to a
+Mott insulator as the on-site interaction is increased above a
+critical point which was originally studied in the context of liquid
+helium \cite{fisher1989}. In contrast to a thermodynamic phase
+transition, a quantum phase transition is driven by quantum
+fluctuations and can occur at zero temperature. The ability to achieve
+a Bose-Hubbard Hamiltonian where the model parameters can be easily
+tuned by varying the lattice potential opened up a new regime in the
+many-body physics of atomic gases. Unlike Bose-Einstein condensates in
+free space which are described by weakly interacting theories
+\cite{dalfovo1999}, the behaviour of ultracold gases trapped in an
+optical lattice is dominated by atomic interactions opening the
+possibility of studying strongly correlated behaviour with
+unprecendented control.
 
 The modern field of ultracold gases is successful due to its
-interdisciplinarity [1, 2]. Originally condensed matter effects are
-now mimicked in controlled atomic systems finding applications in
-areas such as quantum information processing (QIP). A really new
-challenge is to identify novel phenomena which were unreasonable to
-consider in condensed matter, but will become feasible in new systems.
-One such direction is merging quantum optics and many-body physics [3,
-  4]. The former describes delicate effects such as quantum
-measurement and state engineering, but for systems without strong
-many-body correlations (e.g. atomic ensembles).  In the latter,
-decoherence destroys these effects in conventional condensed
-matter. Due to recent experimental progress, e.g. Bose-Einstein
-condensates (BEC) in cavities [5–7], quantum optics of quantum gases
-can close this gap.
+interdisciplinarity \cite{lewenstein2007, bloch2008}. Originally
+condensed matter effects are now mimicked in controlled atomic systems
+finding applications in areas such as quantum information
+processing. A really new challenge is to identify novel phenomena
+which were unreasonable to consider in condensed matter, but will
+become feasible in new systems. One such direction is merging quantum
+optics and many-body physics \cite{mekhov2012, ritsch2013}. Quantum
+optics has been developping as a branch of quantum physics
+independently of the progress in the many-body community. It describes
+delicate effects such as quantum measurement, state engineering, and
+systems that can generally be easily isolated from their environnment
+due to the non-interacting nature of photons \cite{Scully}. However,
+they are also the perfect candidate for studying open systems due the
+advanced state of cavity technologies \cite{carmichael,
+  MeasurementControl}. On the other hand ultracold gases are now used
+to study strongly correlated behaviour of complex macroscopic
+ensembles where decoherence is not so easy to avoid or control. Recent
+experimental progress in combining the two fields offered a very
+promising candidate for taking many-body physics in a direction that
+would not be possible for condensed matter \cite{baumann2010,
+  wolke2012, schmidt2014}. Two very recent breakthrough experiments
+have even managed to couple an ultracold gas trapped in an optical
+lattice to an optical cavity enabling the study of strongly correlated
+systems coupled to quantized light fields where the quantum properties
+of the atoms become imprinted in the scattered light
+\cite{klinder2015, landig2016}.
+
+There are three prominent directions in which the field of quantum
+optics of quantum gases has progressed in. First, the use of quantised
+light enables direct coupling to the quantum properties of the atoms
+\cite{mekhov2007prl, mekhov2007prl, mekhov2012}. This allows us to
+probe the many-body system in a nondestructive manner and under
+certain conditions even perform quantum non-demolition (QND)
+measurements. QND measurements were originally developed in the
+context of quantum optics as a tool to measure a quantum system
+without significantly disturbing it \cite{braginsky1977, unruh1978,
+  brune1990, brune1992}. This has naturally been extended into the
+realm of ultracold gases where such non-demolition schemes have been
+applied to both fermionic \cite{eckert2008qnd, roscilde2009} and
+bosonic \cite{hauke2013, rogers2014}. In this thesis, we consider
+light scattering in free space from a bosonic ultracold gas and show
+that there are many prominent features that go beyond classical
+optics. Even the scattering angular distribution is nontrivial with
+Bragg conditions that are significantly different from the classical
+case. Furthermore, we show that the direct coupling of quantised light
+to the atomic systems enables the nondestructive probing beyond a
+standard mean-field description. We demonstrate this by showing that
+the whole phase diagram of a disordered one-dimensional Bose-Hubbard
+Hamiltonian, which consists of the superfluid, Mott insulating, and
+Bose glass phases, can be mapped from the properties of the scattered
+light. Additionally, we go beyond standard QND approaches, which only
+consider coupling to density observables, by also considering the
+direct coupling of the quantised light to the interference between
+neighbouring lattice sites. We show that not only is this possible to
+achieve in a nondestructive manner, it is also achieved without the
+need for single-site resolution. This is in contrast to the standard
+destructive time-of-flight measurements currently used to perform
+these measurements \cite{miyake2011}. Within a mean-field treatment
+this enables probing of the order parameter as well as matter-field
+quadratures and their squeezing. This can have an impact on atom-wave
+metrology and information processing in areas where quantum optics has
+already made progress, e.g.,~quantum imaging with pixellized sources
+of non-classical light \cite{golubev2010, kolobov1999}, as an optical
+lattice is a natural source of multimode nonclassical matter waves.
+
+Second, coupling a quantum gas to a cavity also enables us to study
+open system many-body dynamics either via dissipation where we have no
+control over the coupling to the environment or via controlled state
+reduction using the measurement backaction due to photodetections. A
+lot of effort was expanded in an attempt to minimise the influence of
+the environment in order to extend decoherence times. However,
+theoretical progress in the field has shown that instead being an
+obstacle, dissipation can actually be used as a tool in engineering
+quantum states \cite{diehl2008}. Furthermore, as the environment
+coupling is varied the system may exhibit sudden changes in the
+properties of its steady state giving rise to dissipative phase
+transitions \cite{carmichael1980, werner2005, capriotti2005,
+  morrison2008, eisert2010, bhaseen2012, diehl2010,
+  vznidarivc2011}. An alternative approach to open systems is to look
+at quantum measurement where we consider a quantum state conditioned
+on the outcome of a single experimental run \cite{carmichael,
+  MeasurementControl}. In this approach we consider the solutions to a
+stochastic Schr\"{o}dinger equation which will be a pure state, which
+in contrast to dissipative systems is generally not the case. The
+question of measurement and its effect on the quantum state has been
+around since the inception of quantum theory and still remains a
+largely open question \cite{zurek2002}. It wasn't long after the first
+condenste was obtained that theoretical work on the effects of
+measurement on BECs appeared \cite{cirac1996, castin1997,
+  ruostekoski1997}. Recently, work has also begun on combining weak
+measurement with the strongly correlated dynamics of ultracold gases
+in optical lattices \cite{mekhov2009prl, mekhov2009pra, mekhov2012,
+  douglas2012, douglas2013, ashida2015, ashida2015a}.
+
+In this thesis we focus on the latter by considering a quantum gas in
+an optical lattice coupled to a cavity \cite{mekhov2012}. This
+provides us with a flexible setup where the global light scattering
+can be engineered. We show that this introduces a new competing energy
+scale into the system and by considering continuous measurement, as
+opposed to discrete projective measurements, we demonstrate the
+quantum backaction can effectively compete with the standard
+short-range processes of the Bose-Hubbard model. The global nature of
+the optical fields leads to new phenomena driven by long-range
+correlations that arise from the measurement. The flexibility of the
+optical setup lets us not only consider coupling to different
+observables, but by carefully choosing the optical geometry we can
+suppress or enhace specific dynamical processes, realising spatially
+nonlocal quantum Zeno dynamics.
+
+The quantum Zeno effect happens when frequent measurements slow the
+evolution of a quantum system \cite{misra1977, facchi2008}. This
+effect was already considered by von Neumann and it has been
+successfully observed in a variety of systems \cite{itano1990,
+  nagels1997, kwiat1999, balzer2000, streed2006, hosten2006,
+  bernu2008}. The generalisation of this effect to measurements with
+multidimensional projections leads to quantum Zeno dynamics where
+unitary evolution is uninhibited within this degenerate subspace,
+i.e. the Zeno subspace \cite{facchi2008, raimond2010, raimond2012,
+  signoles2014}. Here, by combining quantum optical measurements with
+the complex Hilbert space of a many-body quantum gas we go beyond
+conventional quantum Zeno dynamics. By considering the case of
+measurement near, but not in, the projective limit the system is still
+confined to a Zeno subspace, but intermediate transitions are allowed
+via virtual Raman-like processes. In a lattice system, like the
+Bose-Hubbard model we can use global measurement to engineer these
+dynamics to be highly nonlocal leading to the generation of long-range
+correlations and entanglement. Furthermore, we show that this
+behaviour can be approximated by a non-Hermitian Hamiltonian thus
+extending the notion of quantum Zeno dynamics into the realm of
+non-Hermitian quantum mechanics joining the two
+paradigms. Non-Hermitian systems themself exhibit a range of
+interesting phenomena ranging from localisation \cite{hatano1996,
+  refael2006} and $\mathcal{PT}$ symmetry \cite{bender1998,
+  giorgi2010, zhang2013} to spatial order \cite{otterbach2014} and
+novel phase transitions \cite{lee2014prx, lee2014prl}.
+
+Just like for the nondestructive measurements we also consider
+measurement backaction due to coupling to the interference terms
+between the lattice sites. This effectively amounts to coupling to the
+phase observables of the system. As this is the conjugate variable of
+density, this allows to enter a new regime of quantum control using
+measurement backaction. Whilst such interference measurements have
+been previously proposed for BECs in double-wells \cite{cirac1996,
+  castin1997, ruostekoski1997}, the extension to a lattice system is
+not straightforward, but we will show it is possible to achieve with
+our propsed setup by a careful optical arrangement. Within this
+context we demonstrate a novel type of projection which occurs even
+when there is significant competition with the Hamiltonian
+dynamics. This projection is fundamentally different to the standard
+formulation of the Copenhagen postulate projection or the quantum Zeno
+effect \cite{misra1977, facchi2008} thus providing an extension of the
+measurement postulate to dynamical systems subject to weak
+measurement.
+
+Finally, the cavity field that builds up from the scattered photons
+can also create a quantum optical potential which will modify the
+Hamiltonian in a way that depends on the state of the atoms that
+scatterd the light. This can lead to new quantum phases due to new
+types of long-range interactions being mediated by the global quantum
+optical fields \cite{caballero2015, caballero2015njp, caballero2016,
+  caballero2016a}. However, this aspect of quantum optics of quantum
+gases is beyond the scope of this thesis.
