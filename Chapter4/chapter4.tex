@@ -18,14 +18,14 @@
 \section{Introduction}
 
 This thesis is entirely concerned with the question of measuring a
-quantum many-body system using quantized light. However, so far we
+quantum many-body system using quantised light. However, so far we
 have only looked at expectation values in a nondestructive context
 where we neglect the effect of the quantum wavefunction collapse. We
 have shown that light provides information about various statistical
 quantities of the quantum states of the atoms such as their
 correlation functions. In general, any quantum measurement affects the
 system even if it doesn't physically destroy it. In our model both
-optical and matter fields are quantized and their interaction leads to
+optical and matter fields are quantised and their interaction leads to
 entanglement between the two subsystems. When a photon is detected and
 the electromagnetic wavefunction of the optical field collapses, the
 matter state is also affected due to this entanglement resulting in
@@ -78,7 +78,7 @@ not a deterministic process. Furthermore, they are in general
 discotinuous as each detection event brings about a drastic change in
 the quantum state due to the wavefunction collapse of the light field.
 
-Before we discuss specifics relevant to our model of quantized light
+Before we discuss specifics relevant to our model of quantised light
 interacting with a quantum gas we present a more general overview
 which will be useful as some of the results in the following chapters
 are more general. Measurement always consists of at least two
@@ -118,8 +118,8 @@ where the denominator is simply a normalising factor
 \cite{MeasurementControl}. The exact form of the jump operator $\c$
 will depend on the nature of the measurement we are considering. For
 example, if we consider measuring the photons escaping from a leaky
-cavity then $\c = \sqrt{2 \kappa} \hat{a}$, where $\kappa$ is the
-cavity decay rate and $\hat{a}$ is the annihilation operator of a
+cavity then $\c = \sqrt{2 \kappa} \a$, where $\kappa$ is the
+cavity decay rate and $\a$ is the annihilation operator of a
 photon in the cavity field. It is interesting to note that due to
 renormalisation the effect of a single quantum jump is independent of
 the magnitude of the operator $\c$ itself. However, larger operators
@@ -283,7 +283,7 @@ In Chapter \ref{chap:qnd} we used highly efficient DMRG methods
 \cite{tnt} to calculate the ground state of the Bose-Hubbard
 Hamiltonian. Related techniques such as Time-Evolving Block Decimation
 (TEBD) or t-DMRG are often used for numerical calculations of time
-evolution. However, despite the fact our Hamiltonian in
+evolution. However, despite the fact that our Hamiltonian in
 Eq. \eqref{eq:backaction} is simply the Bose-Hubbard model with a
 non-Hermitian term added due to measurement it is actually difficult
 to apply these methods to our system. The problem lies in the fact
@@ -294,11 +294,11 @@ correlations. Unfortunately, the global nature of the measurement we
 consider violates the assumptions made in deriving the area law and,
 as we shall see in the following chapters, leads to long-range
 correlations regardless of coupling strength. Therefore, we resort to
-using exact methods such as exact diagonalisation which we solve with
-well-known ordinary differential equation solvers. This means that we
-can at most simulate a few atoms, but as we shall see it is the
-geometry of the measurement that matters the most and these effects
-are already visible in smaller systems.
+using alternative methods such as exact diagonalisation which we solve
+with well-known ordinary differential equation solvers. This means
+that we can at most simulate a few atoms, but as we shall see it is
+the geometry of the measurement that matters the most and these
+effects are already visible in smaller systems.
 
 \section{The Master Equation}
 \label{sec:master}
@@ -355,17 +355,16 @@ A definite advantage of using the master equation for measurement is
 that it includes the effect of any possible measurement
 outcome. Therefore, it is useful when extracting features that are
 common to many trajectories, regardless of the exact timing of the
-events. However, in this case we do not want to impose any specific
-trajectory on the system as we are not interested in a specific
-experimental run, but we would still like to identify the set of
-possible outcomes and their common properties. Unfortunately,
-calculating the inverse of Eq. \eqref{eq:rho} is not an easy task. In
-fact, the decomposition of a density matrix into pure states might not
-even be unique. However, if a measurement leads to a projection,
-i.e.~the final state becomes confined to some subspace of the Hilbert
-space, then this will be visible in the final state of the density
-matrix. We will show this on an example of a qubit in the quantum
-state
+events. In this case we do not want to impose any specific trajectory
+on the system as we are not interested in a specific experimental run,
+but we would still like to identify the set of possible outcomes and
+their common properties. Unfortunately, calculating the inverse of
+Eq. \eqref{eq:rho} is not an easy task. In fact, the decomposition of
+a density matrix into pure states might not even be unique. However,
+if a measurement leads to a projection, i.e.~the final state becomes
+confined to some subspace of the Hilbert space, then this will be
+visible in the final state of the density matrix. We will show this on
+an example of a qubit in the quantum state
 \begin{equation}
   \label{eq:qubit0}
   | \psi \rangle = \alpha |0 \rangle + \beta | 1 \rangle,
@@ -543,7 +542,7 @@ Fig. \ref{fig:twomodes}.
   \label{fig:twomodes}
 \end{figure}
 
-This can approach can be generalised to an arbitrary number of modes,
+This approach can be generalised to an arbitrary number of modes,
 $Z$. For this we will conisder a deep lattice such that
 $J_{i,i} = u_1^* (\b{r}) u_0 (\b{r})$. We will take the probe beam to
 be incident normally at a 1D lattice so that $u_0 (\b{r}) =

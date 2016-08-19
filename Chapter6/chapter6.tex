@@ -20,7 +20,7 @@ with atomic density, not the matter-wave amplitude. Therefore, it is
 challenging to couple light to the phase of the matter-field, as is
 typical in quantum optics for optical fields. In the previous chapter
 we only considered measurement that couples directly to atomic density
-operators just most of the existing work \cite{LP2009, rogers2014,
+operators just like most of the existing work \cite{LP2009, rogers2014,
   mekhov2012, ashida2015, ashida2015a}. However, we have shown in
 section \ref{sec:B} that it is possible to couple to the the relative
 phase differences between sites in an optical lattice by illuminating
@@ -44,7 +44,7 @@ quantum optical potentials. All three have been covered in the context
 of density-based measurement either here or in other works. However,
 coupling to phase observables in lattices has only been proposed and
 considered in the context of nondestructive measurements (see Chapter
-\ref{chap:qnd}) and quantum optical potentials. \cite{caballero2015,
+\ref{chap:qnd}) and quantum optical potentials \cite{caballero2015,
   caballero2015njp, caballero2016, caballero2016a}. In this chapter,
 we go in a new direction by considering the effect of measurement
 backaction on the atomic gas that results from such coupling.  We
@@ -82,12 +82,11 @@ maximum of scattered light, when our measurement operator is given by
 where the second equality follows from converting to momentum space,
 denoted by index $k$, via
 $b_m = \frac{1}{\sqrt{M}} \sum_k e^{-ikma} b_k$ and $b_k$ annihilates
-an atom with momentum $k$ in the range
-$\{ \frac{(M-1) \pi} {M}, \frac{(M-2) \pi} {M}, ..., \pi \}$. Note
-that this operator is diagonal in momentum space which means that its
-eigenstates are simply Fock momentum Fock states. We have also seen in
-Chapter \ref{chap:backaction} how the global nature of the jump
-operators introduces a nonlocal quadratic term to the Hamiltonian,
+an atom in the Brillouin zone. Note that this operator is diagonal in
+momentum space which means that its eigenstates are simply Fock
+momentum Fock states. We have also seen in Chapter
+\ref{chap:backaction} how the global nature of the jump operators
+introduces a nonlocal quadratic term to the Hamiltonian,
 $\hat{H} = \hat{H}_0 - i \cd \c / 2$. In order to focus on the
 competition between tunnelling and measurement backaction we again
 consider non-interacting atoms, $U = 0$. Therefore, $\B$ is
@@ -159,7 +158,7 @@ Unusually, we do not have to worry about the timing of the quantum
 jumps, because the measurement operator commutes with the
 Hamiltonian. This highlights an important feature of this measurement
 - it does not compete with atomic tunnelling, and represents a quantum
-nondemolition (QND) measurement of the phase-related observable
+non-demolition (QND) measurement of the phase-related observable
 \cite{brune1992}. Eq. \eqref{eq:bmax} shows that regardless of the
 initial state or the photocount trajectory the system will project
 onto a superposition of eigenstates of the $\Bmax$ operator. In fact,
@@ -231,7 +230,7 @@ modes whilst a uniform pattern had only one mode, $b_k$. Furthermore,
 note the similarities to
 $\D = \Delta \hat{N} = \hat{N}_\mathrm{even} - \hat{N}_\mathrm{odd}$
 which is the density measurement operator obtained by illuminated the
-alttice such that neighbouring sites scatter light in anti-phase. This
+lattice such that neighbouring sites scatter light in anti-phase. This
 further highlights the importance of geometry for global measurement.
 
 Trajectory simulations confirm that there is no steady state. However,
@@ -320,15 +319,30 @@ impossible unless the measurement is strong enough for the quantum
 Zeno effect to occur.
 
 We now go beyond what we previously did and define a new type of
-projector $\mathcal{P}_M = \sum_{m \in M} P_m$, such that
-$\mathcal{P}_M \mathcal{P}_N = \delta_{M,N} \mathcal{P}_M$ and
-$\sum_M \mathcal{P}_M = \hat{1}$ where $M$ denotes some arbitrary
-subspace. The first equation implies that the subspaces can be built
-from $P_m$ whilst the second and third equation are properties of
+projector 
+\begin{equation}
+  \mathcal{P}_M = \sum_{m \in M} P_m,
+\end{equation}
+such that 
+\begin{equation}
+  \mathcal{P}_M \mathcal{P}_N = \delta_{M,N} \mathcal{P}_M
+\end{equation}
+\begin{equation}
+  \sum_M \mathcal{P}_M = \hat{1}
+\end{equation}
+where $M$ denotes some arbitrary subspace. The first equation implies that
+the subspaces can be built from
+$P_m$ whilst the second and third equation are properties of
 projectors and specify that these projectors do not overlap and that
 they cover the whole Hilbert space. Furthermore, we will also require
-that $[\mathcal{P}_M, \hat{H}_0 ] = 0$ and $[\mathcal{P}_M, \c] =
-0$. The second commutator simply follows from the definition
+that 
+\begin{equation}
+  [\mathcal{P}_M, \hat{H}_0 ] = 0,
+\end{equation}
+\begin{equation}
+  [\mathcal{P}_M, \c] = 0. 
+\end{equation}
+The second commutator simply follows from the definition
 $\mathcal{P}_M = \sum_{m \in M} P_m$, but the first one is
 non-trivial. However, if we can show that
 $\mathcal{P}_M = \sum_{m \in M} | h_m \rangle \langle h_m |$, where
@@ -407,19 +421,27 @@ eigenstates of the two operators overlap.
 
 To find $\mathcal{P}_M$ we need to identify the subspaces $M$ which
 satisfy the following relation
-$\sum_{m \in M} P_m = \sum_{m \in M} | h_m \rangle \langle h_m
-|$. This can be done iteratively by (i) selecting some $P_m$, (ii)
-identifying the $| h_m \rangle$ which overlap with this subspace,
-(iii) identifying any other $P_m$ which also overlap with these
-$| h_m \rangle$ from step (ii). We repeat (ii)-(iii) for all the $P_m$
-found in (iii) until we have identified all the subspaces $P_m$ linked
-in this way and they will form one of our $\mathcal{P}_M$
-projectors. If $\mathcal{P}_M \ne 1$ then there will be other
-subspaces $P_m$ which we have not included so far and thus we repeat
-this procedure on the unused projectors until we identify all
-$\mathcal{P}_M$. Computationally this can be straightforwardly solved
-with some basic algorithm that can compute the connected components of
-a graph.
+\begin{equation}
+\mathcal{P}_M = \sum_{m \in M} P_m = \sum_{m \in M} | h_m \rangle
+\langle h_m |.
+\end{equation}
+This can be done iteratively by 
+\begin{enumerate}
+  \item selecting some $P_m$, 
+  \item identifying the $| h_m \rangle$ which overlap with this
+    subspace,
+  \item identifying any other $P_m$ which also overlap with these
+    $| h_m \rangle$ from step (ii). 
+  \item Repeat 2-3 for all the $P_m$ found in 3 until we
+    have identified all the subspaces $P_m$ linked in this way and
+    they will form one of our $\mathcal{P}_M$ projectors. If
+    $\mathcal{P}_M \ne 1$ then there will be other subspaces $P_m$
+    which we have not included so far and thus we repeat this
+    procedure on the unused projectors until we identify all
+    $\mathcal{P}_M$.
+\end{enumerate}
+Computationally this can be straightforwardly solved with some basic
+algorithm that can compute the connected components of a graph.
 
 The above procedure, whilst mathematically correct and always
 guarantees to generate the projectors $\mathcal{P}_M$, is very
@@ -427,16 +449,31 @@ unintuitive and gives poor insight into the nature or physical meaning
 of $\mathcal{P}_M$. In order to get a better understanding of these
 subspaces we need to define a new operator $\hat{O}$, with eigenspace
 projectors $R_m$, which commutes with both $\hat{H}_0$ and
-$\c$. Physically this means that $\hat{O}$ is a compatible observable
-with $\c$ and corresponds to a quantity conserved by the
-Hamiltonian. The fact that $\hat{O}$ commutes with the Hamiltonian
-implies that the projectors can be written as a sum of Hamiltonian
-eigenstates $R_m = \sum_{h_i = h_m} | h_i \rangle \langle h_i |$ and
-thus a projector $\mathcal{P}_M = \sum_{m \in M} R_m$ is guaranteed to
-commute with the Hamiltonian and similarly since $[\hat{O}, \c] = 0$
-$\mathcal{P}_M$ will also commute with $\c$ as required. Therefore,
-$\mathcal{P}_M = \sum_{m \in M} R_m = \sum_{m \in M} P_m$ will satisfy
-all the necessary prerequisites. This is illustrated in
+$\c$,
+\begin{equation}
+  [\hat{O}, \hat{H}_0 ] = 0,
+\end{equation}
+\begin{equation}
+  [\hat{O}, \c] = 0. 
+\end{equation}
+Physically this means that $\hat{O}$ is a compatible observable with
+$\c$ and corresponds to a quantity conserved by the Hamiltonian. The
+fact that $\hat{O}$ commutes with the Hamiltonian implies that the
+projectors can be written as a sum of Hamiltonian eigenstates
+\begin{equation}
+  R_m = \sum_{h_i = h_m} | h_i \rangle \langle h_i |
+\end{equation}
+and thus a projector 
+\begin{equation}
+\mathcal{P}_M = \sum_{m \in M} R_m
+\end{equation}
+is guaranteed to commute with the Hamiltonian and similarly since
+$[\hat{O}, \c] = 0$ $\mathcal{P}_M$ will also commute with $\c$ as
+required. Therefore,
+\begin{equation}
+\mathcal{P}_M = \sum_{m \in M} R_m = \sum_{m \in M} P_m
+\end{equation} 
+will satisfy all the necessary prerequisites. This is illustrated in
 Fig. \ref{fig:spaces}.
 
 \begin{figure}[hbtp!]
@@ -469,13 +506,18 @@ feature.
 
 In our case, it is apparent from the form of $\Bmin$ and $\hat{H}_0$
 in Eqs. \eqref{eq:BminBeta} and \eqref{eq:H0Beta} that
-$\hat{O}_k = \beta_k^\dagger \beta_k + \tilde{\beta}_k^\dagger
-\tilde{\beta_k} = \n_k + \n_{k - \pi/a}$ commutes with both operators
-for all $k$. Thus, we can easily construct
-$\hat{O} = \sum_\mathrm{RBZ} g_k \hat{O}_k$ for any arbitrary
-$g_k$. Its eigenspaces, $R_m$, can then be easily constructed and
-their relationship with $P_m$ and $\mathcal{P}_M$ is illustrated in
-Fig. \ref{fig:spaces} whilst the time evolution of
+\begin{equation}
+\hat{O}_k = \beta_k^\dagger \beta_k + \tilde{\beta}_k^\dagger
+\tilde{\beta_k} = \n_k + \n_{k - \pi/a}
+\end{equation}
+commutes with both operators for all $k$. Thus, we can easily
+construct 
+\begin{equation}
+\hat{O} = \sum_\mathrm{RBZ} g_k \hat{O}_k
+\end{equation}
+for any arbitrary $g_k$. Its eigenspaces, $R_m$, can then be easily
+constructed and their relationship with $P_m$ and $\mathcal{P}_M$ is
+illustrated in Fig. \ref{fig:spaces} whilst the time evolution of
 $\langle \hat{O}_k \rangle$ for a sample trajectory is shown in
 Fig. \ref{fig:projections}(a). Note that unlike the $\c$ or $\H_0$ we
 can actually see that this observable's distribution does indeed

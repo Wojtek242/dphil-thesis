@@ -32,14 +32,30 @@ which yields its own set of interesting quantum phenomena
 particles. The theory can be also be generalised to continuous
 systems, but the restriction to optical lattices is convenient for a
 variety of reasons. Firstly, it allows us to precisely describe a
-many-body atomic state over a broad range of parameter values due to
-the inherent tunability of such lattices. Furthermore, this model is
-capable of describing a range of different experimental setups ranging
-from a small number of sites with a large filling factor (e.g.~BECs
-trapped in a double-well potential) to a an extended multi-site
-lattice with a low filling factor (e.g.~a system with one atom per
-site which will exhibit the Mott insulator to superfluid quantum phase
-transition).
+many-body atomic state over a broad range of parameter values due,
+from free particles to strongly correlated systems, to the inherent
+tunability of such lattices. Furthermore, this model is capable of
+describing a range of different experimental setups ranging from a
+small number of sites with a large filling factor (e.g.~BECs trapped
+in a double-well potential) to a an extended multi-site lattice with a
+low filling factor (e.g.~a system with one atom per site which will
+exhibit the Mott insulator to superfluid quantum phase transition).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{LatticeDiagram}
+  \caption[Experimental Setup in Free Space]{Atoms (green) trapped in
+    an optical lattice are illuminated by a coherent probe beam (red),
+    $a_0$, with a mode function $u_0(\b{r})$ which is at an angle
+    $\theta_0$ to the normal to the lattice. The light scatters (blue)
+    into the mode $\a_1$ in free space or into a cavity and is
+    measured by a detector. Its mode function is given by $u_1(\b{r})$
+    and it is at an angle $\theta_1$ relative to the normal to the
+    lattice. If the experiment is in free space light can scatter in
+    any direction. A cavity on the other hand enhances scattering in
+    one particular direction.}
+  \label{fig:LatticeDiagram}
+\end{figure}
 
 An optical lattice can be formed with classical light beams that form
 standing waves. Depending on the detuning with respect to the atomic
@@ -50,49 +66,34 @@ trapped bosons (green) are illuminated with a coherent probe beam
 measured with a detector. The most straightforward measurement is to
 simply count the number of photons with a photodetector, but it is
 also possible to perform a quadrature measurement by using a homodyne
-detection scheme. The experiment can be performed in free space where
-light can scatter in any direction. The atoms can also be placed
-inside a cavity which has the advantage of being able to enhance light
-scattering in a particular direction. Furthermore, cavities allow for
-the formation of a fully quantum potential in contrast to the
+detection scheme \cite{carmichael, atoms2015}. The experiment can be
+performed in free space where light can scatter in any direction. The
+atoms can also be placed inside a cavity which has the advantage of
+being able to enhance light scattering in a particular direction
+\cite{bux2013, kessler2014, landig2015}. Furthermore, cavities allow
+for the formation of a fully quantum potential in contrast to the
 classical lattice trap.
 
-\begin{figure}[htbp!]
-  \centering
-  \includegraphics[width=\linewidth]{LatticeDiagram}
-  \caption[Experimental Setup]{Atoms (green) trapped in an optical
-    lattice are illuminated by a coherent probe beam (red), $a_0$,
-    with a mode function $u_0(\b{r})$ which is at an angle $\theta_0$
-    to the normal to the lattice. The light scatters (blue) into the
-    mode $\a_1$ in free space or into a cavity and is measured by a
-    detector. Its mode function is given by $u_1(\b{r})$ and it is at
-    an angle $\theta_1$ relative to the normal to the lattice. If the
-    experiment is in free space light can scatter in any direction. A
-    cavity on the other hand enhances scattering in one particular
-    direction.}
-  \label{fig:LatticeDiagram}
-\end{figure}
-
-For simplicity, we will be considering one-dimensional lattices most
-of the time. However, the model itself is derived for any number of
+For simplicity we will be considering one-dimensional lattices most of
+the time. However, the model itself is derived for any number of
 dimensions and since none of our arguments will ever rely on
-dimensionality our results straightforwardly generalise to 2- and 3-D
-systems. This simplification allows us to present a much more
-intuitive picture of the physical setup where we only need to concern
-ourselves with a single angle for each optical mode. As shown in
-Fig. \ref{fig:LatticeDiagram} the angle between the normal to the
-lattice and the probe and detected beam are denoted by $\theta_0$ and
-$\theta_1$ respectively. We will consider these angles to be tunable
-although the same effect can be achieved by varying the wavelength of
-the light modes. However, it is much more intuitive to consider
-variable angles in our model as this lends itself to a simpler
-geometrical representation.
+dimensionality our results straightforwardly generalise to two- and
+three-dimensional systems. This simplification allows us to present a
+much more intuitive picture of the physical setup where we only need
+to concern ourselves with a single angle for each optical mode. As
+shown in Fig. \ref{fig:LatticeDiagram} the angle between the normal to
+the lattice and the probe and detected beam are denoted by $\theta_0$
+and $\theta_1$ respectively. We will consider these angles to be
+tunable although the same effect can be achieved by varying the
+wavelength of the light modes. However, it is much more intuitive to
+consider variable angles in our model as this lends itself to a
+simpler geometrical representation.
 
 \section{Derivation of the Hamiltonian}
 \label{sec:derivation}
 
-A general many-body Hamiltonian coupled to a quantized light field in
-second quantized can be separated into three parts,
+A general many-body Hamiltonian coupled to a quantised light field in
+second quantised can be separated into three parts,
 \begin{equation}
 \label{eq:FullH}
   \H = \H_f + \H_a + \H_{fa}.
@@ -149,7 +150,7 @@ atomic raising, lowering and population difference operators, where
 $|g \rangle$ and $| e \rangle$ denote the ground and excited states of
 the two-level atom respectively. $g_l$ are the atom-light coupling
 constants for each mode. It is the inclusion of the interaction of the
-boson with quantized light that distinguishes our work from the
+boson with quantised light that distinguishes our work from the
 typical approach to ultracold atoms where all the optical fields,
 including the trapping potentials, are treated classically.
 
@@ -205,7 +206,7 @@ An effective Hamiltonian which results in the same optical equations
 of motion can be written as
 $\H^\mathrm{eff}_1 = \H_f + \H^\mathrm{eff}_{1,a} +
 \H^\mathrm{eff}_{1,fa}$. The effective atomic and interaction
-Hamiltonians  are
+Hamiltonians are
 \begin{equation}
 \label{eq:aeff}
   \H^\mathrm{eff}_{1,a} = \frac{\b{p}^2}{2 m_a} + V_\mathrm{cl}(\b{r}),
@@ -243,7 +244,7 @@ $\H_{1,fa} = \H_{1,fa}^\mathrm{eff}$ given by Eq. \eqref{eq:aeff} and
 \eqref{eq:faeff} respectively yields the following generalised
 Bose-Hubbard Hamiltonian, $\H = \H_f + \H_a + \H_{fa}$,
 \begin{equation}
-  \H = \H_f + \sum_{i,j}^M J^\mathrm{cl}_{i,j} \bd_i b_j + 
+  \H = \H_f + \sum_{m,n}^M J^\mathrm{cl}_{m,n} \bd_m b_n + 
   \sum_{i,j,k,l}^M \frac{U_{ijkl}}{2} \bd_i \bd_j b_k b_l + 
   \frac{\hbar}{\Delta_a} \sum_{l,m} g_l g_m \ad_l \a_m 
   \left( \sum_{i,j}^K J^{l,m}_{i,j} \bd_i b_j \right).
@@ -276,14 +277,13 @@ the most significant overlap. Thus, for $J_{i,j}^\mathrm{cl}$ we will
 only consider $i$ and $j$ that correspond to nearest neighbours.
 Furthermore, since we will only be looking at lattices that have the
 same separtion between all its nearest neighbours (e.g. cubic or
-square lattice) we can define $J_{i,j}^\mathrm{cl} = - J^\mathrm{cl}$
-(negative sign, because this way $J^\mathrm{cl} > 0$). For the
-inter-atomic interactions this simplifies to simply considering
-on-site collisions where $i=j=k=l$ and we define $U_{iiii} =
-U$. Finally, we end up with the canonical form for the Bose-Hubbard
-Hamiltonian
+square lattice) we can define $J_{i,j}^\mathrm{cl} = - J$ (negative
+sign, because this way $J > 0$). For the inter-atomic interactions
+this simplifies to simply considering on-site collisions where
+$i=j=k=l$ and we define $U_{iiii} = U$. Finally, we end up with the
+canonical form for the Bose-Hubbard Hamiltonian
 \begin{equation}
-  \H_a = -J^\mathrm{cl} \sum_{\langle i,j \rangle}^M \bd_i b_j + 
+  \H_a = -J \sum_{\langle i,j \rangle}^M \bd_i b_j + 
   \frac{U}{2} \sum_{i}^M \hat{n}_i (\hat{n}_i - 1),
 \end{equation}
 where $\langle i,j \rangle$ denotes a summation over nearest
@@ -322,39 +322,41 @@ nearest-neighbour tunnelling operators
 \end{equation}
 where $K$ denotes a sum over the illuminated sites and we neglect
 couplings beyond nearest neighbours for the same reason as before when
-deriving the matter Hamiltonian.
+deriving the matter Hamiltonian. Thus the interaction part of the
+Hamiltonian is given by
+\begin{equation}
+  \H_{fa} = \frac{\hbar}{\Delta_a} \sum_{l,m} g_l g_m \ad_l \a_m \hat{F}_{l,m}
+\end{equation}
 
-\mynote{make sure all group papers are cited here} These equations
-encapsulate the simplicity and flexibility of the measurement scheme
-that we are proposing. The operators given above are entirely
-determined by the values of the $J^{l,m}_{i,j}$ coefficients and
-despite its simplicity, this is sufficient to give rise to a host of
-interesting phenomena via measurement back-action such as the
-generation of multipartite entangled spatial modes in an optical
-lattice \cite{elliott2015, atoms2015, mekhov2009pra}, the appearance
-of long-range correlated tunnelling capable of entangling distant
-lattice sites, and in the case of fermions, the break-up and
+These equations encapsulate the simplicity and flexibility of the
+measurement scheme that we are proposing. The operators given above
+are entirely determined by the values of the $J^{l,m}_{i,j}$
+coefficients and despite its simplicity, this is sufficient to give
+rise to a host of interesting phenomena via measurement backaction
+such as the generation of multipartite entangled spatial modes in an
+optical lattice \cite{elliott2015, atoms2015, mekhov2009pra}, the
+appearance of long-range correlated tunnelling capable of entangling
+distant lattice sites, and in the case of fermions, the break-up and
 protection of strongly interacting pairs \cite{mazzucchi2016,
   kozlowski2016zeno}. Additionally, these coefficients are easy to
 manipulate experimentally by adjusting the optical geometry via the
 light mode functions $u_l(\b{r})$.
 
 It is important to note that we are considering a situation where the
-contribution of quantized light is much weaker than that of the
+contribution of quantised light is much weaker than that of the
 classical trapping potential. If that was not the case, it would be
 necessary to determine the Wannier functions in a self-consistent way
 which takes into account the depth of the quantum poterntial generated
-by the quantized light modes. This significantly complicates the
+by the quantised light modes. This significantly complicates the
 treatment, but can lead to interesting physics. Amongst other things,
 the atomic tunnelling and interaction coefficients will now depend on
-the quantum state of light.  \mynote{cite Santiago's papers and
-  Maschler/Igor EPJD}
+the quantum state of light \cite{mekhov2008}.  
 
 Therefore, combining these final simplifications we finally arrive at
 our quantum light-matter Hamiltonian
 \begin{equation}
   \label{eq:fullH}
-  \H = \H_f -J^\mathrm{cl} \sum_{\langle i,j \rangle}^M \bd_i b_j + 
+  \H = \H_f -J \sum_{\langle i,j \rangle}^M \bd_i b_j + 
   \frac{U}{2} \sum_{i}^M \hat{n}_i (\hat{n}_i - 1) + 
   \frac{\hbar}{\Delta_a} \sum_{l,m} g_l g_m \ad_l \a_m \hat{F}_{l,m} -
   i \sum_l \kappa_l \ad_l \a_l,
@@ -387,20 +389,21 @@ approximation of the Coulomb screening interaction as a simple on-site
 interaction. Despite these enormous simplifications the model was very
 succesful \cite{leggett}. The Bose-Hubbard model is an even simpler
 variation where instead of fermions we consider spinless bosons. It
-was originally devised as a toy model, but in 1998 it was shown by
-Jaksch \emph{et.~al.} that it can be realised with ultracold atoms in
-an optical lattice \cite{jaksch1998}. Shortly afterwards it was
-obtained in a ground-breaking experiment \cite{greiner2002}. The model
-has been the subject of intense research since then, because despite
-its simplicity it possesses highly nontrivial properties such as the
-superfluid to Mott insulator quantum phase transition. Furthermore, it
-is one of the most controllable quantum many-body systems thus
-providing a solid basis for new experiments and technologies.
+was originally devised as a toy model and applied to liquid helium
+\cite{fisher1989}, but in 1998 it was shown by Jaksch \emph{et.~al.}
+that it can be realised with ultracold atoms in an optical lattice
+\cite{jaksch1998}. Shortly afterwards it was obtained in a
+ground-breaking experiment \cite{greiner2002}. The model has been the
+subject of intense research since then, because despite its simplicity
+it possesses highly nontrivial properties such as the superfluid to
+Mott insulator quantum phase transition. Furthermore, it is one of the
+most controllable quantum many-body systems thus providing a solid
+basis for new experiments and technologies.
 
 The model we have derived is essentially an extension of the
 well-known Bose-Hubbard model that also includes interactions with
 quantised light. Therefore, it should come as no surprise that if we
-eliminate all the quantized fields from the Hamiltonian we obtain
+eliminate all the quantised fields from the Hamiltonian we obtain
 exactly the Bose-Hubbard model
 \begin{equation}
   \H_a = -J \sum_{\langle i,j \rangle}^M \bd_i b_j + 
@@ -433,7 +436,7 @@ momentum space defined by the annihilation operator
 \begin{equation}
   b_\b{k} = \frac{1} {\sqrt{M}} \sum_m b_m e^{i \b{k} \cdot \b{r}_m},
 \end{equation}
-where $\b{k}$ denotes the wavevector running over the first Brillouin
+where $\b{k}$ denotes the wave vector running over the first Brillouin
 zone. The Hamiltonian then is given by
 \begin{equation}
   \H_a = \sum_\b{k} \epsilon_\b{k} \bd_\b{k} b_\b{k},
@@ -496,7 +499,7 @@ it will not exhibit a quantum phase transition.
 
 Now that we have a basic understanding of the two limiting cases we
 can now consider the model in between these two extremes. We have
-already mentioned that an exact solution is not known, but fotunately
+already mentioned that an exact solution is not known, but fortunately
 a very good mean-field approximation exists \cite{fisher1989}. In this
 approach the interaction term is treated exactly, but the kinetic
 energy term is decoupled as
@@ -512,7 +515,7 @@ neighbouring sites and is the mean -field order parameter. This
 decoupling effect means that we can write the Hamiltonian as $\hat{H}_a
 = \sum_m^M \hat{h}_a$, where
 \begin{equation}
-  \hat{h}_a = -z J ( \Phi \bd \Phi^* b) + z J | \Phi |^2 + \frac{U}{2}
+  \hat{h}_a = -z J ( \Phi \bd + \Phi^* b) + z J | \Phi |^2 + \frac{U}{2}
   \n (\n - 1) - \mu \n,
 \end{equation}
 and $z$ is the coordination number, i.e. the number of nearest
@@ -522,9 +525,23 @@ the Hamiltonian no longer conserves the total atom number. The ground
 state of the $| \Psi_0 \rangle$ of the overall system will be a
 site-wise product of the individual ground states of
 $\hat{h}_a$. These can be found very easily using standard
-diagonalisation techniques. $\Phi$ is then self-consistently
+diagonalisation techniques where $\Phi$ is self-consistently
 determined by minimising the energy of the ground state with respect
 to $\Phi$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\linewidth]{BHPhase}
+  \caption[Mean-Field Bose-Hubbard Phase Diagram]{Mean-field phase
+    diagram of the Bose-Hubbard model in 1D, i.e.~ $z = 2$, from
+    Ref. \cite{StephenThesis}. The shaded regions are the Mott
+    insulator lobes and each lobe corresponds to a different on-site
+    filling labeled by $n$. The rest of the space corresponds to the
+    superfluid phase. The dashed lines are the phase boundaries
+    obtained from first-order perturbation theory. The solid lines are
+    are lines of constant density in the superfluid
+    phase. \label{fig:BHPhase}}
+\end{figure}
 
 The main advantage of the mean-field treatment is that it lets us
 study the quantum phase transition between the sueprfluid and Mott
@@ -551,29 +568,68 @@ highlights the fact that the interactions, which are treated exactly
 here, are the dominant driver leading to this phase transition and
 other strongly correlated effects in the Bose-Hubbard model.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\linewidth]{BHPhase}
-  \caption[Mean-Field Bose-Hubbard Phase Diagram]{Mean-field phase
-    diagram of the Bose-Hubbard model in 1D, i.e.~ $z = 2$, from
-    Ref. \cite{StephenThesis}. The shaded regions are the Mott
-    insulator lobes and each lobe corresponds to a different on-site
-    filling labeled by $n$. The rest of the space corresponds to the
-    superfluid phase. The dashed lines are the phase boundaries
-    obtained from first-order perturbation theory. The solid lines are
-    are lines of constant density in the superfluid
-    phase. \label{fig:BHPhase}}
-\end{figure}
-
 \subsection{The Bose-Hubbard Model in One Dimension}
+\label{sec:BHM1D}
 
 The mean-field theory in the previous section is very useful tool for
 studying the quantum phase transition in the Bose-Hubbard
 model. However, it is effectively an infinite-dimensional theory and
 in practice it only works in two dimensions or more. The phase
 transition in 1D is poorly described, because it actually belongs to a
-different universality class. This is clearly seen from the one
+different universality class \cite{cazalilla2011, ejima2011,
+  kuhner2000, pino2012, pino2013}. This is clearly seen from the one
 dimensional phase diagram shown in Fig. \ref{fig:1DPhase}.
+
+Some general conclusions can be obtained by looking at Haldane's
+prescription for Luttinger liquids \cite{haldane1981,
+  giamarchi}. Without a periodic potential the low-energy physics of
+the system is described by the Hamiltonian
+\begin{equation}
+  \hat{H}_a = \frac{1}{2 \pi} \int \mathrm{d} x \left\{ v K [ \hat{\Pi}(x)
+    ]^2 + \frac{v} {K} [\partial_x \hat{\Phi}(x) ]^2 \right\},
+\end{equation}
+where we have expressed the bosonic field operators in terms of a
+density operator $\hat{\rho}(x)$ and a phase operator $\hat{\Phi}(x)$
+as $\hat{\Psi}(x) = \sqrt{\hat{\rho}(x)} e^{i \hat{\Phi}(x)}$
+and $\hat{\Pi}(x)$ is the density fluctuation operator. Provided the
+parameters $v$ and $K$ can be correctly determined this Hamiltonian
+gives the correct description of the gapless superfluid phase of the
+Bose-Hubbard model. Most importantly it gives an expression for the
+spatial correlation functions such as
+\begin{equation}
+  \langle \bd_i b_j \rangle = A \left( \frac{\alpha} {|i - j|} \right)^{K/2},
+\end{equation}
+where $A$ is some amplitude and $\alpha$ is a necessary cutoff to
+regularise the theory at short distances. Unlike the superfluid ground
+state in Eq. \eqref{eq:GSSF} this state does not have infinite range
+correlations. They decay according to a power-law. However, for
+non-interacting systems $K = 0$ and long-range order is re-established
+as before though it is important to note that in higher dimensions
+this long-range order persists in the whole superfluid phase even with
+interactions present. 
+
+In order to describe the phase transition and the Mott insulating
+phase it is necessary to introduce a periodic lattice potential. It
+can be shown that this system exhibits at $T = 0$ a
+Berezinskii-Kosterlitz-Thouless phase transition as the parameter $K$
+is varied with a critical point at $K_c = \frac{1}{2}$ where
+$K < \frac{1}{2}$ is a superfluid. Above $K = \frac{1}{2}$ the value
+of $K$ jumps discontinuously to $K \rightarrow \infty$ producing the
+Mott insulator phase. Unlike the gapless superfluid phase the spatial
+correlations decay exponentially as
+\begin{equation}
+  \langle \bd_i b_j \rangle = B e^{ - |i - j|/\xi},
+\end{equation}
+where $B$ is some constant  and the correlation length is given by
+$\xi = v / \Delta$ where $\Delta$ is the energy gap.
+
+Using advanced numerical methods such as density matrix
+renormalisation group (DMRG) calculations it is possible to identify
+the critical point by fitting the power-law decay correlations in
+order to obtain $K$. The resulting phase transition is shown in
+Fig. \ref{fig:1DPhase} and the critical point was shown to be
+$(U/zJ) = 1.68$. Note that unusually the phase diagram exhibits a
+reentrance phase transition for a fixed $\mu$.
 
 \begin{figure}
   \centering
@@ -587,55 +643,6 @@ dimensional phase diagram shown in Fig. \ref{fig:1DPhase}.
     critical point for the fixed density $n = 1$ transition is denoted
     by an 'x'. \label{fig:1DPhase}}
 \end{figure}
-
-Some general conclusions can be obtained by looking at Haldane's
-prescription for Luttinger liquids \cite{haldane1981,
-  giamarchi}. Without a periodic potential the low-energy physics of
-the system is described by the Hamiltonian
-\begin{equation}
-  \hat{H}_a = \frac{1}{2 \pi} \int \mathrm{d} x \left\{ v K [ \hat{\Pi}(x)
-    ]^2 + \frac{v} {K} [\partial_x \hat{\Phi}(x) ]^2 \right\},
-\end{equation}
-where we have expressed the bosonic field operators in terms of a
-density operator $\hat{\rho}(x)$ and a phase operator $\hat{\Phi}(x)$
-as $\hat{\Psi}(x) = \sqrt{\hat{\rho}(x)} e^{i \hat{\hat{\Phi}(x)}}$
-and $\hat{\Pi}(x)$ is the density fluctuation operator. Provided the
-parameters $v$ and $K$ can be correctly determined this Hamiltonian
-gives the correct description of the gapless superfluid phase of the
-Bose-Hubbard model. Most importantly it gives an expression for the
-spatial correlation functions such as
-\begin{equation}
-  \langle \bd_m b_n \rangle = A \left( \frac{\alpha} {|m - n|} \right)^{K/2},
-\end{equation}
-where $A$ is some amplitude and $\alpha$ is a necessary cutoff to
-regularise the theory at short distances. Unlike the superfluid ground
-state in Eq. \eqref{eq:GSSF} this state does not have infinite range
-correlations. They decay according to a power law. However, for
-non-interacting systems $K = 0$ and long-range order is re-established
-as before though it is important to note that in higher dimensions
-this long-range order persists in the whole superfluid phase even with
-interactions present. In order to describe the phase transition and
-the Mott insulating phase it is necessary to introduce a periodic
-lattice potential. It can be shown that this system exhibits at
-$T = 0$ a Berezinskii-Kosterlitz-Thouless phase transition as the
-parameter $K$ is varied with a critical point at $K = \frac{1}{2}$
-where $K < \frac{1}{2}$ is a superfluid. Above $K = \frac{1}{2}$ the
-value of $K$ jumps discontinuously to $K \rightarrow \infty$ producing
-the Mott insulator phase. Unlike the gapless superfluid phase the
-spatial correlations decay exponentially as
-\begin{equation}
-  \langle \bd_m b_n \rangle = B e^{ - |m - n|/\xi},
-\end{equation}
-where $B$ is some constant  and the correlation length is given by
-$\xi = v / \Delta$ where $\Delta$ is the energy gap.
-
-Using advanced numerical methods such as density matrix
-renormalisation group (DMRG) calculations it is possible to identify
-the critical point by fitting the power-law decay correlations in
-order to obtain $K$. The resulting phase transition is shown in
-Fig. \ref{fig:1DPhase} and the critical point was shown to be $(U/zJ) = 1.68$. Note
-that unusually the phase diagram exhibits a reentrance phase
-transition for a fixed $\mu$.
 
 \section{Scattered light behaviour}
 \label{sec:a}
@@ -683,11 +690,12 @@ $\hat{F}_{1,0}$
 where we have defined $C = U_{1,0} a_0 / (\Delta_{p} + i \kappa)$
 which is essentially the Rayleigh scattering coefficient into the
 cavity. Furthermore, since there is no longer any ambiguity in the
-indices $l$ and $m$, we have dropped indices on $\Delta_{1p} \equiv
-\Delta_p$, $\kappa_1 \equiv \kappa$, and $\hat{F}_{1,0} \equiv
-\hat{F}$. We also do the same for the operators $\hat{D}_{1,0} \equiv
-\hat{D}$, $\hat{B}_{1,0} \equiv \hat{B}$, and the coefficients
-$J^{1,0}_{i,j} \equiv J_{i,j}$.
+indices $l$ and $m$, we have dropped indices on
+$\Delta_{1p} \equiv \Delta_p$, $\kappa_1 \equiv \kappa$, and
+$\hat{F}_{1,0} \equiv \hat{F}$. We also do the same for the operators
+$\hat{D}_{1,0} \equiv \hat{D}$, $\hat{B}_{1,0} \equiv \hat{B}$, and
+the coefficients $J^{1,0}_{i,j} \equiv J_{i,j}$. We will adhere to
+this convention from now on.
 
 The operator $\a_1$ itself is not an observable. However, it is
 possible to combine the outgoing light field with a stronger local
@@ -754,22 +762,22 @@ In our model light couples to the operator $\hat{F}$ which consists of
 a density component, $\hat{D} = \sum_i J_{i,i} \hat{n}_i$, and a phase
 component, $\hat{B} = \sum_{\langle i, j \rangle} J_{i,j} \bd_i
 b_j$. In general, the density component dominates,
-$\hat{D} \gg \hat{B}$, and thus $\hat{F} \approx \hat{D}$.  However,
-it is possible to engineer an optical geometry in which $\hat{D} = 0$
-leaving $\hat{B}$ as the dominant term in $\hat{F}$. This approach is
-fundamentally different from the aforementioned double-well proposals
-as it directly couples to the interference terms caused by atoms
-tunnelling rather than combining light scattered from different
-sources. Furthermore, it is not limited to a double-wellsetup and
-naturally extends to a lattice structure which is a key
-advantage. Such a counter-intuitive configuration may affect works on
-quantum gases trapped in quantum potentials \cite{mekhov2012,
-  mekhov2008, larson2008, chen2009, habibian2013, ivanov2014,
-  caballero2015} and quantum measurement-induced preparation of
-many-body atomic states \cite{mazzucchi2016, mekhov2009prl,
-  pedersen2014, elliott2015}.
-
-\mynote{add citiations above if necessary}
+$\hat{D} \gg \hat{B}$, and thus $\hat{F} \approx \hat{D}$
+\cite{mekhov2012}. Physically, this is a consequence of the fact that
+there are more atoms to scatter light at the lattice sites than in
+between them. However, it is possible to engineer an optical geometry
+in which $\hat{D} = 0$ leaving $\hat{B}$ as the dominant term in
+$\hat{F}$. This approach is fundamentally different from the
+aforementioned double-well proposals as it directly couples to the
+interference terms caused by atoms tunnelling rather than combining
+light scattered from different sources. Furthermore, it is not limited
+to a double-well setup and naturally extends to a lattice structure
+which is a key advantage. Such a counter-intuitive configuration may
+affect works on quantum gases trapped in quantum potentials
+\cite{mekhov2012, mekhov2008, larson2008, chen2009, habibian2013,
+  ivanov2014, caballero2015} and quantum measurement-induced
+preparation of many-body atomic states \cite{mazzucchi2016,
+  mekhov2009prl, pedersen2014, elliott2015}.
 
 For clarity we will consider a 1D lattice as shown in
 Fig. \ref{fig:LatticeDiagram} with lattice spacing $d$ along the
@@ -794,9 +802,6 @@ between the light modes and the nearest neighbour Wannier overlap,
 $W_1(x)$. This can be achieved by concentrating the light between the
 sites rather than at the positions of the atoms. 
 
-\mynote{Potentially expand details of the derivation of these
-  equations} 
-
 In order to calculate the $J_{i,j}$ coefficients we perform numerical
 calculations using realistic Wannier functions
 \cite{walters2013}. However, it is possible to gain some analytic
@@ -812,25 +817,25 @@ probe beam to be standing waves which gives the following expressions
 for the $\hat{D}$ and $\hat{B}$ operators
 \begin{align}
   \label{eq:FTs}
-  \hat{D} = & \frac{1}{2}[\mathcal{F}[W_0](k_-)\sum_m\hat{n}_m\cos(k_-
-              x_m +\varphi_-) \nonumber\\ 
-            & + \mathcal{F}[W_0](k_+)\sum_m\hat{n}_m\cos(k_+ x_m +\varphi_+)],
+  \hat{D} = & \frac{1}{2}[\mathcal{F}[W_0](k_-)\sum_i\hat{n}_i\cos(k_-
+              x_i +\varphi_-) \nonumber\\ 
+            & + \mathcal{F}[W_0](k_+)\sum_i\hat{n}_i\cos(k_+ x_i +\varphi_+)],
               \nonumber\\ 
-  \hat{B} = & \frac{1}{2}[\mathcal{F}[W_1](k_-)\sum_m\hat{B}_m\cos(k_- x_m
+  \hat{B} = & \frac{1}{2}[\mathcal{F}[W_1](k_-)\sum_i\hat{B}_i\cos(k_- x_i
               +\frac{k_-d}{2}+\varphi_-) \nonumber\\ 
-            & +\mathcal{F}[W_1](k_+)\sum_m\hat{B}_m\cos(k_+
-              x_m +\frac{k_+d}{2}+\varphi_+)],
+            & +\mathcal{F}[W_1](k_+)\sum_i\hat{B}_i\cos(k_+
+              x_i +\frac{k_+d}{2}+\varphi_+)],
 \end{align}
 where $k_\pm = k_{0x} \pm k_{1x}$,
 $k_{(0,1)x} = k_{0,1} \sin(\theta_{0,1}$),
-$\hat{B}_m=b^\dag_mb_{m+1}+b_mb^\dag_{m+1}$, and
+$\hat{B}_i=\bd_ib_{i+1}+b_i\bd_{i+1}$, and
 $\varphi_\pm=\varphi_0 \pm \varphi_1$. The key result is that the
 $\hat{B}$ operator is phase shifted by $k_\pm d/2$ with respect to the
 $\hat{D}$ operator since it depends on the amplitude of light in
 between the lattice sites and not at the positions of the atoms
 allowing to decouple them at specific angles.
 
-\begin{figure}[hbtp!]
+\begin{figure}
   \centering
   \includegraphics[width=0.8\linewidth]{BDiagram}
   \caption[Maximising Light-Matter Coupling between Lattice
@@ -842,7 +847,7 @@ allowing to decouple them at specific angles.
     is real thus $u_1^*u_0=u_1$. \label{fig:BDiagram}}
 \end{figure}
 
-\begin{figure}[hbtp!]
+\begin{figure}
   \centering
   \includegraphics[width=\linewidth]{WF_S}
   \caption[Wannier Function Products]{The Wannier function products:
@@ -864,7 +869,7 @@ $J_{i,i+1} = J^B_\mathrm{max}$, where $J^B_\mathrm{max}$ is a
 constant. This results in a diffraction maximum where each bond
 (inter-site term) scatters light in phase and the operator is given by
 \begin{equation}
-  \hat{B} = J^B_\mathrm{max} \sum_m^K \hat{B}_m .
+  \hat{B}_\mathrm{max} = J^B_\mathrm{max} \sum_i^K \hat{B}_i .
 \end{equation}
 This can be achieved by crossing the light modes such that
 $\theta_0 = -\theta_1$ and $k_{0x} = k_{1x} = \pi/d$ and choosing the
@@ -888,7 +893,7 @@ Another possibility is to obtain an alternating pattern similar
 corresponding to a diffraction minimum where each bond scatters light
 in anti-phase with its neighbours giving
 \begin{equation}
-  \hat{B} = J^B_\mathrm{min} \sum_m^K (-1)^m \hat{B}_m,
+  \hat{B}_\mathrm{min} = J^B_\mathrm{min} \sum_i^K (-1)^i \hat{B}_i,
 \end{equation}
 where $J^B_\mathrm{min}$ is a constant. We consider an arrangement
 where the beams are arranged such that $k_{0x} = 0$ and
@@ -896,9 +901,9 @@ $k_{1x} = \pi/d$ which gives the following expressions for the density
 and interference terms
 \begin{align}
   \label{eq:DMin}
-  \hat{D} = & \mathcal{F}[W_0]\left(\frac{\pi}{d}\right) \sum_m (-1)^m \hat{n}_m
+  \hat{D} = & \mathcal{F}[W_0]\left(\frac{\pi}{d}\right) \sum_i (-1)^i \hat{n}_i
               \cos(\varphi_0) \cos(\varphi_1) \nonumber \\ 
-  \hat{B} = & -\mathcal{F}[W_1]\left(\frac{\pi}{d}\right) \sum_m (-1)^m \hat{B}_m
+  \hat{B} = & -\mathcal{F}[W_1]\left(\frac{\pi}{d}\right) \sum_i (-1)^i \hat{B}_i
               \cos(\varphi_0) \sin(\varphi_1).
 \end{align}
 For $\varphi_0 = 0$ the corresponding $J_{i,j}$ coefficients are given
@@ -944,7 +949,7 @@ where
 $\hat{\epsilon}_{\b{k}}$ is a unit polarization vector, $\b{k}$ is the
 wave vector,
 $\mathcal{E}_{\b{k}} = \sqrt{\hbar \omega_{\b{k}} / 2 \epsilon_0 V}$,
-$\epsilon_0$ is the free space permittivity, $V$ is the quantization
+$\epsilon_0$ is the free space permittivity, $V$ is the quantisation
 volume and $\a_\b{k}$ and $\a_\b{k}^\dagger$ are the annihilation and
 creation operators respectively of a photon in mode $\b{k}$, and
 $\omega_\b{k}$ is the angular frequency of mode $\b{k}$.
@@ -1039,7 +1044,7 @@ which $i \ne j$ and the remaining integrals become $\int \mathrm{d}^3
 w(\b{r}_0 - \b{r}_i) = f(\b{r}_i)$. The final form of
 the many body operator is then
 \begin{equation}
-  \b{E}^{(+)}_N(\b{r},t) = \hat{\epsilon} C_E
+  \b{\hat{E}}^{(+)}_N(\b{r},t) = \hat{\epsilon} C_E
   \sum_{j = 1}^K \hat{n}_j \frac{u_0 (\b{r}_j)}{|\b{r} -
     \b{r}_j|} e^ {i \b{k}_1 \cdot (\b{r} - \b{r}_j
     ) - i \omega_0 t },
@@ -1092,8 +1097,10 @@ Therefore, we can now express the quantity $n_{\Phi}$ as
 
 Estimates of the scattering rate using real experimental parameters
 are given in Table \ref{tab:photons}. Rubidium atom data has been
-taken from Ref. \cite{steck}. Miyake \emph{et al.} experimental
-parameters are from Ref. \cite{miyake2011}. The $5^2S_{1/2}$,
+taken from Ref. \cite{steck}. The two experiments were chosen as state
+of the art setups that collected light scattered from ultracold atoms
+in free space. Miyake \emph{et al.} experimental parameters are from
+Ref. \cite{miyake2011}. The $5^2S_{1/2}$,
 $F=2 \rightarrow 5^2P_{3/2}$, $F^\prime = 3$ transition of $^{87}$Rb
 is considered. For this transition the Rabi frequency is actually
 larger than the detuning and and effects of saturation should be taken

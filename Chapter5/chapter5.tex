@@ -17,9 +17,9 @@
 In the previous chapter we have introduced a theoretical framework
 which will allow us to study measurement backaction using
 discontinuous quantum jumps and non-Hermitian evolution due to null
-outcomesquantum trajectories. We have also wrapped our quantum gas
-model in this formalism by considering ultracold bosons in an optical
-lattice coupled to a cavity which collects and enhances light
+outcomes using quantum trajectories. We have also wrapped our quantum
+gas model in this formalism by considering ultracold bosons in an
+optical lattice coupled to a cavity which collects and enhances light
 scattered in one particular direction. One of the most important
 conclusions of the previous chapter was that the introduction of
 measurement introduces a new energy and time scale into the picture
@@ -38,17 +38,18 @@ unlike tunnelling and on-site interactions our measurement scheme is
 global in nature which makes it capable of creating long-range
 correlations which enable nonlocal dynamical processes. Furthermore,
 global light scattering from multiple lattice sites creates nontrivial
-spatially nonlocal coupling to the environment which is impossible to
-obtain with local interactions \cite{daley2014, diehl2008,
-  syassen2008}. These spatial modes of matter fields can be considered
-as designed systems and reservoirs opening the possibility of
-controlling dissipations in ultracold atomic systems without resorting
-to atom losses and collisions which are difficult to manipulate. Thus
-the continuous measurement of the light field introduces a
-controllable decoherence channel into the many-body dynamics. Such a
-quantum optical approach can broaden the field even further allowing
-quantum simulation models unobtainable using classical light and the
-design of novel systems beyond condensed matter analogues.
+spatially nonlocal coupling to the environment, as seen in section
+\ref{sec:modes}, which is impossible to obtain with local interactions
+\cite{daley2014, diehl2008, syassen2008}. These spatial modes of
+matter fields can be considered as designed systems and reservoirs
+opening the possibility of controlling dissipations in ultracold
+atomic systems without resorting to atom losses and collisions which
+are difficult to manipulate. Thus the continuous measurement of the
+light field introduces a controllable decoherence channel into the
+many-body dynamics. Such a quantum optical approach can broaden the
+field even further allowing quantum simulation models unobtainable
+using classical light and the design of novel systems beyond condensed
+matter analogues.
 
 In the weak measurement limit, where the quantum jumps do not occur
 frequently compared to the tunnelling rate, this can lead to global
@@ -159,7 +160,7 @@ computed from the eigenvalues of Eq. \eqref{eq:Zmodes},
   \hat{D} = \sum_l^Z \exp\left[-i 2 \pi l R / Z \right] \hat{N}_l.
 \end{equation}
 Each eigenvalue can be represented as the sum of the individual terms
-in teh above sum which are vectors on the complex plane with phases
+in the above sum which are vectors on the complex plane with phases
 that are integer multiples of $2 \pi / Z$: $N_1 e^{-i 2 \pi R / Z}$,
 $N_2 e^{-i 4 \pi R / Z}$, ..., $N_Z$. Since the set of possible sums
 of these vectors is invariant under rotations by $2 \pi l R / Z$,
@@ -173,7 +174,7 @@ in pairs resulting in only three visible components.
 We will now limit ourselves to a specific illumination pattern with
 $\hat{D} = \hat{N}_\mathrm{odd}$ as this leads to the simplest
 multimode dynamics with $Z = 2$ and only a single component as seen in
-Fig. \ref{fig:oscillations}a, i.e.~no multiple peaks like in
+Fig. \ref{fig:oscillations}(a), i.e.~no multiple peaks like in
 Figs. \ref{fig:oscillations}(b,c). This pattern can be obtained by
 crossing two beams such that their projections on the lattice are
 identical and the even sites are positioned at their nodes. However,
@@ -202,7 +203,7 @@ non-Hermitian Hamiltonian describing the time evolution in between the
 jumps is given by
 \begin{equation}
   \label{eq:doublewell}
-  \hat{H} = -J^\mathrm{cl} \left( \bd_o b_e + b_o \bd_e \right) - i
+  \hat{H} = -J \left( \bd_o b_e + b_o \bd_e \right) - i
   \gamma \n_o^2
 \end{equation}
 and the quantum jump operator which is applied at each photodetection
@@ -226,10 +227,9 @@ continuous variables by defining $\psi (x = l / N) = \sqrt{N}
 q_l$. Note that this requires the coefficients $q_l$ to vary smoothly
 which is the case for a superfluid state. We now rescale the
 Hamiltonian in Eq. \eqref{eq:doublewell} to be dimensionless by
-dividing by $NJ^\mathrm{cl}$ and define the relative population
-imbalance between the two wells $z = 2x - 1$. Finally, by taking the
-expectation value of the Hamiltonian and looking for the stationary
-points of
+dividing by $NJ$ and define the relative population imbalance between
+the two wells $z = 2x - 1$. Finally, by taking the expectation value
+of the Hamiltonian and looking for the stationary points of
 $\langle \psi | \hat{H} | \psi \rangle - E \langle \psi | \psi
 \rangle$ we obtain the semiclassical Schr\"{o}dinger equation
 \begin{equation}
@@ -243,21 +243,21 @@ $\langle \psi | \hat{H} | \psi \rangle - E \langle \psi | \psi
     \right)^2 \right] \psi(z, t),
 \end{equation}
 where $\Gamma = N \kappa |C|^2 / J$, $h = 1/N$,
-$\omega = 2 \sqrt{1 + \Lambda - h}$, and
-$\Lambda = NU / (2J^\mathrm{cl})$. The full derivation is not
-straightforward, but the introduction of the non-Hermitian term
-requires only a minor modification to the original formalism presented
-in detail in Ref. \cite{juliadiaz2012} so we have omitted it here. We
-will also be considering $U = 0$ as the effective model is only valid
-in this limit, thus $\Lambda = 0$. However, this model is valid for an
-actual physical double-well setup in which case interacting bosons can
-also be considered. The equation is defined on the interval
-$z \in [-1, 1]$, but $z \ll 1$ has been assumed in order to simplify
-the kinetic term and approximate the potential as parabolic. This does
-mean that this approximation is not valid for the maximum amplitude
-oscillations seen in Fig. \ref{fig:oscillations}a, but since they
-already appear early on in the trajectory we are able to obtain a
-valid analytic description of the oscillations and their growth.
+$\omega = 2 \sqrt{1 + \Lambda - h}$, and $\Lambda = NU / (2J)$. The
+full derivation is not straightforward, but the introduction of the
+non-Hermitian term requires only a minor modification to the original
+formalism presented in detail in Ref. \cite{juliadiaz2012} so we have
+omitted it here. We will also be considering $U = 0$ as the effective
+model is only valid in this limit, thus $\Lambda = 0$. However, this
+model is valid for an actual physical double-well setup in which case
+interacting bosons can also be considered. The equation is defined on
+the interval $z \in [-1, 1]$, but $z \ll 1$ has been assumed in order
+to simplify the kinetic term and approximate the potential as
+parabolic. This does mean that this approximation is not valid for the
+maximum amplitude oscillations seen in Fig. \ref{fig:oscillations}(a),
+but since they already appear early on in the trajectory we are able
+to obtain a valid analytic description of the oscillations and their
+growth.
 
 A superfluid state in our continuous variable approximation
 corresponds to a Gaussian wavefunction $\psi$. Furthermore, since the
@@ -355,8 +355,8 @@ explicitly in the equations above.
 
 First, it is worth noting that all parameters of interest can be
 extracted from $p(t)$ and $q(t)$ alone. We are not interested in
-$\epsilon$ as it is only related to the global phase and the norm of
-the wavefunction and it contains little physical
+$\epsilon(t)$ as it is only related to the global phase and the norm
+of the wavefunction and it contains little physical
 information. Furthermore, an interesting and incredibly convenient
 feature of these equations is that the Eq. \eqref{eq:p} is a function
 of $p(t)$ alone and Eq. \eqref{eq:pq} is a function of $p(t)$ and
@@ -434,7 +434,7 @@ parameters in a form that is easy to analyse. Therefore, we instead
 consider the case when $\Gamma = 0$, but we do not neglect the effect
 of quantum jumps. It may seem counter-intuitive to neglect the term
 that appears due to measurement, but we are considering the weak
-measurement regime where $\gamma \ll J^\mathrm{cl}$ and thus the
+measurement regime where $\gamma \ll J$ and thus the
 dynamics between the quantum jumps are actually dominated by the
 tunnelling of atoms rather than the null outcomes. Furthermore, the
 effect of the quantum jump is independent of the value of $\Gamma$
@@ -477,20 +477,23 @@ and $a_\phi$ cannot be zero, but this is exactly the case for an
 initial superfluid state. We have seen in Eq. \eqref{eq:jumpz0} that
 the effect of a photodetection is to displace the wavepacket by
 approximately $b^2$, i.e.~the width of the Gaussian, in the direction
-of the positive $z$-axis. Therefore, even though the can oscillate in
-the absence of measurement it is the quantum jumps that are the
-driving force behind this phenomenon. Furthermore, these oscillations
-grow because the quantum jumps occur at an average instantaneous rate
-proportional to $\langle \cd \c \rangle (t)$ which itself is
-proportional to $(1+z)^2$. This means they are most likely to occur at
-the point of maximum displacement in the positive $z$ direction at
-which point a quantum jump provides positive feedback and further
-increases the amplitude of the wavefunction leading to the growth seen
-in Fig. \ref{fig:oscillations}a. The oscillations themselves are
-essentially due to the natural dynamics of coherently displaced atoms
-in a lattice , but it is the measurement that causes the initial and
-more importantly coherent displacement and the positive feedback drive
-which causes the oscillations to continuously grow.
+of the positive $z$-axis. Therefore, even though the atoms can
+oscillate in the absence of measurement it is the quantum jumps that
+are the driving force behind this phenomenon. Furthermore, these
+oscillations grow because the quantum jumps occur at an average
+instantaneous rate proportional to $\langle \cd \c \rangle (t)$ which
+itself is proportional to $(1+z)^2$. This means they are most likely
+to occur at the point of maximum displacement in the positive $z$
+direction at which point a quantum jump provides positive feedback and
+further increases the amplitude of the wavefunction leading to the
+growth seen in Fig. \ref{fig:oscillations}(a). The oscillations
+themselves are essentially due to the natural dynamics of coherently
+displaced atoms in a lattice , but it is the measurement that causes
+the initial and more importantly coherent displacement and the
+positive feedback drive which causes the oscillations to continuously
+grow. Furthermore, it is by engineering the measurement, and through
+it the geometry of the modes, that we have control over the nature of
+the correlated dynamics of the oscillations.
 
 We have now seen the effect of the quantum jumps and how that leads to
 oscillations between odd and even sites in a lattice. However, we have
@@ -529,35 +532,35 @@ $\Gamma^2 / \omega^4 \ll 1$. $b^2_\mathrm{SF} = 2h$ denotes the width
 of the initial superfluid state. This result is interesting, because
 it shows that the width of the Gaussian distribution is squeezed as
 compared with its initial state which is exactly what we see in
-Fig. \ref{fig:oscillations}a. However, if we substitute the parameter
-values used in that trajectory we only get a reduction in width by
-about $3\%$, but the maximum amplitude oscillations in look like they
-have a significantly smaller width than the initial distribution. This
-discrepancy is due to the fact that the continuous variable
-approximation is only valid for $z \ll 1$ and thus it cannot explain
-the final behaviour of the system. Furthermore, it has been shown that
-the width of the distribution $b^2$ does not actually shrink to a
-constant value, but rather it keeps oscillating around the value given
-in Eq. \eqref{eq:b2} \cite{mazzucchi2016njp}. However, what we do see
-is that during the early stages of the trajectory, which are well
-described by this model, is that the width does in fact stay roughly
-constant. It is only in the later stages when the oscillations reach
-maximal amplitude that the width becomes visibly reduced.
+Fig. \ref{fig:oscillations}(a). However, if we substitute the
+parameter values used in that trajectory we only get a reduction in
+width by about $3\%$, but the maximum amplitude oscillations in look
+like they have a significantly smaller width than the initial
+distribution. This discrepancy is due to the fact that the continuous
+variable approximation is only valid for $z \ll 1$ and thus it cannot
+explain the final behaviour of the system. Furthermore, it has been
+shown that the width of the distribution $b^2$ does not actually
+shrink to a constant value, but rather it keeps oscillating around the
+value given in Eq. \eqref{eq:b2} \cite{mazzucchi2016njp}. However,
+what we do see is that during the early stages of the trajectory,
+which are well described by this model, is that the width does in fact
+stay roughly constant. It is only in the later stages when the
+oscillations reach maximal amplitude that the width becomes visibly
+reduced.
 
 \subsection{Three-Way Competition}
 
-Now it is time to turn on the inter-atomic interactions,
-$U/J^\mathrm{cl} \ne 0$. As a result the atomic dynamics will change
-as the measurement now competes with both the tunnelling and the
-on-site interactions. A common approach to study such open systems is
-to map a dissipative phase diagram by finding the steady state of the
-master equation for a range of parameter values
-\cite{kessler2012}. However, here we adopt a quantum optical approach
-in which we focus on the conditional dynamics of a single quantum
-trajectory as this corresponds to a single realisation of an
-experiment. The resulting evolution does not necessarily reach a
-steady state and usually occurs far from the ground state of the
-system.
+Now it is time to turn on the inter-atomic interactions, $U/J \ne
+0$. As a result the atomic dynamics will change as the measurement now
+competes with both the tunnelling and the on-site interactions. A
+common approach to study such open systems is to map a dissipative
+phase diagram by finding the steady state of the master equation for a
+range of parameter values \cite{kessler2012}. However, here we adopt a
+quantum optical approach in which we focus on the conditional dynamics
+of a single quantum trajectory as this corresponds to a single
+realisation of an experiment. The resulting evolution does not
+necessarily reach a steady state and usually occurs far from the
+ground state of the system.
 
 A key feature of the quantum trajectory approach is that each
 trajectory evolves differently as it is conditioned on the
@@ -673,7 +676,7 @@ $U = 0$ are well squeezed when compared to the inital state and this
 is the case over here as well. However, as $U$ is increased the
 interactions prevent the atoms from accumulating in one place thus
 preventing oscillations with a large amplitude which effectively makes
-the squeezing less effective as seen in Fig. \ref{fig:Utraj}a. In
+the squeezing less effective as seen in Fig. \ref{fig:Utraj}(a). In
 fact, we have seen towards the end of the last section how for small
 amplitude oscillations that can be described by the effective
 double-well model the width of the number distribution does not change
@@ -687,7 +690,7 @@ significant increase in fluctuations compared to the ground
 state. This is simply due to the fact that the measurement destroys
 the Mott insulating state, which has small fluctuations due to strong
 local interactions, but then subsequently is not strong enough to
-squeeze the resulting dynamics as shown in Fig. \ref{fig:Utraj}b. To
+squeeze the resulting dynamics as shown in Fig. \ref{fig:Utraj}(b). To
 see why this is so easy for the quantum jumps to do we look at the
 ground state in first-order perturbation theory given by
 \begin{equation}
@@ -720,9 +723,10 @@ number of photons arriving in succession can destroy the ground
 state. We have neglected all dynamics in between the jumps which would
 distribute the new excitations in a way which will affect and possibly
 reduce the effects of the subsequent quantum jumps. However, due to
-the lack of any decay channels they will remain in the system and
-subsequent jumps will still amplify them further destroying the ground
-state and thus quickly leading to a state with large fluctuations.
+the lack of any serious decay channels they will remain in the system
+and subsequent jumps will still amplify them further destroying the
+ground state and thus quickly leading to a state with large
+fluctuations.
 
 In the strong measurement regime ($\gamma \gg J$) the measurement
 becomes more significant than the local dynamics and the system will
@@ -964,7 +968,7 @@ sites, as is the case in the $t$-$J$ model \cite{auerbach}. This has
 profound consequences as this is the physical origin of the long-range
 correlated tunneling events represented in Eq. \eqref{eq:hz} by the
 fact that the pairs ($i$, $j$) and ($k$, $l$) can be very distant. The
-projection $\hat{P}_0$ is not sensitive to individual site
+projection $P_0$ is not sensitive to individual site
 occupancies, but instead enforces a fixed value of the observable,
 i.e.~a single Zeno subspace. This is a striking difference with the
 $t$-$J$ and other strongly interacting models. The strong interaction
@@ -980,7 +984,7 @@ consist of many sites the stable configuration can be restored by a
 tunnelling event from a completely different lattice site that belongs
 to the same mode.
 
-In Fig.~\ref{fig:zeno}a we consider illuminating only the central
+In Fig.~\ref{fig:zeno}(a) we consider illuminating only the central
 region of the optical lattice and detecting light in the diffraction
 maximum, thus we freeze the atom number in the $K$ illuminated sites
 $\hat{N}_\text{K}$~\cite{mekhov2009prl,mekhov2009pra}. The measurement
@@ -1043,7 +1047,7 @@ consequence of the dynamics being constrained to a Zeno subspace: the
 virtual processes allowed by the measurement entangle the spatial
 modes nonlocally. Since the measurement only reveals the total number
 of atoms in the illuminated sites, but not their exact distribution,
-these multi-tunelling events cause the build-up of long range
+these multi-tunelling events cause the build-up of long-range
 entanglement. This is in striking contrast to the entanglement caused
 by local processes which can be very confined, especially in 1D where
 it is typically short range. This makes numerical calculations of our
@@ -1184,7 +1188,7 @@ the individual Zeno subspace density matrices. One can easily recover
 the projective Zeno limit by considering $\lambda \rightarrow \infty$
 when all the subspaces completely decouple. This is exactly the
 $\gamma \rightarrow \infty$ limit discussed in the previous
-section. However, we have seen that it is crucial we only consider,
+section. However, we have seen that it is crucial we only consider
 $\lambda^2 \gg \nu$, but not infinite. If the subspaces do not
 decouple completely, then transitions within a single subspace can
 occur via other subspaces in a manner similar to Raman transitions. In
@@ -1443,7 +1447,7 @@ have the projector $P_0$ applied from one side,
 e.g.~$\hat{\rho}_{0m}$. The term $\delta \c \hat{\rho} \delta \cd$
 applies the fluctuation operator from both sides so it does not matter
 in this case, but it becomes relevant for terms such as
-$\delta \cd \delta \c \hat{\rho}$. It is important to note that this
+$ \hat{\rho} \delta \cd \delta \c$. It is important to note that this
 term does not automatically vanish, but when the explicit form of our
 approximate density matrix is inserted, it is in fact zero. Therefore,
 we can omit this term using the information we gained from
@@ -1585,7 +1589,7 @@ multiplying each eigenvector with its corresponding time evolution
   z_1 - \sqrt{2} z_2 e^{-6 J^2 t / \gamma} + z_3 e^{-12 J^2 t /
                                      \gamma} \\ 
                                    \end{array} 
-                                 \right), \nonumber
+                                 \right),
 \end{equation}
 where $z_i$ denote the overlap between the eigenvectors and the
 initial state, $z_i = \langle v_i | \Psi (0) \rangle$, with
@@ -1646,11 +1650,11 @@ for $U = 0$) to derive the steady state. These two conditions in
 momentum space are
 \begin{equation}
   \hat{T} | \Psi \rangle = \sum_{\text{RBZ}} \left[ \bd_k b_k -
-    \bd_{q} b_{q} \right] \cos(ka) |\Psi \rangle = 0, \nonumber
+    \bd_{q} b_{q} \right] \cos(ka) |\Psi \rangle = 0,
 \end{equation}
 \begin{equation}
   \Delta \N |\Psi \rangle = \sum_{\text{RBZ}} \left[ \bd_k b_{-q} +
-    \bd_{-q} b_k \right] | \Psi \rangle= \Delta N |\Psi \rangle, \nonumber
+    \bd_{-q} b_k \right] | \Psi \rangle= \Delta N |\Psi \rangle,
 \end{equation}
 where $b_k = \frac{1}{\sqrt{M}} \sum_j e^{i k j a} b_j$,
 $\Delta \hat{N} = \hat{D} - N/2$, $q = \pi/a - k$, $a$ is the lattice
@@ -1679,7 +1683,7 @@ we can now write the equation for the $N$-particle steady state
   | \Psi \rangle \propto \left[ \prod_{i=1}^{(N - |\Delta N|)/2}
     \left( \sum_{k = 0}^{\pi/2a} \phi_{i,k} \hat{\alpha}_k^\dagger
     \right) \right] \left( \hat{\beta}_\varphi^\dagger \right)^{|
-    \Delta N |} | 0 \rangle, \nonumber
+    \Delta N |} | 0 \rangle,
 \end{equation}
 where $\phi_{i,k}$ are coefficients that depend on the trajectory
 taken to reach this state and $|0 \rangle$ is the vacuum state defined
