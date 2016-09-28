@@ -2,7 +2,11 @@
 %*********************************** Fifth Chapter *****************************
 %*******************************************************************************
 
-\chapter{Density Measurement Induced Dynamics}
+\chapter[Density Measurement Induced Dynamics]
+        {Density Measurement Induced Dynamics\footnote{The results of
+            this chapter were first published in
+            Refs. \cite{mazzucchi2016, kozlowski2016zeno,
+              mazzucchi2016njp}}}
 % Title of the Fifth Chapter
 
 \ifpdf
@@ -290,6 +294,8 @@ jump. Expanding around the peak of the Gaussian ansatz we get
 Multiplying the wavefunction in Eq. \eqref{eq:ansatz} with the jump
 operator above yields a Gaussian wavefunction as well, but the
 parameters change discontinuously according to
+\begingroup
+\allowdisplaybreaks
 \begin{align}
   \label{eq:jumpb2}
   b^2 & \rightarrow \frac{ b^2 (1 + z_0)^2 } { (1 + z_0)^2 + b^2 }, \\
@@ -299,6 +305,7 @@ parameters change discontinuously according to
   z_\phi & \rightarrow z_\phi, \\
   \epsilon & \rightarrow \epsilon.
 \end{align}
+\endgroup
 The fact that the wavefunction remains Gaussian after a photodetection
 is a huge advantage, because it means that the combined time evolution
 of the system can be described with a single Gaussian ansatz in
@@ -527,15 +534,15 @@ yields
 \end{equation}
 where the approximation on the right-hand side follows from the fact
 that $\omega \approx 2$ since we are considering the $N \gg 1$ limit,
-and because we are considering the weak measurement limit
-$\Gamma^2 / \omega^4 \ll 1$. $b^2_\mathrm{SF} = 2h$ denotes the width
-of the initial superfluid state. This result is interesting, because
-it shows that the width of the Gaussian distribution is squeezed as
-compared with its initial state which is exactly what we see in
+and because we are considering the weak measurement limit $\Gamma^2 /
+\omega^4 \ll 1$. $b^2_\mathrm{SF} = 2h$ denotes the width of the
+initial superfluid state. This result is interesting, because it shows
+that the width of the Gaussian distribution is squeezed as compared
+with its initial state which is exactly what we see in
 Fig. \ref{fig:oscillations}(a). However, if we substitute the
 parameter values used in that trajectory we only get a reduction in
-width by about $3\%$, but the maximum amplitude oscillations in look
-like they have a significantly smaller width than the initial
+width by about $3\%$, but the maximum amplitude oscillations look like
+they have a significantly smaller width than the initial
 distribution. This discrepancy is due to the fact that the continuous
 variable approximation is only valid for $z \ll 1$ and thus it cannot
 explain the final behaviour of the system. Furthermore, it has been
@@ -1648,14 +1655,12 @@ eigenstate of $\c$ and we combine this with the requirement for it to
 be in the dark state of the tunnelling operator (eigenstate of $\H_0$
 for $U = 0$) to derive the steady state. These two conditions in
 momentum space are
-\begin{equation}
+\begin{align}
   \hat{T} | \Psi \rangle = \sum_{\text{RBZ}} \left[ \bd_k b_k -
-    \bd_{q} b_{q} \right] \cos(ka) |\Psi \rangle = 0,
-\end{equation}
-\begin{equation}
+    \bd_{q} b_{q} \right] \cos(ka) |\Psi \rangle = 0, \\
   \Delta \N |\Psi \rangle = \sum_{\text{RBZ}} \left[ \bd_k b_{-q} +
     \bd_{-q} b_k \right] | \Psi \rangle= \Delta N |\Psi \rangle,
-\end{equation}
+\end{align}
 where $b_k = \frac{1}{\sqrt{M}} \sum_j e^{i k j a} b_j$,
 $\Delta \hat{N} = \hat{D} - N/2$, $q = \pi/a - k$, $a$ is the lattice
 spacing, $N$ the total atom number, and we perform summations over the
@@ -1738,10 +1743,11 @@ discussed.
 To obtain a state with a specific value of $\Delta N$ postselection
 may be necessary, but otherwise it is not needed.  The process can be
 optimised by feedback control since the state is monitored at all
-times \cite{ivanov2014}. Furthermore, the form of the measurement
-operator is very flexible and it can easily be engineered by the
-geometry of the optical setup \cite{elliott2015, mazzucchi2016} which
-can be used to design a state with desired properties.
+times \cite{ivanov2014, mazzucchi2016feedback}. Furthermore, the form
+of the measurement operator is very flexible and it can easily be
+engineered by the geometry of the optical setup \cite{elliott2015,
+  mazzucchi2016} which can be used to design a state with desired
+properties.
 
 \section{Conclusions}
 

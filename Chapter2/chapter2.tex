@@ -9,20 +9,24 @@
     \graphicspath{{Chapter2/Figs/Raster/}{Chapter2/Figs/PDF/}{Chapter2/Figs/}}
 \else
     \graphicspath{{Chapter2/Figs/Vector/}{Chapter2/Figs/}}
-\fi
+\fi    
 
 \section{Introduction}
 
-In this chapter, we derive a general Hamiltonian that describes the
-coupling of atoms with far-detuned optical beams
-\cite{mekhov2012}. This will serve as the basis from which we explore
-the system in different parameter regimes, such as nondestructive
-measurement in free space or quantum measurement backaction in a
-cavity. Another interesting direction for this field of research are
-quantum optical lattices where the trapping potential is treated
-quantum mechanically \cite{caballero2015, caballero2015njp,
-  caballero2016, caballero2016a}. However this is beyond the scope of
-this work.
+In this chapter, we present the derivation of a general Hamiltonian
+that describes the coupling of atoms with far-detuned optical beams
+originally presented in Ref. \cite{mekhov2012}. This will serve as the
+basis from which we explore the system in different parameter regimes,
+such as nondestructive measurement in free space or quantum
+measurement backaction in a cavity. As this model extends the
+Bose-Hubbard Hamiltonian to include the effects of interactions with
+quantised light we also present a brief overview of the properties of
+the Bose-Hubbard model itself and its quantum phase transiton. This is
+followed by a description of the behaviour of the scattered light with
+a particular focus on how to couple the optical fields to phase
+observables as opposed to density observables as is typically the
+case. Finally, we conclude with an overview of possible experimental
+realisability.
 
 We consider $N$ two-level atoms in an optical lattice with $M$
 sites. For simplicity we will restrict our attention to spinless
@@ -37,7 +41,7 @@ from free particles to strongly correlated systems, to the inherent
 tunability of such lattices. Furthermore, this model is capable of
 describing a range of different experimental setups ranging from a
 small number of sites with a large filling factor (e.g.~BECs trapped
-in a double-well potential) to a an extended multi-site lattice with a
+in a double-well potential) to an extended multi-site lattice with a
 low filling factor (e.g.~a system with one atom per site which will
 exhibit the Mott insulator to superfluid quantum phase transition).
 
@@ -262,7 +266,7 @@ hopping rate given by
 \begin{equation}
   J^\mathrm{cl}_{i,j} = \int \mathrm{d}^3 \b{r} w (\b{r} - \b{r}_i ) 
   \left( -\frac{\b{p}^2}{2 m_a} + V_\mathrm{cl}(\b{r}) \right) w(\b{r}
-  - \b{r}_i),
+  - \b{r}_j),
 \end{equation}
 and $U_{ijkl}$ is the atomic interaction term given by
 \begin{equation}
@@ -731,7 +735,9 @@ neglected. This is likely to be the case since the interactions will
 be dominated by photons scattering from the much larger coherent
 probe.
 
-\section{Density and Phase Observables}
+\section[Density and Phase Observables]
+        {Density and Phase Observables\footnote{The results of this
+            section were first published in Ref. \cite{kozlowski2015}}}
 \label{sec:B}
 
 Light scatters due to its interactions with the dipole moment of the
@@ -802,6 +808,18 @@ between the light modes and the nearest neighbour Wannier overlap,
 $W_1(x)$. This can be achieved by concentrating the light between the
 sites rather than at the positions of the atoms. 
 
+\begin{figure}[hbtp!]
+  \centering
+  \includegraphics[width=0.8\linewidth]{BDiagram}
+  \caption[Maximising Light-Matter Coupling between Lattice
+  Sites]{Light field arrangements which maximise coupling, $u_1^*u_0$,
+    between lattice sites. The thin black line indicates the trapping
+    potential (not to scale). (a) Arrangement for the uniform pattern
+    $J_{i,i+1} = J_1$. (b) Arrangement for spatially varying pattern
+    $J_{i,i+1}=(-1)^m J_2$; here $u_0=1$ so it is not shown and $u_1$
+    is real thus $u_1^*u_0=u_1$. \label{fig:BDiagram}}
+\end{figure}
+
 In order to calculate the $J_{i,j}$ coefficients we perform numerical
 calculations using realistic Wannier functions
 \cite{walters2013}. However, it is possible to gain some analytic
@@ -835,35 +853,6 @@ $\hat{D}$ operator since it depends on the amplitude of light in
 between the lattice sites and not at the positions of the atoms
 allowing to decouple them at specific angles.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\linewidth]{BDiagram}
-  \caption[Maximising Light-Matter Coupling between Lattice
-  Sites]{Light field arrangements which maximise coupling, $u_1^*u_0$,
-    between lattice sites. The thin black line indicates the trapping
-    potential (not to scale). (a) Arrangement for the uniform pattern
-    $J_{i,i+1} = J_1$. (b) Arrangement for spatially varying pattern
-    $J_{i,i+1}=(-1)^m J_2$; here $u_0=1$ so it is not shown and $u_1$
-    is real thus $u_1^*u_0=u_1$. \label{fig:BDiagram}}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\linewidth]{WF_S}
-  \caption[Wannier Function Products]{The Wannier function products:
-    (a) $W_0(x)$ (solid line, right axis), $W_1(x)$ (dashed line, left
-    axis) and their (b) Fourier transforms $\mathcal{F}[W_{0,1}]$. The
-    Density $J_{i,i}$ and matter-interference $J_{i,i+1}$ coefficients
-    in diffraction maximum (c) and minimum (d) as are shown as
-    functions of standing wave shifts $\varphi$ or, if one were to
-    measure the quadrature variance $(\Delta X^F_\beta)^2$, the local
-    oscillator phase $\beta$. The black points indicate the positions,
-    where light measures matter interference $\hat{B} \ne 0$, and the
-    density-term is suppressed, $\hat{D} = 0$. The trapping potential
-    depth is approximately 5 recoil energies.}
-  \label{fig:WannierProducts}
-\end{figure}
-
 The simplest case is to find a diffraction maximum where
 $J_{i,i+1} = J^B_\mathrm{max}$, where $J^B_\mathrm{max}$ is a
 constant. This results in a diffraction maximum where each bond
@@ -888,6 +877,23 @@ given by $J^B_\mathrm{max} = \mathcal{F}[W_1](2 \pi / d)$. This
 arrangement of light modes maximizes the interference signal,
 $\hat{B}$, by suppressing the density signal, $\hat{D}$, via
 interference compensating for the spreading of the Wannier functions.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{WF_S}
+  \caption[Wannier Function Products]{The Wannier function products:
+    (a) $W_0(x)$ (solid line, right axis), $W_1(x)$ (dashed line, left
+    axis) and their (b) Fourier transforms $\mathcal{F}[W_{0,1}]$. The
+    Density $J_{i,i}$ and matter-interference $J_{i,i+1}$ coefficients
+    in diffraction maximum (c) and minimum (d) as are shown as
+    functions of standing wave shifts $\varphi$ or, if one were to
+    measure the quadrature variance $(\Delta X^F_\beta)^2$, the local
+    oscillator phase $\beta$. The black points indicate the positions,
+    where light measures matter interference $\hat{B} \ne 0$, and the
+    density-term is suppressed, $\hat{D} = 0$. The trapping potential
+    depth is approximately 5 recoil energies.}
+  \label{fig:WannierProducts}
+\end{figure}
 
 Another possibility is to obtain an alternating pattern similar
 corresponding to a diffraction minimum where each bond scatters light
@@ -927,10 +933,13 @@ $\hat{X}^F_\beta = \hat{D} \cos(\beta) + \hat{B} \sin(\beta)$ and by
 varying the local oscillator phase, one can choose which conjugate
 operator to measure.
 
-\section{Electric Field Stength}
+\section[Electric Field Strength]
+        {Electric Field Strength\footnote{The derivation has not been
+            published before, but the final numerical results were
+            included in Ref. \cite{kozlowski2015}}}
 \label{sec:Efield}
 
-The Electric field operator at position $\b{r}$ and at time $t$ is
+The electric field operator at position $\b{r}$ and at time $t$ is
 usually written in terms of its positive and negative components:
 \begin{equation}
   \b{\hat{E}}(\b{r},t) = \b{\hat{E}}^{(+)}(\b{r},t) + \b{\hat{E}}^{(-)}(\b{r},t),
@@ -1095,6 +1104,25 @@ Therefore, we can now express the quantity $n_{\Phi}$ as
   n_{\Phi} = \frac{1}{8} \left(\frac{\Omega_0}{\Delta_a}\right)^2 \frac{\Gamma}{2} N_K.
 \end{equation}
 
+\begin{table}
+  \centering
+  \begin{tabular}{l c c}
+    \toprule
+    Value & Miyake \emph{et al.} & Weitenberg \emph{et al.} \\ \midrule
+    $\omega_a$ & \multicolumn{2}{ c }{$2 \pi \cdot 384$ THz}\\
+    $\Gamma$ & \multicolumn{2}{ c }{$2 \pi \cdot 6.07$ MHz} \\
+    $\Delta_a$ & $2\pi \cdot 30$ MHz & $2 \pi \cdot 85$ MHz \\
+    $I$ & $4250$ Wm$^{-2}$ & N/A \\ 
+    $\Omega_0$ & 293$\times 10^6$ s$^{-1}$ & 42.5$\times 10^6$ s$^{-1}$ \\
+    $N_K$ & 10$^5$ & 147 \\ \midrule
+    $n_{\Phi}$ & $6 \times 10^{11}$ s$^{-1}$ & $2 \times 10^6$ s$^{-1}$ \\
+    \bottomrule
+  \end{tabular}
+  \caption[Photon Scattering Rates]{Experimental parameters used in
+    estimating the photon scattering rates.}
+  \label{tab:photons}
+\end{table}
+
 Estimates of the scattering rate using real experimental parameters
 are given in Table \ref{tab:photons}. Rubidium atom data has been
 taken from Ref. \cite{steck}. The two experiments were chosen as state
@@ -1131,21 +1159,38 @@ $\Gamma_\mathrm{sc} = (\Gamma/2) (s_\mathrm{tot}) /
 (1+s_\mathrm{tot}+(2 \Delta / \Gamma)^2)$. A scattering rate of 60 kHz
 per atom \cite{weitenberg2011} gives $s_\mathrm{tot} = 2.5$.
 
-\begin{table}
-  \centering
-  \begin{tabular}{l c c}
-    \toprule
-    Value & Miyake \emph{et al.} & Weitenberg \emph{et al.} \\ \midrule
-    $\omega_a$ & \multicolumn{2}{ c }{$2 \pi \cdot 384$ THz}\\
-    $\Gamma$ & \multicolumn{2}{ c }{$2 \pi \cdot 6.07$ MHz} \\
-    $\Delta_a$ & $2\pi \cdot 30$ MHz & $2 \pi \cdot 85$ MHz \\
-    $I$ & $4250$ Wm$^{-2}$ & N/A \\ 
-    $\Omega_0$ & 293$\times 10^6$ s$^{-1}$ & 42.5$\times 10^6$ s$^{-1}$ \\
-    $N_K$ & 10$^5$ & 147 \\ \midrule
-    $n_{\Phi}$ & $6 \times 10^{11}$ s$^{-1}$ & $2 \times 10^6$ s$^{-1}$ \\
-    \bottomrule
-  \end{tabular}
-  \caption[Photon Scattering Rates]{Experimental parameters used in
-    estimating the photon scattering rates.}
-  \label{tab:photons}
-\end{table}
+\section{Possible Experimental Issues}
+
+There are many possible experimental issues that we have neglected so
+far in our theoretical treatment which need to be answered in order to
+consider the experimental feasability of our proposal. The two main
+concerns are photodetector efficiency and heating losses.
+
+In our theoretical models we treat the detectors as if they were
+capable of detecting every scattered photon, but real photodetectors
+can have efficiencies as low as 5\%. For the case of nondestructive
+measurement as covered in Chapter \ref{chap:qnd} this is not an issue
+provided a sufficient number of photons can be collected to calculate
+reliable expectation values. The case of scattering into a cavity and
+the effect of efficiency on the conditioned state was addressed in
+Ref. \cite{mazzucchi2016njp} where it was shown that detector
+efficiencies as low as 1\% are still capable of resolving the dynamics
+to a good degree of accuracy and 10\% was sufficient for near unit
+fidelity. However, this incredible result requires that the photon
+scattering pattern is periodic in some way, e.g.~oscillatory as was
+the case in Ref. \cite{mazzucchi2016njp} or constant. This way it is
+only necessary to detect a sufficient number of photons to deduce the
+correct phase of the oscillations or the rate for the case of a
+constant scattering rate. In this thesis we deal predominantly with
+these two cases so photodetector efficiency is not an issue.
+
+The other issue is the heating of the trapped gas which will limit the
+lifetime of the experiment. For free space scattering imaging times of
+several hundred milliseconds have been achieved by for example using
+molasses beams that simultaneously cool and trap the atoms
+\cite{weitenberg2011, weitenbergThesis}. Similar feats have been
+achieved with atoms coupled to a leaky cavity where interogation times
+of 0.8s have been achieved in Ref. \cite{brennecke2013}. Crucially,
+the cavity in said experiment has a decay rate of the order of MHz
+which is necessary to observe measurement backaction which we will
+consider in the subsequent chapters.
