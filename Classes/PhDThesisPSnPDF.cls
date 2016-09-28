@@ -1160,14 +1160,23 @@ wish to left align your text}
   \thispagestyle{empty}
   \setsinglecolumn
   \begin{center}
-    { \Large {\bfseries {\@title}} \par}
-    {{\large \vspace*{1em} \@author} \par}
+    { \Large \singlespacing {\bfseries {\@title}} \par}
+    { {\onehalfspacing \vspace*{1em} \@author, \@college \\        
+        A thesis submitted for the degree of \@degreetitle \\
+        \@degreedate \\
+      {\Large \vspace*{1em} {\bfseries {Abstract}}}\par}}
   \end{center}
 \else
 % Normal abstract in the thesis
   \cleardoublepage
   \setsinglecolumn
-  \chapter*{\centering \Large Abstract}
+  \begin{center}
+    { \Large \singlespacing {\bfseries {\@title}} \par}
+    { {\onehalfspacing \vspace*{1em} \@author, \@college \\        
+        A thesis submitted for the degree of \@degreetitle \\
+        \@degreedate \\
+      {\Large \vspace*{1em} {\bfseries {Abstract}}}\par}}
+  \end{center}
   \thispagestyle{empty}
 \fi
 }
