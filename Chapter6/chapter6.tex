@@ -25,18 +25,18 @@ typical in quantum optics for optical fields. In the previous chapter
 we only considered measurement that couples directly to atomic density
 operators just like most of the existing work \cite{mekhov2012,
   LP2009, rogers2014, ashida2015, ashida2015a}. However, we have shown
-in section \ref{sec:B} that it is possible to couple to the the
-relative phase differences between sites in an optical lattice by
-illuminating the bonds between them. Furthermore, we have also shown
-how it can be applied to probe the Bose-Hubbard order parameter or
-even matter-field quadratures in Chapter \ref{chap:qnd}. This concept
-has also been applied to the study of quantum optical potentials
-formed in a cavity and shown to lead to a host of interesting quantum
-phase diagrams \cite{caballero2015, caballero2015njp, caballero2016,
+in section \ref{sec:B} that it is possible to couple to the relative
+phase differences between sites in an optical lattice by illuminating
+the bonds between them. Furthermore, we have also shown how it can be
+applied to probe the Bose-Hubbard order parameter or even matter-field
+quadratures in Chapter \ref{chap:qnd}. This concept has also been
+applied to the study of quantum optical potentials formed in a cavity
+and shown to lead to a host of interesting quantum phase diagrams
+\cite{caballero2015, caballero2015njp, caballero2016,
   caballero2016a}. This is a multi-site generalisation of previous
 double-well schemes \cite{cirac1996, castin1997, ruostekoski1997,
   ruostekoski1998, rist2012}, although the physical mechanism is
-fundametally different as it involves direct coupling to the
+fundamentally different as it involves direct coupling to the
 interference terms caused by atoms tunnelling rather than combining
 light scattered from different sources.
 
@@ -78,18 +78,17 @@ density contribution from $\hat{D}$ is suppressed. We will first
 consider the case when the profile is uniform, i.e.~the diffraction
 maximum of scattered light, when our measurement operator is given by
 \begin{equation}
-  \B = \Bmax = J^B_\mathrm{max} \sum_j^K \left( \bd_j b_{j+1} b_j
+  \B = \Bmax = J^B_\mathrm{max} \sum_j^K \left( \bd_j b_{j+1} + b_j
     \bd_{j+1} \right)
   = 2 J^B_\mathrm{max} \sum_k \bd_k b_k \cos(ka),
 \end{equation}
 where the second equality follows from converting to momentum space,
-denoted by index $k$, via
-$b_m = \frac{1}{\sqrt{M}} \sum_k e^{-ikma} b_k$ and $b_k$ annihilates
-an atom in the Brillouin zone. Note that this operator is diagonal in
-momentum space which means that its eigenstates are simply Fock
-momentum Fock states. We have also seen in Chapter
-\ref{chap:backaction} how the global nature of the jump operators
-introduces a nonlocal quadratic term to the Hamiltonian,
+denoted by index $k$, via $b_m = \frac{1}{\sqrt{M}} \sum_k e^{-ikma}
+b_k$ and $b_k$ annihilates an atom in the Brillouin zone. Note that
+this operator is diagonal in momentum space which means that its
+eigenstates are simply momentum Fock states. We have also seen in
+Chapter \ref{chap:backaction} how the global nature of the jump
+operators introduces a nonlocal quadratic term to the Hamiltonian,
 $\hat{H} = \hat{H}_0 - i \cd \c / 2$. In order to focus on the
 competition between tunnelling and measurement backaction we again
 consider non-interacting atoms, $U = 0$. Therefore, $\B$ is
@@ -103,7 +102,7 @@ measurement of the from $\a_1 = C \B$ is thus
   \gamma \Bmax^\dagger \Bmax.
 \end{equation} 
 Furthermore, whenever a photon is detected, the operator
-$\c = \sqrt{2 \kappa} C \Bmax$ is applied to the wavefunction. We can
+$\c = \sqrt{2 \kappa} C \Bmax$ is applied to the wave function. We can
 rewrite the above equation as
 \begin{equation}
   \hat{H} = -\frac{J}{J^B_\mathrm{max}} \Bmax - i \gamma \Bmax^\dagger \Bmax.
@@ -179,14 +178,13 @@ spreads the atoms), effectively requiring strong couplings for a
 projection as seen in the previous chapter. Here a projection is
 achieved at any measurement strength which allows for a weaker probe
 and thus effectively less heating and a longer experimental
-lifetime. Furthermore. This is in contrast to the quantum Zeno effect
-which requires a very strong probe to compete effectively with the
+lifetime. This is in contrast to the quantum Zeno effect which
+requires a very strong probe to compete effectively with the
 Hamiltonian \cite{misra1977, facchi2008, raimond2010, raimond2012,
   signoles2014}. Interestingly, the $\Bmax$ measurement will even
-establish phase coherence across the lattice,
-$\langle \bd_j b_j \rangle \ne 0$, in contrast to density based
-measurements where the opposite is true: Fock states with no
-coherences are favoured.
+establish phase coherence across the lattice, $\langle \bd_j b_j
+\rangle \ne 0$, in contrast to density based measurements where the
+opposite is true: Fock states with no coherences are favoured.
 
 \section{General Model for Weak Measurement Projection}
 
@@ -222,7 +220,7 @@ and the Hamiltonian:
   \hat{H}_0 = - 2 J \sum_{\mathrm{RBZ}} \cos(ka) \left( \beta_k^\dagger
     \tilde{\beta}_k + \tilde{\beta}^\dagger_k \beta_k \right),
 \end{equation}
-where the summations are performed over the reduced Brilluoin Zone
+where the summations are performed over the reduced Brillouin Zone
 (RBZ), $0 < k \le \pi/a$, to ensure the transformation is
 canonical. We see that the measurement operator now consists of two
 types of modes, $\beta_k$ and $\tilde{\beta_k}$, which are
@@ -289,10 +287,10 @@ open systems described by the density matrix, $\hat{\rho}$,
   \left[ \c \hat{\rho} \cd - \frac{1}{2} \left( \cd \c \hat{\rho} + \hat{\rho}
       \cd \c \right) \right].
 \end{equation}
-The following results will not depend on the nature or exact form of
+The following results will not depend on the nature nor exact form of
 the jump operator $\c$. However, whenever we refer to our simulations
 or our model we will be considering $\c = \sqrt{2 \kappa} C(\D + \B)$
-as before, but the results are more general and can be applied to ther
+as before, but the results are more general and can be applied to their
 setups. This equation describes the state of the system if we discard
 all knowledge of the outcome. The commutator describes coherent
 dynamics due to the isolated Hamiltonian and the remaining terms are
@@ -372,7 +370,7 @@ depends only on itself. Every submatrix
 $\mathcal{P}_M \dot{\hat{\rho}} \mathcal{P}_N$ depends only on the
 current state of itself and its evolution is ignorant of anything else
 in the total density matrix. This is in contrast to the partitioning
-we achieved with $P_m$. Previously we only identitified subspaces that
+we achieved with $P_m$. Previously we only identified subspaces that
 were decoherence free, i.e.~unaffected by measurement. However, those
 submatrices could still couple with the rest of the density matrix via
 the coherent term $P_m [\hat{H}_0, \hat{\rho}] P_n$.
@@ -495,12 +493,12 @@ In the simplest case the projectors $\mathcal{P}_M$ can consist of
 only single eigenspaces of $\hat{O}$, $\mathcal{P}_M = R_m$. The
 interpretation is straightforward - measurement projects the system
 onto a eigenspace of an observable $\hat{O}$ which is a compatible
-observable with $\a$ and corresponds to a quantity conserved by the
+observable with $\a_1$ and corresponds to a quantity conserved by the
 coherent Hamiltonian evolution. However, this may not be possible and
 we have the more general case when
 $\mathcal{P}_M = \sum_{m \in M} R_m$. In this case, one can simply
 think of all $R_{m \in M}$ as degenerate just like eigenstates of the
-measurement operator, $\a$, that are degenerate, can form a single
+measurement operator, $\a_1$, that are degenerate, can form a single
 eigenspace $P_m$. However, these subspaces correspond to different
 eigenvalues of $\hat{O}$ distinguishing it from conventional
 projections. Instead, the degeneracies are identified by some other
@@ -527,14 +525,14 @@ freeze. These eigenspaces are composed of Fock states in momentum
 space that have the same number of atoms within each pair of $k$ and
 $k - \pi/a$ modes.
 
-Having identified and appropriate $\hat{O}$ operator we proceed to
+Having identified an appropriate $\hat{O}$ operator we proceed to
 identifying $\mathcal{P}_M$ subspaces for the operator
 $\Bmin$. Firstly, since $\Bmin$ contains $\sin(ka)$ coefficients atoms
 in different $k$ modes that have the same $\sin(ka)$ value are
 indistinguishable to the measurement and will lie in the same $P_m$
 eigenspaces. This will happen for the pairs ($k$, $\pi/a -
-k$). Therefore, the $R_m$ spaces that have the same
-$\hat{O}_k + \hat{O}_{\pi/a - k}$ eigenvalues must belong to the same
+k$). Therefore, the $R_m$ spaces that have the same $\hat{O}_k +
+\hat{O}_{\pi/a - k}$ eigenvalues must belong to the same
 $\mathcal{P}_M$.
 
 Secondly, if we re-write $\hat{O}$ in terms of the $\beta_k$ and
@@ -621,8 +619,8 @@ $\sin(ka)$ is the same for both. Therefore, we already know that we
 can combine $(R_0, R_2, R_7)$, $(R_1, R_5)$, and $(R_3, R_8)$, because
 those combinations have the same $O_{\pi/4a} + O_{3\pi/4a}$
 values. This is very clear in the table as these subspaces span
-exactly the same values of $B_\mathrm{min}$, i.e.~the have exactly the
-same values in the third column.
+exactly the same values of $B_\mathrm{min}$, i.e.~they have exactly
+the same values in the third column.
 
 Now we have to match the parities. Subspaces that have the same parity
 combination for the pair $(O_{\pi/4a} + O_{3\pi/4a}, O_{\pi/2a})$ will
@@ -659,7 +657,7 @@ $\mathcal{P}_M = \sum_{m \in M} P_m$.
 In summary we have investigated measurement backaction resulting from
 coupling light to an ultracold gas's phase-related observables. We
 demonstrated how this can be used to prepare the Hamiltonian
-eigenstates even if significant tunnelling is occuring as the
+eigenstates even if significant tunnelling is occurring as the
 measurement can be engineered to not compete with the system's
 dynamics. Furthermore, we have shown that when the observable of the
 phase-related quantities does not commute with the Hamiltonian we

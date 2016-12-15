@@ -20,14 +20,14 @@
 This thesis is entirely concerned with the question of measuring a
 quantum many-body system using quantised light. However, so far we
 have only looked at expectation values in a nondestructive context
-where we neglect the effect of the quantum wavefunction collapse. We
+where we neglect the effect of the quantum wave function collapse. We
 have shown that light provides information about various statistical
 quantities of the quantum states of the atoms such as their
 correlation functions. In general, any quantum measurement affects the
-system even if it doesn't physically destroy it. In our model both
+system even if it does not physically destroy it. In our model both
 optical and matter fields are quantised and their interaction leads to
 entanglement between the two subsystems. When a photon is detected and
-the electromagnetic wavefunction of the optical field collapses, the
+the electromagnetic wave function of the optical field collapses, the
 matter state is also affected due to this entanglement resulting in
 quantum measurement backaction. Therefore, in order to determine these
 quantities multiple measurements have to be performed to establish a
@@ -75,8 +75,8 @@ realisation. In particular, we consider states conditioned upon
 measurement results such as the photodetection times. Such a
 trajectory is generally stochastic in nature as light scattering is
 not a deterministic process. Furthermore, they are in general
-discotinuous as each detection event brings about a drastic change in
-the quantum state due to the wavefunction collapse of the light field.
+discontinuous as each detection event brings about a drastic change in
+the quantum state due to the wave function collapse of the light field.
 
 Before we discuss specifics relevant to our model of quantised light
 interacting with a quantum gas we present a more general overview
@@ -105,10 +105,10 @@ there are much fewer atoms being illuminated than previously.
 
 Basic quantum mechanics tells us that such measurements will in
 general affect the quantum state in some way. Each event will cause a
-discontinuous quantum jump in the wavefunction of the system and it
+discontinuous quantum jump in the wave function of the system and it
 will have a jump operator, $\c$, associated with it. The effect of a
 detection event on the quantum state is simply the result of applying
-this jump operator to the wavefunction, $| \psi (t) \rangle$,
+this jump operator to the wave function, $| \psi (t) \rangle$,
 \begin{equation}
   \label{eq:jump}
   | \psi(t + \mathrm{d}t) \rangle = \frac{\c | \psi(t) \rangle}
@@ -152,7 +152,7 @@ quantum jump occurs and $0$ otherwise \cite{MeasurementControl}. Note
 that this equation has a straightforward generalisation to multiple
 jump operators, but we do not consider this possibility here at all.
 
-All trajectories that we calculate in the follwing chapters are
+All trajectories that we calculate in the following chapters are
 described by the stochastic Schr\"{o}dinger equation in
 Eq. \eqref{eq:SSE}. The most straightforward way to solve it is to
 replace the differentials by small time-steps $\delta t$. Then we
@@ -165,7 +165,7 @@ applied, i.e.~$\mathrm{d}N(t) = 1$, if
 In practice, this is not the most efficient method for simulation
 \cite{MeasurementControl}. Instead we will use the following
 method. At an initial time $t = t_0$ a random number $R$ is
-generated. We then propagate the unnormalised wavefunction
+generated. We then propagate the unnormalised wave function
 $| \tilde{\psi} (t) \rangle$ using the non-Hermitian evolution given
 by
 \begin{equation}
@@ -174,9 +174,9 @@ by
 \end{equation}
 up to a time $T$ such that
 $\langle \tilde{\psi} (T) | \tilde{\psi} (T) \rangle = R$. This
-problem can be solved efficienlty using standard numerical
+problem can be solved efficiently using standard numerical
 techniques. At time $T$ a quantum jump is applied according to
-Eq. \eqref{eq:jump} which renormalises the wavefunction as well and
+Eq. \eqref{eq:jump} which renormalises the wave function as well and
 the process is repeated as long as desired. This formulation also has
 the advantage that it provides a more intuitive picture of what
 happens during a single trajectory. The quantum jumps are
@@ -194,7 +194,7 @@ processes is balanced and without any further external influence the
 distribution of outcomes over many trajectories will be entirely
 determined by the initial state even though each individual trajectory
 will be unique and conditioned on the exact detection times that
-occured during the given experimental run. However, individual
+occurred during the given experimental run. However, individual
 trajectories can have features that are not present after averaging
 and this is why we focus our attention on single experimental runs
 rather than average behaviour.
@@ -224,7 +224,7 @@ could scatter and thus include multiple jump operators reducing our
 ability to control the system.
 
 The model we derived in Eq. \eqref{eq:fullH} is in fact already in a
-form ready for quantum trajectory simulations. The phenomologically
+form ready for quantum trajectory simulations. The phenomenologically
 included cavity decay rate $-i \kappa \ad_1 \a_1$ is in fact the
 non-Hermitian term $-i \cd \c / 2$, where $\c = \sqrt{2 \kappa} \a_1$
 which is the jump operator we want for measurements of photons leaking
@@ -239,7 +239,7 @@ can be achieved when the cavity-probe detuning is smaller than the
 cavity decay rate, $\Delta_p \ll \kappa$
 \cite{caballero2015}. However, even though the cavity field has a
 negligible effect on the atoms, measurement backaction will not. This
-effect is of a different nature. It is due to the wavefunction
+effect is of a different nature. It is due to the wave function
 collapse due to the destruction of photons rather than an interaction
 between fields. Therefore, the final form of the Hamiltonian
 Eq. \eqref{eq:fullH} that we will be using in the following chapters
@@ -265,7 +265,7 @@ Importantly, we see that measurement introduces a new energy and time
 scale $\gamma$ which competes with the two other standard scales
 responsible for the unitary dynamics of the closed system, tunnelling,
 $J$, and on-site interaction, $U$.  If each atom scattered light
-inependently a different jump operator $\c_i$ would be required for
+independently a different jump operator $\c_i$ would be required for
 each site projecting the atomic system into a state where long-range
 coherence is degraded. This is a typical scenario for spontaneous
 emission \cite{pichler2010, sarkar2014}, or for local
@@ -343,7 +343,7 @@ is not accessible and thus must be represented as an average over all
 possible trajectories. However, there is a crucial difference between
 measurement and dissipation. When we perform a measurement we use the
 master equation to describe system evolution if we ignore the
-measuremt outcomes, but at any time we can look at the detection times
+measurement outcomes, but at any time we can look at the detection times
 and obtain a conditioned pure state for this current experimental
 run. On the other hand, for a dissipative system we simply have no
 such record of results and thus the density matrix predicted by the
@@ -398,7 +398,7 @@ know with certainty that the state must be either $| 0 \rangle$ or
 $| 1 \rangle$. We just don't know which one until we check the result
 of the measurement.
 
-We have assumed that it was a discrete wavefunction collapse that lead
+We have assumed that it was a discrete wave function collapse that lead
 to the state in Eq. \eqref{eq:rho1} in which case the conclusion we
 reached was obvious. However, the nature of the process that takes us
 from the initial state to the final state with classical uncertainty
@@ -410,8 +410,8 @@ two basis states. Therefore, if we obtained this density matrix as a
 result of applying the time evolution given by the master equation we
 would be able to identify the final states of individual trajectories
 even though we have no information about the individual trajectories
-themself. This is analogous to an approach in which decoherence due to
-coupling to the environment is used to model the wavefunction collapse
+themselves. This is analogous to an approach in which decoherence due to
+coupling to the environment is used to model the wave function collapse
 \cite{zurek2002}, but here we will be looking at projective effects
 due to weak measurement.
 
@@ -444,7 +444,7 @@ was irrelevant. Now, on the other hand, we are interested in the
 effect of these measurements on the dynamics of the system. The effect
 of measurement backaction will depend on the information that is
 encoded in the detected photon. If a scattered mode cannot
-distinuguish between two different lattice sites then we have no
+distinguish between two different lattice sites then we have no
 information about the distribution of atoms between those two sites.
 Therefore, all quantum correlations between the atoms in these sites
 are unaffected by the backaction whilst their correlations with the
@@ -494,7 +494,7 @@ that these partitions in general are not neighbours of each other,
 they are not localised, they overlap in a nontrivial way, and the
 patterns can be made more complex in higher dimensions as shown in
 Fig. \ref{fig:2dmodes} or with a more sophisticated optical setup
-\cite{caballero2016}. This has profound consquences as it can lead to
+\cite{caballero2016}. This has profound consequences as it can lead to
 the creation of long-range nonlocal correlations between lattice sites
 \cite{mazzucchi2016, kozlowski2016zeno}. The measurement does not know
 which atom within a certain mode scattered the light, there is no
@@ -538,7 +538,7 @@ Fig. \ref{fig:twomodes}.
   \includegraphics[width=0.7\textwidth]{TwoModes2}
   \caption[Two Mode Partitioning]{Top: only the odd sites scatter
     light leading to a measurement of $\hat{N}_\mathrm{odd}$ and an
-    effectove partitiong into even and odd sites. Bottom: this also
+    effective partitioning into even and odd sites. Bottom: this also
     partitions the lattice into odd and even sites, but this time
     atoms at all sites scatter light, but in anti-phase with their
     neighbours.}
@@ -546,7 +546,7 @@ Fig. \ref{fig:twomodes}.
 \end{figure}
 
 This approach can be generalised to an arbitrary number of modes,
-$Z$. For this we will conisder a deep lattice such that
+$Z$. For this we will consider a deep lattice such that
 $J_{i,i} = u_1^* (\b{r}) u_0 (\b{r})$. We will take the probe beam to
 be incident normally at a 1D lattice so that $u_0 (\b{r}) =
 1$. Therefore, the final form of the scattered light field is given by
