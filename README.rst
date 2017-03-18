@@ -1,5 +1,5 @@
-Competition between Weak Quantum Measurement and Many-Body Dynamics in Ultracold Bosonic Gases - DPhil thesis by Wojciech Kozlowski
-===================================================================================================================================
+Competition between Weak Quantum Measurement and Many-Body Dynamics in Ultracold Bosonic Gases
+==============================================================================================
 
 A dissertation submitted for the degree of *Doctor of Philosophy* at
 the University of Oxford.
@@ -41,6 +41,8 @@ evolution.
 
 Download
 --------
+
+You can obtain the final PDF version from https://wojciechkozlowski.eu/dphil/files/thesis.pdf
 
 You can obtain the source files by either:
 
